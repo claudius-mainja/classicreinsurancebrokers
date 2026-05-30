@@ -28,8 +28,6 @@
     <?php echo $__env->yieldPushContent('head'); ?>
 
     <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/js/app.js']); ?>
-
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body class="min-h-screen bg-white">
     <?php if (isset($component)) { $__componentOriginala591787d01fe92c5706972626cdf7231 = $component; } ?>
@@ -99,34 +97,23 @@
     }
     </script>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // AOS initialization for simple fade-ups, fade-left, fade-right
-            AOS.init({
-                duration: 800,
-                once: true,
-                offset: 100,
-            });
-
-            // GSAP ScrollTrigger for hero headings and advanced animations
             gsap.registerPlugin(ScrollTrigger);
 
-            // Animate hero headings on page load
+            // Hero entrance
             document.querySelectorAll('.hero-animate').forEach((el, i) => {
                 gsap.from(el, {
-                    y: 60,
-                    opacity: 0,
-                    duration: 0.8,
+                    y: 60, opacity: 0, duration: 0.9,
                     delay: i * 0.15,
                     ease: 'power3.out',
                 });
             });
 
-            // Scroll-triggered reveal for all .reveal elements (backward compat)
-            const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+            // Scroll reveal observer
+            const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -60px 0px' };
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -135,23 +122,49 @@
                 });
             }, observerOptions);
 
-            document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-stagger, .img-reveal').forEach(el => {
+            document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .img-reveal').forEach(el => {
                 revealObserver.observe(el);
             });
 
-            // Typewriter effect for hero spans with .typewriter class
-            document.querySelectorAll('.typewriter').forEach(el => {
-                const text = el.textContent;
-                el.textContent = '';
-                let i = 0;
-                const type = () => {
-                    if (i < text.length) {
-                        el.textContent += text.charAt(i);
-                        i++;
-                        setTimeout(type, 40);
+            // Stat counter animation
+            document.querySelectorAll('.stat-value').forEach(el => {
+                const target = parseInt(el.dataset.target);
+                const suffix = el.dataset.suffix || '';
+                gsap.fromTo(el, { textContent: 0 }, {
+                    textContent: target,
+                    duration: 2,
+                    ease: 'power2.out',
+                    scrollTrigger: { trigger: el, start: 'top 85%' },
+                    snap: { textContent: 1 },
+                    onUpdate: function() {
+                        el.textContent = Math.round(el.textContent) + suffix;
                     }
-                };
-                setTimeout(type, 500);
+                });
+            });
+
+            // Navbar background swap on scroll
+            const nav = document.querySelector('.site-nav');
+            if (nav) {
+                gsap.to(nav, {
+                    backgroundColor: 'rgba(255,255,255,0.98)',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
+                    duration: 0.3,
+                    scrollTrigger: {
+                        trigger: document.body,
+                        start: '80px top',
+                        toggleActions: 'play reverse play reverse',
+                    }
+                });
+            }
+
+            // FAQ accordion
+            document.querySelectorAll('.faq-question').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const answer = btn.nextElementSibling;
+                    const icon = btn.querySelector('.faq-icon');
+                    answer.classList.toggle('open');
+                    if (icon) icon.classList.toggle('open');
+                });
             });
         });
     </script>
