@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\BlogPost;
-use App\Models\CareerJob;
+use App\Models\Career;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -39,7 +39,7 @@ class SearchController extends Controller
                 ];
             });
 
-        $careers = CareerJob::where('is_active', true)
+        $careers = Career::where('is_active', true)
             ->where(function ($q) use ($like) {
                 $q->where('title', 'like', $like)
                   ->orWhere('description', 'like', $like)

@@ -26,6 +26,8 @@ class BlogPost extends Model
         'og_image',
     ];
 
+    protected $appends = ['content'];
+
     public function category(): BelongsTo
     {
         return $this->belongsTo(BlogCategory::class);
@@ -49,5 +51,10 @@ class BlogPost extends Model
     public function getRouteKeyName(): string
     {
         return 'slug';
+    }
+
+    public function getContentAttribute(): string
+    {
+        return $this->body ?? '';
     }
 }

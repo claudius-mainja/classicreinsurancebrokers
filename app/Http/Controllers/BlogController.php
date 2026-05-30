@@ -51,7 +51,7 @@ class BlogController extends Controller
 
         $posts = BlogPost::published()
             ->with(['category', 'author', 'tags'])
-            ->where('blog_category_id', $categoryModel->id)
+            ->where('category_id', $categoryModel->id)
             ->orderBy('published_at', 'desc')
             ->paginate(9);
 
