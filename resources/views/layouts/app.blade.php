@@ -23,11 +23,13 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     @stack('head')
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body class="min-h-screen bg-white">
     <x-navbar />
@@ -53,10 +55,67 @@
             "addressLocality": "Harare",
             "addressCountry": "ZW"
         },
-        "foundingDate": "2010",
+        "foundingDate": "2015",
         "areaServed": ["Zimbabwe", "Africa"],
         "priceRange": "$$"
     }
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // AOS initialization for simple fade-ups, fade-left, fade-right
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100,
+            });
+
+            // GSAP ScrollTrigger for hero headings and advanced animations
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Animate hero headings on page load
+            document.querySelectorAll('.hero-animate').forEach((el, i) => {
+                gsap.from(el, {
+                    y: 60,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: i * 0.15,
+                    ease: 'power3.out',
+                });
+            });
+
+            // Scroll-triggered reveal for all .reveal elements (backward compat)
+            const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-stagger, .img-reveal').forEach(el => {
+                revealObserver.observe(el);
+            });
+
+            // Typewriter effect for hero spans with .typewriter class
+            document.querySelectorAll('.typewriter').forEach(el => {
+                const text = el.textContent;
+                el.textContent = '';
+                let i = 0;
+                const type = () => {
+                    if (i < text.length) {
+                        el.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(type, 40);
+                    }
+                };
+                setTimeout(type, 500);
+            });
+        });
     </script>
 
     @stack('scripts')

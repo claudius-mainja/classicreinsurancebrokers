@@ -22,14 +22,12 @@
 @endpush
 
 @section('content')
-<section class="relative overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 px-6 py-24 sm:py-32 lg:px-8">
-    <div class="absolute inset-0 bg-[url('{{ asset('images/hero-pattern.png') }}')] bg-cover bg-center opacity-10"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-primary-950/60 via-transparent to-transparent"></div>
+<section class="relative overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-primary-950 px-6 py-24 sm:py-32 lg:px-8">
     <div class="relative mx-auto max-w-7xl text-center">
-        <div class="reveal">
-            <span class="inline-flex items-center rounded-full bg-primary-500/20 px-4 py-1.5 text-sm font-medium text-primary-200 ring-1 ring-primary-500/30">Careers</span>
-            <h1 class="section-title mt-6 text-white">Join Our Team</h1>
-            <p class="section-subtitle mx-auto text-primary-100">
+        <div>
+            <span class="hero-animate inline-flex items-center rounded-lg bg-primary-600/20 px-4 py-1.5 text-sm font-medium text-primary-200 ring-1 ring-primary-600/30">Careers</span>
+            <h1 class="hero-animate mt-6 font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Join Our Team</h1>
+            <p class="hero-animate mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-neutral-300">
                 Build a rewarding career at Zimbabwe's premier reinsurance broker. We're always looking for talented individuals who share our passion for excellence.
             </p>
         </div>
@@ -60,7 +58,7 @@
                         @if($department->jobs->count() > 0)
                             <div class="grid gap-4">
                                 @foreach($department->jobs as $job)
-                                    <div class="card-hover group rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md">
+                                    <div class="card-hover group rounded-md border border-neutral-100 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md">
                                         <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                                             <div class="flex-1">
                                                 <h4 class="text-lg font-bold text-neutral-900 transition-colors group-hover:text-primary-600">{{ $job->title }}</h4>
@@ -96,7 +94,7 @@
     <section class="bg-white px-6 py-20 sm:py-28 lg:px-8">
         <div class="mx-auto max-w-7xl">
             <div class="reveal text-center">
-                <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-neutral-100">
+                <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-md bg-neutral-100">
                     <svg class="h-10 w-10 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
                 </div>
                 <h2 class="section-title mt-6">No Open Positions Right Now</h2>
@@ -121,7 +119,7 @@
 
         <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div class="reveal card-hover stagger-children text-center">
-                <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-100 text-primary-600">
+                <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-md bg-primary-100 text-primary-600">
                     <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
                 </div>
                 <h3 class="text-lg font-bold text-neutral-900">Professional Growth</h3>
@@ -131,7 +129,7 @@
             </div>
 
             <div class="reveal card-hover stagger-children text-center">
-                <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-secondary-100 text-secondary-600">
+                <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-md bg-primary-100 text-primary-600">
                     <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
                 </div>
                 <h3 class="text-lg font-bold text-neutral-900">Collaborative Environment</h3>
@@ -141,7 +139,7 @@
             </div>
 
             <div class="reveal card-hover stagger-children text-center">
-                <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-100 text-amber-600">
+                <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-md bg-amber-100 text-amber-600">
                     <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
                 </div>
                 <h3 class="text-lg font-bold text-neutral-900">Open Communication</h3>
@@ -151,7 +149,7 @@
             </div>
 
             <div class="reveal card-hover stagger-children text-center">
-                <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-green-100 text-green-600">
+                <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-md bg-green-100 text-green-600">
                     <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </div>
                 <h3 class="text-lg font-bold text-neutral-900">Work-Life Balance</h3>

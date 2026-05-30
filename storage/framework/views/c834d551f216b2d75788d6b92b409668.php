@@ -1,5 +1,5 @@
 <?php $__env->startSection('title', 'Reinsurance Solutions & Advisory Services'); ?>
-<?php $__env->startSection('meta_description', 'Classic Reinsurance Brokers offers comprehensive reinsurance solutions and strategic advisory services across 9 core products and 9 specialty risk classes, delivering tailored capacity and expertise across Africa.'); ?>
+<?php $__env->startSection('meta_description', 'Classic Reinsurance Brokers offers comprehensive reinsurance solutions and strategic advisory services across 9 core products and 9 specialty risk classes, delivering tailored capacity and expertise across Zimbabwe.'); ?>
 <?php $__env->startSection('og_title', 'Reinsurance & Advisory Services | Classic Reinsurance Brokers'); ?>
 <?php $__env->startSection('og_description', 'Explore our full range of reinsurance products, advisory services, and specialty risk insurance solutions tailored for the Zimbabwean and African markets.'); ?>
 
@@ -246,84 +246,84 @@
 
         <div class="stagger-children mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <a href="<?php echo e(route('services.specialty', 'aviation')); ?>" class="card-hover group">
-                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary-50 text-secondary-600 transition-colors group-hover:bg-secondary-600 group-hover:text-white">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5M5 12l7-7 7 7"/></svg>
                 </div>
                 <h3 class="font-heading text-xl font-bold text-neutral-900">Aviation</h3>
                 <p class="mt-2 text-sm leading-relaxed text-neutral-600">Aviation reinsurance covering hull & liability for commercial airlines, general aviation, rotorcraft, airports, and maintenance facilities with access to London and Lloyd's markets.</p>
-                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-secondary-600 transition-colors group-hover:text-secondary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 transition-colors group-hover:text-primary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
             </a>
 
             <a href="<?php echo e(route('services.specialty', 'bankers-blanket')); ?>" class="card-hover group">
-                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary-50 text-secondary-600 transition-colors group-hover:bg-secondary-600 group-hover:text-white">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </div>
                 <h3 class="font-heading text-xl font-bold text-neutral-900">Bankers' Blanket</h3>
                 <p class="mt-2 text-sm leading-relaxed text-neutral-600">Comprehensive reinsurance for financial institutions covering fidelity, forgery, theft, computer crime, and internal fraud with tailored limits for commercial and investment banks.</p>
-                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-secondary-600 transition-colors group-hover:text-secondary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 transition-colors group-hover:text-primary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
             </a>
 
             <a href="<?php echo e(route('services.specialty', 'construction-projects')); ?>" class="card-hover group">
-                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary-50 text-secondary-600 transition-colors group-hover:bg-secondary-600 group-hover:text-white">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
                 </div>
                 <h3 class="font-heading text-xl font-bold text-neutral-900">Construction Projects</h3>
                 <p class="mt-2 text-sm leading-relaxed text-neutral-600">Project-specific reinsurance for major infrastructure developments covering CAR, EAR, delay in start-up, and third-party liability for roads, bridges, dams, and commercial developments.</p>
-                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-secondary-600 transition-colors group-hover:text-secondary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 transition-colors group-hover:text-primary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
             </a>
 
             <a href="<?php echo e(route('services.specialty', 'cyber')); ?>" class="card-hover group">
-                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary-50 text-secondary-600 transition-colors group-hover:bg-secondary-600 group-hover:text-white">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                 </div>
                 <h3 class="font-heading text-xl font-bold text-neutral-900">Cyber</h3>
                 <p class="mt-2 text-sm leading-relaxed text-neutral-600">Cyber reinsurance covering data breaches, ransomware, business interruption from system failure, network security liability, and privacy regulation defence for corporate and public entities.</p>
-                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-secondary-600 transition-colors group-hover:text-secondary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 transition-colors group-hover:text-primary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
             </a>
 
             <a href="<?php echo e(route('services.specialty', 'kidnap-and-ransom')); ?>" class="card-hover group">
-                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary-50 text-secondary-600 transition-colors group-hover:bg-secondary-600 group-hover:text-white">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
                 </div>
                 <h3 class="font-heading text-xl font-bold text-neutral-900">Kidnap & Ransom</h3>
                 <p class="mt-2 text-sm leading-relaxed text-neutral-600">Specialist K&R reinsurance covering ransom payments, crisis response consultancy, legal liability, and extortion threats for multinational corporations, executives, and high-net-worth individuals.</p>
-                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-secondary-600 transition-colors group-hover:text-secondary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 transition-colors group-hover:text-primary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
             </a>
 
             <a href="<?php echo e(route('services.specialty', 'marine-hull')); ?>" class="card-hover group">
-                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary-50 text-secondary-600 transition-colors group-hover:bg-secondary-600 group-hover:text-white">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </div>
                 <h3 class="font-heading text-xl font-bold text-neutral-900">Marine Hull</h3>
                 <p class="mt-2 text-sm leading-relaxed text-neutral-600">Marine hull reinsurance for ocean-going vessels, coastal craft, fishing fleets, and inland waterway boats covering hull & machinery, war risks, protection & indemnity, and excess liabilities.</p>
-                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-secondary-600 transition-colors group-hover:text-secondary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 transition-colors group-hover:text-primary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
             </a>
 
             <a href="<?php echo e(route('services.specialty', 'power-projects')); ?>" class="card-hover group">
-                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary-50 text-secondary-600 transition-colors group-hover:bg-secondary-600 group-hover:text-white">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                 </div>
                 <h3 class="font-heading text-xl font-bold text-neutral-900">Power Projects</h3>
                 <p class="mt-2 text-sm leading-relaxed text-neutral-600">Energy reinsurance for power generation assets including thermal, hydroelectric, solar, and wind projects covering construction, operational all risks, machinery breakdown, and business interruption.</p>
-                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-secondary-600 transition-colors group-hover:text-secondary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 transition-colors group-hover:text-primary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
             </a>
 
             <a href="<?php echo e(route('services.specialty', 'political-risks')); ?>" class="card-hover group">
-                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary-50 text-secondary-600 transition-colors group-hover:bg-secondary-600 group-hover:text-white">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </div>
                 <h3 class="font-heading text-xl font-bold text-neutral-900">Political Risks</h3>
                 <p class="mt-2 text-sm leading-relaxed text-neutral-600">Political risk reinsurance covering expropriation, currency inconvertibility, contract frustration, trade disruption, and sovereign default for cross-border investments and international trade.</p>
-                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-secondary-600 transition-colors group-hover:text-secondary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 transition-colors group-hover:text-primary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
             </a>
 
             <a href="<?php echo e(route('services.specialty', 'political-violence-terrorism')); ?>" class="card-hover group">
-                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary-50 text-secondary-600 transition-colors group-hover:bg-secondary-600 group-hover:text-white">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
                 </div>
                 <h3 class="font-heading text-xl font-bold text-neutral-900">Political Violence & Terrorism</h3>
                 <p class="mt-2 text-sm leading-relaxed text-neutral-600">Specialist reinsurance covering sabotage, terrorism, riots, strikes, civil commotion, and malicious damage for commercial properties, government assets, and strategic infrastructure.</p>
-                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-secondary-600 transition-colors group-hover:text-secondary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 transition-colors group-hover:text-primary-700">Learn more <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
             </a>
         </div>
     </div>

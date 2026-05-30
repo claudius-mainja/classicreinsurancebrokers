@@ -94,12 +94,12 @@
 
                     <div class="mt-6 space-y-6">
                         @foreach($results as $result)
-                            <article class="reveal rounded-2xl border border-neutral-100 bg-white p-6 transition-all duration-300 hover:border-primary-200 hover:shadow-md sm:p-8">
+                            <article class="reveal rounded-lg border border-neutral-100 bg-white p-6 transition-all duration-300 hover:border-primary-200 hover:shadow-md sm:p-8">
                                 <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                                     <div class="flex-1 min-w-0">
                                         <div class="flex flex-wrap items-center gap-3">
                                             @if(isset($result->type))
-                                                <span class="inline-flex items-center rounded-full bg-primary-50 px-3 py-0.5 text-xs font-semibold text-primary-700">{{ $result->type }}</span>
+                                                <span class="inline-flex items-center rounded-md bg-primary-50 px-3 py-0.5 text-xs font-semibold text-primary-700">{{ $result->type }}</span>
                                             @endif
                                         </div>
                                         <h3 class="mt-2 text-lg font-bold text-neutral-900 sm:text-xl">
@@ -132,7 +132,7 @@
                 </div>
             @else
                 <div class="reveal mt-16 text-center">
-                    <div class="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-neutral-100">
+                    <div class="mx-auto flex h-24 w-24 items-center justify-center rounded-lg bg-neutral-100">
                         <svg class="h-12 w-12 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                         </svg>
@@ -153,7 +153,7 @@
             @endif
         @else
             <div class="reveal mt-16 text-center">
-                <div class="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-neutral-100">
+                <div class="mx-auto flex h-24 w-24 items-center justify-center rounded-lg bg-neutral-100">
                     <svg class="h-12 w-12 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                     </svg>

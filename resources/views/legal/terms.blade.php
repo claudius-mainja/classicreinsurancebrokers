@@ -44,14 +44,12 @@
 @endpush
 
 @section('content')
-<section class="relative overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 px-6 py-24 sm:py-32 lg:px-8">
-    <div class="absolute inset-0 bg-[url('{{ asset('images/hero-pattern.png') }}')] bg-cover bg-center opacity-10"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-primary-950/60 via-transparent to-transparent"></div>
+<section class="relative overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-primary-950 px-6 py-24 sm:py-32 lg:px-8">
     <div class="relative mx-auto max-w-7xl text-center">
-        <div class="reveal">
-            <span class="inline-flex items-center rounded-full bg-primary-500/20 px-4 py-1.5 text-sm font-medium text-primary-200 ring-1 ring-primary-500/30">Legal</span>
-            <h1 class="section-title mt-6 text-white">Terms &amp; Conditions</h1>
-            <p class="section-subtitle mx-auto text-primary-100">
+        <div>
+            <span class="hero-animate inline-flex items-center rounded-lg bg-primary-600/20 px-4 py-1.5 text-sm font-medium text-primary-200 ring-1 ring-primary-600/30">Legal</span>
+            <h1 class="hero-animate mt-6 font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Terms &amp; Conditions</h1>
+            <p class="hero-animate mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-neutral-300">
                 The terms governing your use of our website and reinsurance broking services.
             </p>
         </div>

@@ -1,9 +1,8 @@
-<nav class="nav fixed top-0 left-0 right-0 z-50 transition-all duration-500" x-data="{ mobileOpen: false, scrolled: false }" x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 80)" :class="scrolled ? 'nav-scrolled bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'">
+<nav class="nav fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-500" x-data="{ mobileOpen: false }">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-20 items-center justify-between">
             <a href="{{ route('home') }}" class="flex items-center gap-3">
-                <img src="{{ asset('images/logo.png') }}" alt="Classic Reinsurance Brokers" class="h-12 w-auto transition-all duration-300" :class="scrolled ? 'h-10' : 'h-12'">
-                <span class="hidden font-heading text-lg font-bold text-neutral-900 sm:block">ClassicRE</span>
+                <img src="{{ asset('images/logo.png') }}" alt="Classic Reinsurance Brokers" class="h-14 w-auto transition-all duration-300" :class="scrolled ? 'h-12' : 'h-14'">
             </a>
 
             <div class="hidden items-center gap-1 lg:flex">
@@ -11,10 +10,10 @@
                 <a href="{{ route('about') }}" class="rounded-lg px-4 py-2 font-heading text-sm font-medium text-neutral-700 transition-all duration-200 hover:bg-neutral-100">About Us</a>
 
                 <div class="group relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                    <button class="flex items-center gap-1 rounded-lg px-4 py-2 font-heading text-sm font-medium text-neutral-700 transition-all duration-200 hover:bg-neutral-100">
+                    <a href="{{ route('services') }}" class="inline-flex items-center gap-1 rounded-lg px-4 py-2 font-heading text-sm font-medium text-neutral-700 transition-all duration-200 hover:bg-neutral-100">
                         Services
                         <svg class="h-4 w-4 transition-transform duration-200" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
+                    </a>
                     <div x-show="open" @click.away="open = false" x-cloak class="absolute left-0 top-full z-50 w-[600px] rounded-2xl bg-white p-6 shadow-xl ring-1 ring-neutral-100" x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="translate-y-2 opacity-0" x-transition:enter-end="translate-y-0 opacity-100">
                         <div class="grid grid-cols-2 gap-6">
                             <div>
@@ -49,7 +48,6 @@
                     </div>
                 </div>
 
-                <a href="{{ route('services') }}" class="rounded-lg px-4 py-2 font-heading text-sm font-medium text-neutral-700 transition-all duration-200 hover:bg-neutral-100">Services</a>
                 <a href="{{ route('blog') }}" class="rounded-lg px-4 py-2 font-heading text-sm font-medium text-neutral-700 transition-all duration-200 hover:bg-neutral-100">Insights</a>
                 <a href="{{ route('careers') }}" class="rounded-lg px-4 py-2 font-heading text-sm font-medium text-neutral-700 transition-all duration-200 hover:bg-neutral-100">Careers</a>
                 <a href="{{ route('contact') }}" class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary-600 px-5 py-2.5 font-heading text-sm font-semibold text-white transition-all duration-300 hover:bg-primary-700 hover:shadow-lg hover:shadow-primary-600/25">Contact Us</a>
@@ -67,7 +65,7 @@
             <a href="{{ route('about') }}" class="block rounded-lg px-4 py-3 font-heading text-sm font-medium text-neutral-700 hover:bg-neutral-50">About Us</a>
             <details class="group">
                 <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-3 font-heading text-sm font-medium text-neutral-700 hover:bg-neutral-50">
-                    Services
+                    <a href="{{ route('services') }}" class="flex-1">Services</a>
                     <svg class="h-4 w-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </summary>
                 <div class="ml-4 mt-1 space-y-1 border-l-2 border-neutral-100 pl-4">

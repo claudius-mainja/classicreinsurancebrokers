@@ -47,14 +47,12 @@
 @endpush
 
 @section('content')
-<section class="relative overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 px-6 py-24 sm:py-32 lg:px-8">
-    <div class="absolute inset-0 bg-[url('{{ asset('images/hero-pattern.png') }}')] bg-cover bg-center opacity-10"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-primary-950/60 via-transparent to-transparent"></div>
+<section class="relative overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-primary-950 px-6 py-24 sm:py-32 lg:px-8">
     <div class="relative mx-auto max-w-7xl text-center">
-        <div class="reveal">
-            <span class="inline-flex items-center rounded-full bg-primary-500/20 px-4 py-1.5 text-sm font-medium text-primary-200 ring-1 ring-primary-500/30">Contact</span>
-            <h1 class="section-title mt-6 text-white">Get In Touch</h1>
-            <p class="section-subtitle mx-auto text-primary-100">
+        <div>
+            <span class="hero-animate inline-flex items-center rounded-lg bg-primary-600/20 px-4 py-1.5 text-sm font-medium text-primary-200 ring-1 ring-primary-600/30">Contact</span>
+            <h1 class="hero-animate mt-6 font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Get In Touch</h1>
+            <p class="hero-animate mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-neutral-300">
                 Have a question or ready to discuss your reinsurance needs? Our team is here to help.
             </p>
         </div>
@@ -76,20 +74,20 @@
                     <div class="grid gap-6 sm:grid-cols-2">
                         <div>
                             <label for="name" class="block text-sm font-medium text-neutral-700">Full Name <span class="text-red-500">*</span></label>
-                            <input type="text" id="name" name="name" required class="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm text-neutral-900 placeholder-neutral-400 transition-colors focus:border-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600/20" placeholder="Your full name">
+                            <input type="text" id="name" name="name" required class="mt-1.5 w-full rounded-md border border-neutral-200 px-4 py-3 text-sm text-neutral-900 placeholder-neutral-400 transition-colors focus:border-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600/20" placeholder="Your full name">
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-neutral-700">Email Address <span class="text-red-500">*</span></label>
-                            <input type="email" id="email" name="email" required class="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm text-neutral-900 placeholder-neutral-400 transition-colors focus:border-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600/20" placeholder="your@email.com">
+                            <input type="email" id="email" name="email" required class="mt-1.5 w-full rounded-md border border-neutral-200 px-4 py-3 text-sm text-neutral-900 placeholder-neutral-400 transition-colors focus:border-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600/20" placeholder="your@email.com">
                         </div>
                     </div>
                     <div>
                         <label for="phone" class="block text-sm font-medium text-neutral-700">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" class="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm text-neutral-900 placeholder-neutral-400 transition-colors focus:border-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600/20" placeholder="+263 242 773192">
+                        <input type="tel" id="phone" name="phone" class="mt-1.5 w-full rounded-md border border-neutral-200 px-4 py-3 text-sm text-neutral-900 placeholder-neutral-400 transition-colors focus:border-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600/20" placeholder="+263 242 773192">
                     </div>
                     <div>
                         <label for="subject" class="block text-sm font-medium text-neutral-700">Subject <span class="text-red-500">*</span></label>
-                        <select id="subject" name="subject" required class="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm text-neutral-900 transition-colors focus:border-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600/20">
+                        <select id="subject" name="subject" required class="mt-1.5 w-full rounded-md border border-neutral-200 px-4 py-3 text-sm text-neutral-900 transition-colors focus:border-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600/20">
                             <option value="">Select a subject</option>
                             <option value="Reinsurance Broking">Reinsurance Broking</option>
                             <option value="Facultative Placement">Facultative Placement</option>
@@ -102,7 +100,7 @@
                     </div>
                     <div>
                         <label for="message" class="block text-sm font-medium text-neutral-700">Message <span class="text-red-500">*</span></label>
-                        <textarea id="message" name="message" rows="6" required class="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm text-neutral-900 placeholder-neutral-400 transition-colors focus:border-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600/20 resize-none" placeholder="Tell us about your reinsurance requirements or how we can assist you..."></textarea>
+                        <textarea id="message" name="message" rows="6" required class="mt-1.5 w-full rounded-md border border-neutral-200 px-4 py-3 text-sm text-neutral-900 placeholder-neutral-400 transition-colors focus:border-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600/20 resize-none" placeholder="Tell us about your reinsurance requirements or how we can assist you..."></textarea>
                     </div>
                     <button type="submit" class="btn-primary inline-flex items-center gap-2">
                         Send Message
@@ -112,13 +110,13 @@
             </div>
 
             <div class="space-y-8">
-                <div class="reveal rounded-2xl bg-neutral-50 p-8">
+                <div class="reveal rounded-md bg-neutral-50 p-8">
                     <h3 class="text-xl font-bold text-neutral-900">Contact Information</h3>
                     <p class="mt-2 text-sm text-neutral-500">Reach out to us through any of the channels below.</p>
 
                     <div class="mt-8 space-y-6">
                         <div class="flex items-start gap-4">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-600">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-md bg-primary-100 text-primary-600">
                                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
                             </div>
                             <div>
@@ -132,7 +130,7 @@
                         </div>
 
                         <div class="flex items-start gap-4">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-600">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-md bg-primary-100 text-primary-600">
                                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
                             </div>
                             <div>
@@ -144,7 +142,7 @@
                         </div>
 
                         <div class="flex items-start gap-4">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-600">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-md bg-primary-100 text-primary-600">
                                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
                             </div>
                             <div>
@@ -154,7 +152,7 @@
                         </div>
 
                         <div class="flex items-start gap-4">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-600">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-md bg-primary-100 text-primary-600">
                                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             </div>
                             <div>
@@ -169,7 +167,7 @@
                     </div>
                 </div>
 
-                <div class="reveal overflow-hidden rounded-2xl bg-neutral-100 shadow-sm">
+                <div class="reveal overflow-hidden rounded-md bg-neutral-100 shadow-sm">
                     <div class="aspect-[16/9] bg-neutral-200">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3799.9999999999995!2d31.046!3d-17.825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDQ5JzMwLjAiUyAzMcKwMDInNDUuNiJF!5e0!3m2!1sen!2szw!4v1" width="100%" height="100%" style="border:0; min-height: 320px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Classic Reinsurance Brokers office location"></iframe>
                     </div>
@@ -190,7 +188,7 @@
         </div>
 
         <div class="mt-12 space-y-3" x-data="{ open: null }">
-            <div class="reveal rounded-2xl border border-neutral-200 bg-white transition-all duration-200" :class="open === 1 ? 'shadow-md border-primary-200' : ''">
+            <div class="reveal rounded-md border border-neutral-200 bg-white transition-all duration-200" :class="open === 1 ? 'shadow-md border-primary-200' : ''">
                 <button @click="open = open === 1 ? null : 1" class="flex w-full items-center justify-between px-6 py-5 text-left">
                     <span class="text-base font-semibold text-neutral-900">What services does Classic Reinsurance Brokers offer?</span>
                     <svg class="h-5 w-5 flex-shrink-0 text-neutral-400 transition-transform duration-200" :class="open === 1 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -202,7 +200,7 @@
                 </div>
             </div>
 
-            <div class="reveal rounded-2xl border border-neutral-200 bg-white transition-all duration-200" :class="open === 2 ? 'shadow-md border-primary-200' : ''">
+            <div class="reveal rounded-md border border-neutral-200 bg-white transition-all duration-200" :class="open === 2 ? 'shadow-md border-primary-200' : ''">
                 <button @click="open = open === 2 ? null : 2" class="flex w-full items-center justify-between px-6 py-5 text-left">
                     <span class="text-base font-semibold text-neutral-900">How can I get a reinsurance quote?</span>
                     <svg class="h-5 w-5 flex-shrink-0 text-neutral-400 transition-transform duration-200" :class="open === 2 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -214,7 +212,7 @@
                 </div>
             </div>
 
-            <div class="reveal rounded-2xl border border-neutral-200 bg-white transition-all duration-200" :class="open === 3 ? 'shadow-md border-primary-200' : ''">
+            <div class="reveal rounded-md border border-neutral-200 bg-white transition-all duration-200" :class="open === 3 ? 'shadow-md border-primary-200' : ''">
                 <button @click="open = open === 3 ? null : 3" class="flex w-full items-center justify-between px-6 py-5 text-left">
                     <span class="text-base font-semibold text-neutral-900">Which markets do you serve?</span>
                     <svg class="h-5 w-5 flex-shrink-0 text-neutral-400 transition-transform duration-200" :class="open === 3 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -226,7 +224,7 @@
                 </div>
             </div>
 
-            <div class="reveal rounded-2xl border border-neutral-200 bg-white transition-all duration-200" :class="open === 4 ? 'shadow-md border-primary-200' : ''">
+            <div class="reveal rounded-md border border-neutral-200 bg-white transition-all duration-200" :class="open === 4 ? 'shadow-md border-primary-200' : ''">
                 <button @click="open = open === 4 ? null : 4" class="flex w-full items-center justify-between px-6 py-5 text-left">
                     <span class="text-base font-semibold text-neutral-900">What types of reinsurance treaties do you arrange?</span>
                     <svg class="h-5 w-5 flex-shrink-0 text-neutral-400 transition-transform duration-200" :class="open === 4 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -238,7 +236,7 @@
                 </div>
             </div>
 
-            <div class="reveal rounded-2xl border border-neutral-200 bg-white transition-all duration-200" :class="open === 5 ? 'shadow-md border-primary-200' : ''">
+            <div class="reveal rounded-md border border-neutral-200 bg-white transition-all duration-200" :class="open === 5 ? 'shadow-md border-primary-200' : ''">
                 <button @click="open = open === 5 ? null : 5" class="flex w-full items-center justify-between px-6 py-5 text-left">
                     <span class="text-base font-semibold text-neutral-900">How do you handle claims advocacy?</span>
                     <svg class="h-5 w-5 flex-shrink-0 text-neutral-400 transition-transform duration-200" :class="open === 5 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -250,7 +248,7 @@
                 </div>
             </div>
 
-            <div class="reveal rounded-2xl border border-neutral-200 bg-white transition-all duration-200" :class="open === 6 ? 'shadow-md border-primary-200' : ''">
+            <div class="reveal rounded-md border border-neutral-200 bg-white transition-all duration-200" :class="open === 6 ? 'shadow-md border-primary-200' : ''">
                 <button @click="open = open === 6 ? null : 6" class="flex w-full items-center justify-between px-6 py-5 text-left">
                     <span class="text-base font-semibold text-neutral-900">Is Classic Reinsurance Brokers regulated?</span>
                     <svg class="h-5 w-5 flex-shrink-0 text-neutral-400 transition-transform duration-200" :class="open === 6 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
