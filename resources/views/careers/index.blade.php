@@ -60,7 +60,7 @@
                                                     <span class="inline-flex items-center gap-1"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>Posted {{ $job->created_at->diffForHumans() }}</span>
                                                 </div>
                                             </div>
-                                            <a href="{{ route('careers.apply', $job->slug) }}" class="btn btn-primary shrink-0 text-sm">Apply now</a>
+                                            <a href="{{ route('careers.show', $job->slug) }}" class="btn btn-primary shrink-0 text-sm">View & apply</a>
                                         </div>
                                     </div>
                                 @endforeach
@@ -136,11 +136,11 @@
             <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">Don't see the right role?</h2>
             <p class="mt-6 text-lg leading-relaxed text-primary-100">We're always on the lookout for exceptional talent. Send us your CV and cover letter, and we'll reach out when a suitable position becomes available.</p>
             <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <a href="{{ route('careers.apply', 'speculative') }}" class="btn bg-white text-primary-700 hover:bg-primary-50 text-base px-8 py-3">
+                <a href="{{ route('contact') }}?subject=Speculative%20Application" class="btn bg-white text-primary-700 hover:bg-primary-50 text-base px-8 py-3">
                     Send speculative application
                     <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg>
                 </a>
-                <a href="{{ route('contact') }}" class="btn btn-outline-white text-base px-8 py-3">
+                <a href="mailto:hr@classicre.co.zw" class="btn btn-outline-white text-base px-8 py-3">
                     Contact HR
                     <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75"/></svg>
                 </a>

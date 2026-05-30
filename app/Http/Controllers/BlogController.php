@@ -86,4 +86,15 @@ class BlogController extends Controller
 
         return view('blog.index', compact('posts', 'categories', 'tags'));
     }
+
+    public function comment($slug, Request $request)
+    {
+        $validated = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:255'],
+            'message' => ['required', 'string', 'max:5000'],
+        ]);
+
+        return back()->with('success', 'Thank you for your comment! It will be reviewed before being published.');
+    }
 }

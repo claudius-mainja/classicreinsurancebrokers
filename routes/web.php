@@ -17,10 +17,11 @@ Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 Route::post('/newsletter', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
 
-Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/blog/category/{category}', [BlogController::class, 'category'])->name('blog.category');
 Route::get('/blog/tag/{tag}', [BlogController::class, 'tag'])->name('blog.tag');
+Route::post('/blog/{slug}/comment', [BlogController::class, 'comment'])->name('blog.comment');
 
 Route::get('/careers', [CareerController::class, 'index'])->name('careers');
 Route::get('/careers/{slug}', [CareerController::class, 'show'])->name('careers.show');
