@@ -10,12 +10,12 @@
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css'])
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             background: #f6f6f6;
             color: #3d3d3d;
             min-height: 100vh;
@@ -39,7 +39,7 @@
             width: auto;
         }
         .error-code {
-            font-family: 'Manrope', sans-serif;
+            font-family: 'Sora', sans-serif;
             font-size: clamp(6rem, 20vw, 10rem);
             font-weight: 800;
             line-height: 1;
@@ -59,7 +59,7 @@
             border-radius: 2px;
         }
         .error-title {
-            font-family: 'Manrope', sans-serif;
+            font-family: 'Sora', sans-serif;
             font-size: clamp(1.5rem, 4vw, 2rem);
             font-weight: 700;
             color: #262626;
@@ -95,7 +95,7 @@
             padding: 0.875rem 2rem;
             background: #c93333;
             color: #fff;
-            font-family: 'Manrope', sans-serif;
+            font-family: 'Sora', sans-serif;
             font-size: 0.9375rem;
             font-weight: 600;
             border: none;
@@ -124,7 +124,7 @@
             padding: 0.875rem 2rem;
             background: transparent;
             color: #3d3d3d;
-            font-family: 'Manrope', sans-serif;
+            font-family: 'Sora', sans-serif;
             font-size: 0.9375rem;
             font-weight: 600;
             border: 2px solid #d1d1d1;
