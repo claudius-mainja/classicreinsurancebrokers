@@ -1,14 +1,12 @@
-@extends('layouts.app')
+<?php $__env->startSection('title', config('app.name') . ' — Zimbabwe\'s Premier Reinsurance Broker'); ?>
+<?php $__env->startSection('meta_description', 'Classic Reinsurance Brokers — Zimbabwe\'s leading reinsurance broker, delivering expert treaty and facultative reinsurance placements to insurance companies across Zimbabwe since 2015.'); ?>
+<?php $__env->startSection('meta_keywords', 'reinsurance broker Zimbabwe, reinsurance broker Harare, treaty reinsurance Zimbabwe, facultative reinsurance, reinsurance advisory, Classic Reinsurance Brokers, insurance company reinsurance, African reinsurance broker, risk management Zimbabwe, insurance broker Zimbabwe, reinsurance intermediary Zimbabwe'); ?>
+<?php $__env->startSection('og_title', config('app.name') . ' — Premier Reinsurance Broker in Zimbabwe'); ?>
 
-@section('title', config('app.name') . ' — Zimbabwe\'s Premier Reinsurance Broker')
-@section('meta_description', 'Classic Reinsurance Brokers — Zimbabwe\'s leading reinsurance broker, delivering expert treaty and facultative reinsurance placements to insurance companies across Zimbabwe since 2015.')
-@section('meta_keywords', 'reinsurance broker Zimbabwe, reinsurance broker Harare, treaty reinsurance Zimbabwe, facultative reinsurance, reinsurance advisory, Classic Reinsurance Brokers, insurance company reinsurance, African reinsurance broker, risk management Zimbabwe, insurance broker Zimbabwe, reinsurance intermediary Zimbabwe')
-@section('og_title', config('app.name') . ' — Premier Reinsurance Broker in Zimbabwe')
-
-@push('head')
+<?php $__env->startPush('head'); ?>
 <script type="application/ld+json">
 {
-    "@@context": "https://schema.org",
+    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
         {
@@ -46,12 +44,12 @@
     ]
 }
 </script>
-@endpush
+<?php $__env->stopPush(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <section class="relative min-h-screen flex items-center overflow-hidden">
     <div class="absolute inset-0">
-        <img src="{{ asset('images/herobg.png') }}" alt="" class="h-full w-full object-cover">
+        <img src="<?php echo e(asset('images/herobg.png')); ?>" alt="" class="h-full w-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-b from-primary-900/80 via-primary-900/60 to-neutral-950/90"></div>
     </div>
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
@@ -76,11 +74,11 @@
                 Classic Reinsurance Brokers connects insurance companies with leading reinsurance markets — delivering expert treaty, facultative, and advisory services that strengthen your capacity to write business with confidence.
             </p>
             <div class="fade-up mt-8 flex flex-wrap gap-4" style="transition-delay: 0.3s">
-                <a href="{{ route('contact') }}" class="btn btn-primary text-base px-8 py-3">
+                <a href="<?php echo e(route('contact')); ?>" class="btn btn-primary text-base px-8 py-3">
                     Start a conversation
                     <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg>
                 </a>
-                <a href="{{ route('services') }}" class="btn btn-outline text-base px-8 py-3 border-neutral-400 text-neutral-200 hover:bg-white/10">Our services</a>
+                <a href="<?php echo e(route('services')); ?>" class="btn btn-outline text-base px-8 py-3 border-neutral-400 text-neutral-200 hover:bg-white/10">Our services</a>
             </div>
         </div>
     </div>
@@ -129,12 +127,12 @@
                     Founded on integrity, professionalism, and technical excellence, our team brings decades of combined experience in the insurance and reinsurance industry.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-4">
-                    <a href="{{ route('about') }}" class="btn border-neutral-700 text-neutral-800 hover:bg-neutral-800 hover:text-white">Learn more about us</a>
+                    <a href="<?php echo e(route('about')); ?>" class="btn border-neutral-700 text-neutral-800 hover:bg-neutral-800 hover:text-white">Learn more about us</a>
                 </div>
             </div>
             <div class="fade-up relative" style="transition-delay: 0.15s">
                 <div class="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-200">
-                    <img src="{{ asset('images/abouthome.png') }}" alt="Classic Reinsurance Brokers" class="h-full w-full object-cover">
+                    <img src="<?php echo e(asset('images/abouthome.png')); ?>" alt="Classic Reinsurance Brokers" class="h-full w-full object-cover">
                 </div>
             </div>
         </div>
@@ -149,7 +147,7 @@
             <p class="mt-4 text-lg leading-relaxed text-neutral-400">We connect insurance companies with leading global and regional reinsurance markets, delivering the capacity and expertise you need to grow your portfolio with confidence.</p>
         </div>
         <div class="mt-16 space-y-20">
-            {{-- Reinsurance Services --}}
+            
             <div>
                 <div class="fade-up mb-10 max-w-2xl">
                     <h3 class="text-2xl font-bold text-white font-heading">Reinsurance Services</h3>
@@ -187,7 +185,7 @@
                 </div>
             </div>
 
-            {{-- Advisory Services --}}
+            
             <div>
                 <div class="fade-up mb-10 max-w-2xl">
                     <h3 class="text-2xl font-bold text-white font-heading">Advisory Services</h3>
@@ -225,7 +223,7 @@
                 </div>
             </div>
 
-            {{-- Specialty Market Expertise --}}
+            
             <div>
                 <div class="fade-up mb-10 max-w-2xl">
                     <h3 class="text-2xl font-bold text-white font-heading">Specialty Market Expertise</h3>
@@ -317,7 +315,7 @@
             </div>
 
             <div class="fade-up text-center">
-                <a href="{{ route('services') }}" class="btn btn-primary">Explore all services <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg></a>
+                <a href="<?php echo e(route('services')); ?>" class="btn btn-primary">Explore all services <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg></a>
             </div>
         </div>
     </div>
@@ -354,7 +352,7 @@
             <p class="mt-4 text-lg leading-relaxed text-neutral-400">Professional reinsurance broking across nine core classes, giving insurance companies access to reliable capacity backed by strong relationships with leading global and regional reinsurers.</p>
         </div>
         <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <a href="{{ route('services.product', 'motor-insurance') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl">
+            <a href="<?php echo e(route('services.product', 'motor-insurance')); ?>" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl">
                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
                     <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 1.106l1.054 2.108A1 1 0 0121 14v3a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-7a2 2 0 012-2h3m4 0V5a2 2 0 00-2-2H7a1 1 0 00-.707.293L4 5m10 5H8m4 0h2"/></svg>
                 </div>
@@ -363,7 +361,7 @@
                     <p class="text-xs text-neutral-500 mt-0.5">Private & commercial vehicle fleets</p>
                 </div>
             </a>
-            <a href="{{ route('services.product', 'household') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.05s">
+            <a href="<?php echo e(route('services.product', 'household')); ?>" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.05s">
                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
                     <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
                 </div>
@@ -372,7 +370,7 @@
                     <p class="text-xs text-neutral-500 mt-0.5">Buildings & contents cover</p>
                 </div>
             </a>
-            <a href="{{ route('services.product', 'engineering') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.1s">
+            <a href="<?php echo e(route('services.product', 'engineering')); ?>" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.1s">
                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
                     <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.573-1.066z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                 </div>
@@ -381,7 +379,7 @@
                     <p class="text-xs text-neutral-500 mt-0.5">CAR, EAR, plant & machinery</p>
                 </div>
             </a>
-            <a href="{{ route('services.product', 'assets-all-risks') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.15s">
+            <a href="<?php echo e(route('services.product', 'assets-all-risks')); ?>" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.15s">
                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
                     <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
                 </div>
@@ -390,7 +388,7 @@
                     <p class="text-xs text-neutral-500 mt-0.5">Commercial & industrial assets</p>
                 </div>
             </a>
-            <a href="{{ route('services.product', 'liability-insurance') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.2s">
+            <a href="<?php echo e(route('services.product', 'liability-insurance')); ?>" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.2s">
                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
                     <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                 </div>
@@ -399,7 +397,7 @@
                     <p class="text-xs text-neutral-500 mt-0.5">Public, product, professional indemnity</p>
                 </div>
             </a>
-            <a href="{{ route('services.product', 'goods-in-transit') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.25s">
+            <a href="<?php echo e(route('services.product', 'goods-in-transit')); ?>" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.25s">
                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
                     <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
                 </div>
@@ -408,7 +406,7 @@
                     <p class="text-xs text-neutral-500 mt-0.5">Marine cargo & transportation</p>
                 </div>
             </a>
-            <a href="{{ route('services.product', 'group-personal-accidents') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.3s">
+            <a href="<?php echo e(route('services.product', 'group-personal-accidents')); ?>" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.3s">
                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
                     <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
                 </div>
@@ -417,7 +415,7 @@
                     <p class="text-xs text-neutral-500 mt-0.5">Employer & affinity group cover</p>
                 </div>
             </a>
-            <a href="{{ route('services.product', 'travel-insurance') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.35s">
+            <a href="<?php echo e(route('services.product', 'travel-insurance')); ?>" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.35s">
                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
                     <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
                 </div>
@@ -426,7 +424,7 @@
                     <p class="text-xs text-neutral-500 mt-0.5">Medical, trip, baggage cover</p>
                 </div>
             </a>
-            <a href="{{ route('services.product', 'agriculture-insurance') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.4s">
+            <a href="<?php echo e(route('services.product', 'agriculture-insurance')); ?>" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.4s">
                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
                     <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
                 </div>
@@ -437,7 +435,7 @@
             </a>
         </div>
         <div class="fade-up mt-10 text-center">
-            <a href="{{ route('services') }}" class="btn btn-outline border-neutral-500 text-neutral-300 hover:bg-white/10">View all products & specialties <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg></a>
+            <a href="<?php echo e(route('services')); ?>" class="btn btn-outline border-neutral-500 text-neutral-300 hover:bg-white/10">View all products & specialties <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg></a>
         </div>
     </div>
 </section>
@@ -447,7 +445,7 @@
         <div class="grid items-center gap-16 lg:grid-cols-2">
             <div class="fade-up order-2 lg:order-1">
                 <div class="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-800">
-                    <img src="{{ asset('images/HomeContact.png') }}" alt="Why Classic Reinsurance Brokers" class="h-full w-full object-cover opacity-90">
+                    <img src="<?php echo e(asset('images/HomeContact.png')); ?>" alt="Why Classic Reinsurance Brokers" class="h-full w-full object-cover opacity-90">
                 </div>
             </div>
             <div class="fade-up order-1 lg:order-2" style="transition-delay: 0.1s">
@@ -503,7 +501,7 @@
             <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl font-heading">Partner with Classic Reinsurance Brokers</h2>
             <p class="mt-6 text-lg leading-relaxed text-primary-100">Let our team help you connect with the right reinsurance markets for your portfolio. Reach out today for a confidential consultation.</p>
             <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <a href="{{ route('contact') }}" class="btn bg-white text-primary-700 hover:bg-primary-50 hover:text-primary-800 text-base px-8 py-3">
+                <a href="<?php echo e(route('contact')); ?>" class="btn bg-white text-primary-700 hover:bg-primary-50 hover:text-primary-800 text-base px-8 py-3">
                     Get in touch
                     <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg>
                 </a>
@@ -512,4 +510,6 @@
         </div>
     </div>
 </section>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\claud\OneDrive\Desktop\classicreinsurancebrokers\resources\views/index.blade.php ENDPATH**/ ?>

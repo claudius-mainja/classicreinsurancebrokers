@@ -1,14 +1,14 @@
 <footer class="relative overflow-hidden border-t border-white/5 bg-neutral-950">
-    {{-- Animated background orbs --}}
+    
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-primary-600/5 blur-3xl animate-pulse-glow"></div>
         <div class="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-primary-800/5 blur-3xl animate-pulse-glow" style="animation-delay: 2s"></div>
     </div>
     <div class="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
         <div class="grid gap-12 lg:grid-cols-4">
-            {{-- Column 1: About --}}
+            
             <div class="fade-up">
-                <img src="{{ asset('images/logo.png') }}" alt="{{ config('app.name') }}" class="h-9 w-auto brightness-0 invert">
+                <img src="<?php echo e(asset('images/logo.png')); ?>" alt="<?php echo e(config('app.name')); ?>" class="h-9 w-auto brightness-0 invert">
                 <p class="mt-4 max-w-xs text-sm leading-relaxed text-neutral-500">
                     Zimbabwe's premier reinsurance broker, connecting insurance companies with leading global and regional reinsurance markets since 2015.
                 </p>
@@ -25,39 +25,39 @@
                 </div>
             </div>
 
-            {{-- Column 2: Reinsurance Products --}}
+            
             <div class="fade-up" style="transition-delay: 0.1s">
                 <h4 class="text-sm font-semibold text-white flex items-center gap-2">
                     <span class="h-px w-4 bg-primary-500"></span>
                     Reinsurance Products
                 </h4>
                 <ul class="mt-5 space-y-2.5">
-                    <li><a href="{{ route('services.product', 'motor-insurance') }}" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Motor Insurance</a></li>
-                    <li><a href="{{ route('services.product', 'household') }}" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Household</a></li>
-                    <li><a href="{{ route('services.product', 'engineering') }}" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Engineering</a></li>
-                    <li><a href="{{ route('services.product', 'assets-all-risks') }}" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Assets All Risks</a></li>
-                    <li><a href="{{ route('services.product', 'liability-insurance') }}" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Liability Insurance</a></li>
-                    <li><a href="{{ route('services.product', 'agriculture-insurance') }}" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Agriculture Insurance</a></li>
+                    <li><a href="<?php echo e(route('services.product', 'motor-insurance')); ?>" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Motor Insurance</a></li>
+                    <li><a href="<?php echo e(route('services.product', 'household')); ?>" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Household</a></li>
+                    <li><a href="<?php echo e(route('services.product', 'engineering')); ?>" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Engineering</a></li>
+                    <li><a href="<?php echo e(route('services.product', 'assets-all-risks')); ?>" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Assets All Risks</a></li>
+                    <li><a href="<?php echo e(route('services.product', 'liability-insurance')); ?>" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Liability Insurance</a></li>
+                    <li><a href="<?php echo e(route('services.product', 'agriculture-insurance')); ?>" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Agriculture Insurance</a></li>
                 </ul>
             </div>
 
-            {{-- Column 3: Specialty Risk --}}
+            
             <div class="fade-up" style="transition-delay: 0.2s">
                 <h4 class="text-sm font-semibold text-white flex items-center gap-2">
                     <span class="h-px w-4 bg-primary-500"></span>
                     Specialty Risk
                 </h4>
                 <ul class="mt-5 space-y-2.5">
-                    <li><a href="{{ route('services.specialty', 'aviation') }}" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Aviation</a></li>
-                    <li><a href="{{ route('services.specialty', 'cyber') }}" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Cyber</a></li>
-                    <li><a href="{{ route('services.specialty', 'construction-projects') }}" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Construction Projects</a></li>
-                    <li><a href="{{ route('services.specialty', 'political-risks') }}" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Political Risks</a></li>
-                    <li><a href="{{ route('services.specialty', 'kidnap-and-ransom') }}" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Kidnap & Ransom</a></li>
-                    <li><a href="{{ route('services.specialty', 'marine-hull') }}" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Marine Hull</a></li>
+                    <li><a href="<?php echo e(route('services.specialty', 'aviation')); ?>" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Aviation</a></li>
+                    <li><a href="<?php echo e(route('services.specialty', 'cyber')); ?>" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Cyber</a></li>
+                    <li><a href="<?php echo e(route('services.specialty', 'construction-projects')); ?>" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Construction Projects</a></li>
+                    <li><a href="<?php echo e(route('services.specialty', 'political-risks')); ?>" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Political Risks</a></li>
+                    <li><a href="<?php echo e(route('services.specialty', 'kidnap-and-ransom')); ?>" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Kidnap & Ransom</a></li>
+                    <li><a href="<?php echo e(route('services.specialty', 'marine-hull')); ?>" class="text-sm text-neutral-500 transition-all duration-200 hover:text-primary-400 hover:translate-x-1 inline-block">Marine Hull</a></li>
                 </ul>
             </div>
 
-            {{-- Column 4: Contact --}}
+            
             <div class="fade-up" style="transition-delay: 0.3s">
                 <h4 class="text-sm font-semibold text-white flex items-center gap-2">
                     <span class="h-px w-4 bg-primary-500"></span>
@@ -84,7 +84,7 @@
             </div>
         </div>
 
-        {{-- Bottom bar --}}
+        
         <div class="mt-10 border-t border-white/5 pt-6">
             <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-neutral-600">
                 <span>Reinsurance broker Zimbabwe</span>
@@ -96,15 +96,15 @@
             </div>
         </div>
         <div class="mt-6 flex flex-col items-center justify-between gap-6 border-t border-white/5 pt-8 sm:flex-row">
-            <p class="text-xs text-neutral-600">&copy; {{ date('Y') }} {{ config('app.name') }}. All rights reserved. <a href="https://www.classicre.co.zw" class="text-primary-500/70 hover:text-primary-400 transition-colors">www.classicre.co.zw</a></p>
+            <p class="text-xs text-neutral-600">&copy; <?php echo e(date('Y')); ?> <?php echo e(config('app.name')); ?>. All rights reserved. <a href="https://www.classicre.co.zw" class="text-primary-500/70 hover:text-primary-400 transition-colors">www.classicre.co.zw</a></p>
             <div class="flex gap-6">
-                <a href="{{ route('privacy') }}" class="text-xs text-neutral-600 transition-colors hover:text-primary-400">Privacy Policy</a>
-                <a href="{{ route('terms') }}" class="text-xs text-neutral-600 transition-colors hover:text-primary-400">Terms &amp; Conditions</a>
-                <a href="{{ route('contact') }}" class="text-xs text-neutral-600 transition-colors hover:text-primary-400">Contact</a>
+                <a href="<?php echo e(route('privacy')); ?>" class="text-xs text-neutral-600 transition-colors hover:text-primary-400">Privacy Policy</a>
+                <a href="<?php echo e(route('terms')); ?>" class="text-xs text-neutral-600 transition-colors hover:text-primary-400">Terms &amp; Conditions</a>
+                <a href="<?php echo e(route('contact')); ?>" class="text-xs text-neutral-600 transition-colors hover:text-primary-400">Contact</a>
             </div>
         </div>
         <div class="mt-4 text-center">
             <p class="text-xs text-neutral-700">Designed and developed by <a href="https://www.blacklemur.co.zw" target="_blank" rel="noopener" class="text-primary-500 hover:text-primary-400 transition-colors">Claudius Mainja (Blacklemur Innovations)</a> — <a href="https://www.blacklemur.co.zw" target="_blank" rel="noopener" class="text-neutral-600 hover:text-primary-400 transition-colors">Web design Zimbabwe</a></p>
         </div>
     </div>
-</footer>
+</footer><?php /**PATH C:\Users\claud\OneDrive\Desktop\classicreinsurancebrokers\resources\views/components/footer.blade.php ENDPATH**/ ?>

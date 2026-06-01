@@ -1,59 +1,57 @@
-@extends('layouts.app')
+<?php $__env->startSection('title', $specialty['name'] . ' Specialty Reinsurance | Classic Reinsurance Brokers'); ?>
+<?php $__env->startSection('meta_description', $specialty['description']); ?>
+<?php $__env->startSection('meta_keywords'); ?><?php echo e(Str::slug($specialty['name'])); ?> specialty reinsurance, <?php echo e($specialty['name']); ?> insurance Zimbabwe, specialty risk insurance, complex risk reinsurance, emerging risk coverage Zimbabwe, Classic Reinsurance Brokers specialty
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('og_title', $specialty['name'] . ' Specialty Reinsurance | Classic Reinsurance Brokers'); ?>
+<?php $__env->startSection('og_description', $specialty['description']); ?>
 
-@section('title', $specialty['name'] . ' Specialty Reinsurance | Classic Reinsurance Brokers')
-@section('meta_description', $specialty['description'])
-@section('meta_keywords'){{ Str::slug($specialty['name']) }} specialty reinsurance, {{ $specialty['name'] }} insurance Zimbabwe, specialty risk insurance, complex risk reinsurance, emerging risk coverage Zimbabwe, Classic Reinsurance Brokers specialty
-@endsection
-@section('og_title', $specialty['name'] . ' Specialty Reinsurance | Classic Reinsurance Brokers')
-@section('og_description', $specialty['description'])
-
-@push('head')
+<?php $__env->startPush('head'); ?>
 <script type="application/ld+json">
 {
-    "@@context": "https://schema.org",
+    "@context": "https://schema.org",
     "@type": "Service",
-    "name": "{{ $specialty['name'] }} Specialty Reinsurance",
-    "description": "{{ $specialty['description'] }}",
+    "name": "<?php echo e($specialty['name']); ?> Specialty Reinsurance",
+    "description": "<?php echo e($specialty['description']); ?>",
     "serviceType": "Specialty Reinsurance",
-    "provider": { "@type": "InsuranceBrokerage", "name": "Classic Reinsurance Brokers", "url": "{{ url('/') }}" },
+    "provider": { "@type": "InsuranceBrokerage", "name": "Classic Reinsurance Brokers", "url": "<?php echo e(url('/')); ?>" },
     "areaServed": ["Zimbabwe", "Africa"]
 }
 </script>
 <script type="application/ld+json">
 {
-    "@@context": "https://schema.org",
+    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "What is {{ $specialty['name'] }} specialty reinsurance?",
+            "name": "What is <?php echo e($specialty['name']); ?> specialty reinsurance?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "{{ $specialty['name'] }} specialty reinsurance provides dedicated risk transfer capacity for complex and emerging risks that require deep underwriting expertise. Classic Reinsurance Brokers facilitates these placements with leading global specialty markets."
+                "text": "<?php echo e($specialty['name']); ?> specialty reinsurance provides dedicated risk transfer capacity for complex and emerging risks that require deep underwriting expertise. Classic Reinsurance Brokers facilitates these placements with leading global specialty markets."
             }
         },
         {
             "@type": "Question",
-            "name": "Which markets provide {{ $specialty['name'] }} reinsurance capacity?",
+            "name": "Which markets provide <?php echo e($specialty['name']); ?> reinsurance capacity?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We access global specialty reinsurance markets including Lloyd's, London company market, and international specialty reinsurers to secure capacity for {{ lcfirst($specialty['name']) }} risks."
+                "text": "We access global specialty reinsurance markets including Lloyd's, London company market, and international specialty reinsurers to secure capacity for <?php echo e(lcfirst($specialty['name'])); ?> risks."
             }
         },
         {
             "@type": "Question",
-            "name": "Is {{ $specialty['name'] }} reinsurance available in Zimbabwe?",
+            "name": "Is <?php echo e($specialty['name']); ?> reinsurance available in Zimbabwe?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, Classic Reinsurance Brokers provides {{ lcfirst($specialty['name']) }} reinsurance intermediary services to insurance companies in Zimbabwe, connecting them with global specialty markets for complex risk transfer solutions."
+                "text": "Yes, Classic Reinsurance Brokers provides <?php echo e(lcfirst($specialty['name'])); ?> reinsurance intermediary services to insurance companies in Zimbabwe, connecting them with global specialty markets for complex risk transfer solutions."
             }
         }
     ]
 }
 </script>
-@endpush
+<?php $__env->stopPush(); ?>
 
-@php
+<?php
 $allSpecialties = [
     'aviation' => 'Aviation',
     'bankers-blanket' => 'Bankers\' Blanket',
@@ -65,11 +63,11 @@ $allSpecialties = [
     'political-risks' => 'Political Risks',
     'political-violence-terrorism' => 'Political Violence & Terrorism',
 ];
-@endphp
+?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <section class="relative min-h-[50vh] flex items-center overflow-hidden bg-neutral-950">
-    <div class="absolute inset-0 bg-cover bg-center bg-fixed opacity-15" style="background-image: url('{{ asset('images/hero-pattern.png') }}')"></div>
+    <div class="absolute inset-0 bg-cover bg-center bg-fixed opacity-15" style="background-image: url('<?php echo e(asset('images/hero-pattern.png')); ?>')"></div>
     <div class="absolute inset-0 bg-gradient-to-br from-primary-900/70 via-neutral-950/90 to-neutral-950"></div>
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute top-1/4 left-1/4 h-2 w-2 rounded-full bg-primary-500/40 animate-pulse" style="animation-delay: 0s"></div>
@@ -81,43 +79,43 @@ $allSpecialties = [
     </div>
     <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-24 lg:py-32">
         <nav class="fade-up flex items-center gap-2 text-sm text-neutral-400 mb-8">
-            <a href="{{ route('home') }}" class="transition-colors hover:text-white">Home</a>
+            <a href="<?php echo e(route('home')); ?>" class="transition-colors hover:text-white">Home</a>
             <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg>
-            <a href="{{ route('services') }}" class="transition-colors hover:text-white">Services</a>
+            <a href="<?php echo e(route('services')); ?>" class="transition-colors hover:text-white">Services</a>
             <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg>
-            <span class="text-white">{{ $specialty['name'] }}</span>
+            <span class="text-white"><?php echo e($specialty['name']); ?></span>
         </nav>
         <div class="grid items-center gap-12 lg:grid-cols-2">
             <div class="fade-up">
                 <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-primary-300 backdrop-blur-sm">Specialty risk</span>
-                <h1 class="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">{{ $specialty['name'] }}</h1>
-                <p class="mt-6 text-lg leading-relaxed text-neutral-300">{{ $specialty['description'] }}</p>
+                <h1 class="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl"><?php echo e($specialty['name']); ?></h1>
+                <p class="mt-6 text-lg leading-relaxed text-neutral-300"><?php echo e($specialty['description']); ?></p>
                 <div class="mt-8 flex flex-wrap gap-4">
-                    <a href="{{ route('contact') }}" class="btn bg-primary-600 text-white hover:bg-primary-700">Discuss your risk</a>
-                    <a href="{{ route('services') }}" class="btn border border-white/30 text-white hover:bg-white/10">All specialties</a>
+                    <a href="<?php echo e(route('contact')); ?>" class="btn bg-primary-600 text-white hover:bg-primary-700">Discuss your risk</a>
+                    <a href="<?php echo e(route('services')); ?>" class="btn border border-white/30 text-white hover:bg-white/10">All specialties</a>
                 </div>
             </div>
             <div class="fade-up relative" style="transition-delay: 0.1s">
-                @php
+                <?php
                 $specImage = 'images/specialty/' . Str::slug($specialty['name']) . '.jpg';
                 $specImagePng = 'images/specialty/' . Str::slug($specialty['name']) . '.png';
-                @endphp
+                ?>
                 <div class="aspect-[4/3] overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                    <img src="{{ asset($specImage) }}" alt="{{ $specialty['name'] }}" class="h-full w-full object-cover" onerror="this.src='{{ asset($specImagePng) }}'; this.onerror=null">
+                    <img src="<?php echo e(asset($specImage)); ?>" alt="<?php echo e($specialty['name']); ?>" class="h-full w-full object-cover" onerror="this.src='<?php echo e(asset($specImagePng)); ?>'; this.onerror=null">
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-@if(!empty($specialty['fullDescription']))
+<?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(!empty($specialty['fullDescription'])): ?>
 <section class="bg-neutral-950 py-20 lg:py-28">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="grid gap-12 lg:grid-cols-5">
             <div class="fade-up lg:col-span-3">
                 <span class="section-label">About this specialty</span>
-                <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">{{ $specialty['name'] }} Reinsurance</h2>
-                <p class="mt-6 text-lg leading-relaxed text-neutral-300">{{ $specialty['fullDescription'] }}</p>
+                <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl"><?php echo e($specialty['name']); ?> Reinsurance</h2>
+                <p class="mt-6 text-lg leading-relaxed text-neutral-300"><?php echo e($specialty['fullDescription']); ?></p>
                 <div class="mt-6 rounded-xl border border-primary-500/20 bg-primary-500/5 p-4">
                     <p class="text-sm text-primary-200">As a specialist <strong class="text-white">reinsurance broker</strong>, we connect insurance companies with leading global and regional specialty reinsurance markets. We do not underwrite risk or assume liability directly. We facilitate the placement of complex and emerging risks with leading global specialty markets, giving our clients access to the expertise and capacity they need to serve their policyholders.</p>
                 </div>
@@ -146,57 +144,57 @@ $allSpecialties = [
         </div>
     </div>
 </section>
-@endif
+<?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
 <section class="border-t border-white/10 bg-neutral-950 py-20 lg:py-28">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="fade-up max-w-2xl mx-auto text-center">
             <span class="section-label">Service details</span>
             <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">Coverage options</h2>
-            <p class="mt-4 text-lg text-neutral-400">Specialist reinsurance capacity designed for {{ lcfirst($specialty['name']) }} risks.</p>
+            <p class="mt-4 text-lg text-neutral-400">Specialist reinsurance capacity designed for <?php echo e(lcfirst($specialty['name'])); ?> risks.</p>
         </div>
         <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            @forelse($specialty['features'] as $i => $feature)
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__empty_1 = true; $__currentLoopData = $specialty['features']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $feature): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
             <div class="fade-up card-glass relative overflow-hidden p-6 group">
                 <div class="absolute right-0 top-0 h-20 w-20 translate-x-8 -translate-y-8 rounded-full bg-primary-600/5 transition-all group-hover:scale-150"></div>
                 <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-600/10 text-primary-500 transition-colors group-hover:bg-primary-600 group-hover:text-white">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </div>
-                <h3 class="mt-4 text-lg font-bold text-white">{{ $feature }}</h3>
-                <p class="mt-2 text-sm leading-relaxed text-neutral-400">Bespoke reinsurance solutions for {{ lcfirst($feature) }}, supported by deep specialty underwriting expertise and access to leading global specialty markets.</p>
+                <h3 class="mt-4 text-lg font-bold text-white"><?php echo e($feature); ?></h3>
+                <p class="mt-2 text-sm leading-relaxed text-neutral-400">Bespoke reinsurance solutions for <?php echo e(lcfirst($feature)); ?>, supported by deep specialty underwriting expertise and access to leading global specialty markets.</p>
             </div>
-            @empty
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
             <div class="col-span-full text-center text-neutral-500"><p>Coverage details coming soon.</p></div>
-            @endforelse
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
         </div>
     </div>
 </section>
 
-@if(!empty($specialty['benefits']))
+<?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(!empty($specialty['benefits'])): ?>
 <section class="border-t border-white/10 bg-neutral-900 py-20 lg:py-28">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="grid gap-12 lg:grid-cols-2">
             <div class="fade-up">
                 <span class="section-label">Client benefits</span>
-                <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">Why our {{ $specialty['name'] }} solutions</h2>
-                <p class="mt-6 text-lg leading-relaxed text-neutral-400">Partner with Classic Reinsurance Brokers for your {{ lcfirst($specialty['name']) }} reinsurance needs and gain access to specialist expertise, global capacity, and dedicated service.</p>
+                <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">Why our <?php echo e($specialty['name']); ?> solutions</h2>
+                <p class="mt-6 text-lg leading-relaxed text-neutral-400">Partner with Classic Reinsurance Brokers for your <?php echo e(lcfirst($specialty['name'])); ?> reinsurance needs and gain access to specialist expertise, global capacity, and dedicated service.</p>
             </div>
             <div class="fade-up space-y-4" style="transition-delay:0.1s">
-                @foreach($specialty['benefits'] as $i => $benefit)
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $specialty['benefits']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $benefit): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="card-glass flex items-start gap-4 p-5 transition-all hover:border-primary-500/30">
-                    <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-600/15 text-primary-400 text-sm font-bold">{{ $i + 1 }}</span>
+                    <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-600/15 text-primary-400 text-sm font-bold"><?php echo e($i + 1); ?></span>
                     <div>
-                        <p class="text-base font-semibold text-white">{{ $benefit }}</p>
+                        <p class="text-base font-semibold text-white"><?php echo e($benefit); ?></p>
                     </div>
                 </div>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
             </div>
         </div>
     </div>
 </section>
-@endif
+<?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-@if(!empty($specialty['process']))
+<?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(!empty($specialty['process'])): ?>
 <section class="border-t border-white/10 bg-neutral-950 py-20 lg:py-28">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="fade-up max-w-2xl mx-auto text-center">
@@ -205,18 +203,18 @@ $allSpecialties = [
             <p class="mt-4 text-lg text-neutral-400">A structured process from risk assessment through to ongoing programme management.</p>
         </div>
         <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            @foreach($specialty['process'] as $i => $step)
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $specialty['process']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $step): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="fade-up relative text-center">
-                <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary-600 to-primary-800 text-white text-xl font-bold shadow-lg shadow-primary-600/20">{{ $i + 1 }}</div>
-                @if(!$loop->last)<div class="absolute left-[calc(50%+40px)] top-8 hidden h-0.5 w-[calc(100%-80px)] bg-gradient-to-r from-primary-500/50 to-transparent lg:block"></div>@endif
-                <h3 class="mt-5 text-base font-bold text-white">{{ $step }}</h3>
+                <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary-600 to-primary-800 text-white text-xl font-bold shadow-lg shadow-primary-600/20"><?php echo e($i + 1); ?></div>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(!$loop->last): ?><div class="absolute left-[calc(50%+40px)] top-8 hidden h-0.5 w-[calc(100%-80px)] bg-gradient-to-r from-primary-500/50 to-transparent lg:block"></div><?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                <h3 class="mt-5 text-base font-bold text-white"><?php echo e($step); ?></h3>
                 <p class="mt-2 text-xs text-neutral-400">Dedicated support throughout every stage of the specialty reinsurance lifecycle.</p>
             </div>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
         </div>
     </div>
 </section>
-@endif
+<?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
 <section class="border-t border-white/10 bg-neutral-950 py-20 lg:py-28">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -263,14 +261,15 @@ $allSpecialties = [
                     <h3 class="text-base font-bold text-white">Specialty Risk Classes</h3>
                     <p class="mt-1 text-xs text-neutral-400">Explore our full range of specialty insurance solutions.</p>
                     <ul class="mt-6 space-y-1">
-                        @foreach($allSpecialties as $slug => $sname)
+                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $allSpecialties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slug => $sname): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <li>
-                            <a href="{{ route('services.specialty', $slug) }}" class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-neutral-400 transition-all hover:bg-primary-600/10 hover:text-primary-300 @if($sname === $specialty['name']) bg-primary-600/10 text-primary-300 @endif">
+                            <a href="<?php echo e(route('services.specialty', $slug)); ?>" class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-neutral-400 transition-all hover:bg-primary-600/10 hover:text-primary-300 <?php if($sname === $specialty['name']): ?> bg-primary-600/10 text-primary-300 <?php endif; ?>">
                                 <span class="h-1.5 w-1.5 rounded-full bg-current"></span>
-                                {{ $sname }}
+                                <?php echo e($sname); ?>
+
                             </a>
                         </li>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                     </ul>
                 </div>
             </aside>
@@ -279,7 +278,7 @@ $allSpecialties = [
 </section>
 
 <section class="relative overflow-hidden bg-neutral-950 py-20 lg:py-28">
-    <div class="absolute inset-0 bg-cover bg-center bg-fixed opacity-10" style="background-image: url('{{ asset('images/hero-pattern.png') }}')"></div>
+    <div class="absolute inset-0 bg-cover bg-center bg-fixed opacity-10" style="background-image: url('<?php echo e(asset('images/hero-pattern.png')); ?>')"></div>
     <div class="absolute inset-0 bg-gradient-to-br from-primary-900/60 via-neutral-950/90 to-neutral-950"></div>
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute top-1/3 left-1/4 h-2 w-2 rounded-full bg-primary-500/30 animate-pulse" style="animation-delay: 0s"></div>
@@ -291,10 +290,12 @@ $allSpecialties = [
             <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">Partner with Classic Reinsurance Brokers</h2>
             <p class="mt-6 text-lg leading-relaxed text-primary-200">Our specialty team is ready to help you navigate complex risks with bespoke reinsurance solutions. Contact us to discuss how we can support your unique requirements.</p>
             <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <a href="{{ route('contact') }}" class="btn bg-primary-600 text-white hover:bg-primary-700 text-base px-8 py-3">Contact our team</a>
+                <a href="<?php echo e(route('contact')); ?>" class="btn bg-primary-600 text-white hover:bg-primary-700 text-base px-8 py-3">Contact our team</a>
                 <a href="tel:+263242773192" class="btn border border-white/30 text-white hover:bg-white/10 text-base px-8 py-3">+263 242 773192/3/4</a>
             </div>
         </div>
     </div>
 </section>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\claud\OneDrive\Desktop\classicreinsurancebrokers\resources\views/pages/specialty.blade.php ENDPATH**/ ?>

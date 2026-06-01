@@ -1,18 +1,16 @@
-@extends('layouts.app')
+<?php $__env->startSection('title', 'Contact Us | Classic Reinsurance Brokers'); ?>
+<?php $__env->startSection('meta_description', 'Get in touch with Classic Reinsurance Brokers — Zimbabwe\'s premier reinsurance broker. Call +263 242 773192 or visit our Harare office at 11th Floor Fidelity Life Tower.'); ?>
+<?php $__env->startSection('meta_keywords', 'contact Classic Reinsurance Brokers, reinsurance broker Zimbabwe phone, Harare reinsurance broker address, reinsurance broker contact, insurance broker Harare Zimbabwe, +263 242 773192, info@classicre.co.zw'); ?>
+<?php $__env->startSection('og_title', 'Contact Classic Reinsurance Brokers | Harare Office'); ?>
+<?php $__env->startSection('og_description', 'Reach out to Zimbabwe\'s premier reinsurance broker for tailored reinsurance placements across Africa. Call +263 242 773192 or email info@classicre.co.zw.'); ?>
 
-@section('title', 'Contact Us | Classic Reinsurance Brokers')
-@section('meta_description', 'Get in touch with Classic Reinsurance Brokers — Zimbabwe\'s premier reinsurance broker. Call +263 242 773192 or visit our Harare office at 11th Floor Fidelity Life Tower.')
-@section('meta_keywords', 'contact Classic Reinsurance Brokers, reinsurance broker Zimbabwe phone, Harare reinsurance broker address, reinsurance broker contact, insurance broker Harare Zimbabwe, +263 242 773192, info@classicre.co.zw')
-@section('og_title', 'Contact Classic Reinsurance Brokers | Harare Office')
-@section('og_description', 'Reach out to Zimbabwe\'s premier reinsurance broker for tailored reinsurance placements across Africa. Call +263 242 773192 or email info@classicre.co.zw.')
-
-@push('head')
+<?php $__env->startPush('head'); ?>
 <script type="application/ld+json">
 {
-    "@@context": "https://schema.org",
+    "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact Classic Reinsurance Brokers",
-    "url": "{{ url()->current() }}",
+    "url": "<?php echo e(url()->current()); ?>",
     "mainEntity": {
         "@type": "Organization",
         "name": "Classic Reinsurance Brokers",
@@ -23,11 +21,11 @@
     }
 }
 </script>
-@endpush
+<?php $__env->stopPush(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <section class="relative min-h-[50vh] flex items-center overflow-hidden bg-neutral-950">
-    <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('{{ asset('images/serviceshero.png') }}')"></div>
+    <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('<?php echo e(asset('images/serviceshero.png')); ?>')"></div>
     <div class="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-neutral-950/85 to-neutral-950"></div>
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute top-1/4 left-[15%] h-2 w-2 rounded-full bg-primary-500/40 particle" style="animation-delay: 0s"></div>
@@ -55,8 +53,8 @@
                 <span class="section-label">Send us a message</span>
                 <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">Let's start a conversation</h2>
                 <p class="mt-4 text-lg leading-relaxed text-neutral-400">Fill out the form below and a member of our team will get back to you within 24 hours.</p>
-                <form action="{{ route('contact.submit') }}" method="POST" class="mt-10 space-y-5">
-                    @csrf
+                <form action="<?php echo e(route('contact.submit')); ?>" method="POST" class="mt-10 space-y-5">
+                    <?php echo csrf_field(); ?>
                     <div class="grid gap-5 sm:grid-cols-2">
                         <div>
                             <label for="name" class="block text-sm font-medium text-neutral-300">Full name <span class="text-primary-500">*</span></label>
@@ -214,4 +212,6 @@
         </div>
     </div>
 </section>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\claud\OneDrive\Desktop\classicreinsurancebrokers\resources\views/pages/contact.blade.php ENDPATH**/ ?>

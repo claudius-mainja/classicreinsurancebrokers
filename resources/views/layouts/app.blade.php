@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', config('app.name'))</title>
-    <meta name="description" content="@yield('meta_description', 'Classic Reinsurance Brokers — Zimbabwe\'s premier reinsurance-to-reinsurance intermediary, delivering expert treaty, facultative, and advisory reinsurance solutions since 2015.')">
-    <meta name="keywords" content="@yield('meta_keywords', 'reinsurance broker Zimbabwe, reinsurance intermediary, reinsurance-to-reinsurance, treaty reinsurance, facultative reinsurance, reinsurance advisory, Classic Reinsurance Brokers, Harare reinsurance broker, African reinsurance, insurance companies Zimbabwe, risk management Zimbabwe, reinsurance solutions, reinsurance products Zimbabwe, specialty reinsurance, political risk reinsurance, cyber reinsurance')">
+    <meta name="description" content="@yield('meta_description', 'Classic Reinsurance Brokers — Zimbabwe\'s premier reinsurance broker, connecting insurance companies with leading global and regional reinsurance markets through expert treaty, facultative, and advisory placements since 2015.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'reinsurance broker Zimbabwe, reinsurance broker Harare, treaty reinsurance Zimbabwe, facultative reinsurance, reinsurance advisory, Classic Reinsurance Brokers, insurance company reinsurance, African reinsurance broker, risk management Zimbabwe, insurance broker Zimbabwe, reinsurance intermediary, reinsurance products Zimbabwe, specialty reinsurance, political risk reinsurance, cyber reinsurance')">
     <meta name="author" content="Classic Reinsurance Brokers">
     <meta name="geo.region" content="ZW">
     <meta name="geo.placename" content="Harare">
     <meta name="geo.position" content="-17.8252;31.0335">
     <meta name="ICBM" content="-17.8252, 31.0335">
     <meta property="og:title" content="@yield('og_title', config('app.name'))">
-    <meta property="og:description" content="@yield('og_description', 'Zimbabwe\'s premier reinsurance broker delivering innovative and tailored reinsurance-to-reinsurance intermediary solutions.')">
+    <meta property="og:description" content="@yield('og_description', 'Zimbabwe\'s premier reinsurance broker delivering innovative and tailored reinsurance placements for insurance companies.')">
     <meta property="og:image" content="@yield('og_image', asset('images/og-image.png'))">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
@@ -21,7 +21,7 @@
     <meta property="og:locale" content="en_ZW">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="@yield('og_title', config('app.name'))">
-    <meta name="twitter:description" content="@yield('og_description', 'Zimbabwe\'s premier reinsurance-to-reinsurance intermediary.')">
+    <meta name="twitter:description" content="@yield('og_description', 'Zimbabwe\'s premier reinsurance broker, connecting insurance companies with leading reinsurance markets.')">
     <meta name="twitter:image" content="@yield('og_image', asset('images/og-image.png'))">
     <meta name="robots" content="@yield('robots', 'index, follow')">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -37,7 +37,7 @@
         "@@context": "https://schema.org",
         "@@type": "InsuranceBrokerage",
         "name": "Classic Reinsurance Brokers",
-        "description": "Zimbabwe's premier reinsurance-to-reinsurance intermediary brokering treaty, facultative, and specialty reinsurance solutions.",
+        "description": "Zimbabwe's premier reinsurance broker connecting insurance companies with leading global and regional reinsurance markets for treaty, facultative, and specialty reinsurance solutions.",
         "url": "{{ url('/') }}",
         "telephone": "+263242773192",
         "email": "info@classicre.co.zw",

@@ -1,22 +1,20 @@
-@extends('layouts.app')
+<?php $__env->startSection('title', 'About Us — Classic Reinsurance Brokers'); ?>
+<?php $__env->startSection('meta_description', 'Classic Reinsurance Brokers is Zimbabwe\'s premier reinsurance broker, delivering innovative and tailored reinsurance placements since 2015. Learn about our mission, vision, values, and leadership team.'); ?>
+<?php $__env->startSection('meta_keywords', 'about Classic Reinsurance Brokers, reinsurance broker Zimbabwe history, Kingstone Mhinda, reinsurance broker Harare, reinsurance company Zimbabwe, insurance broker Zimbabwe, reinsurance broker team, insurance and reinsurance Zimbabwe'); ?>
+<?php $__env->startSection('og_title', 'About Classic Reinsurance Brokers — Premier Reinsurance Broker'); ?>
+<?php $__env->startSection('og_description', 'Learn about Zimbabwe\'s premier reinsurance broker — our mission, vision, values, leadership team, and comprehensive reinsurance broking services since 2015.'); ?>
 
-@section('title', 'About Us — Classic Reinsurance Brokers')
-@section('meta_description', 'Classic Reinsurance Brokers is Zimbabwe\'s premier reinsurance broker, delivering innovative and tailored reinsurance placements since 2015. Learn about our mission, vision, values, and leadership team.')
-@section('meta_keywords', 'about Classic Reinsurance Brokers, reinsurance broker Zimbabwe history, Kingstone Mhinda, reinsurance broker Harare, reinsurance company Zimbabwe, insurance broker Zimbabwe, reinsurance broker team, insurance and reinsurance Zimbabwe')
-@section('og_title', 'About Classic Reinsurance Brokers — Premier Reinsurance Broker')
-@section('og_description', 'Learn about Zimbabwe\'s premier reinsurance broker — our mission, vision, values, leadership team, and comprehensive reinsurance broking services since 2015.')
-
-@push('head')
+<?php $__env->startPush('head'); ?>
 <script type="application/ld+json">
 {
-    "@@context": "https://schema.org",
+    "@context": "https://schema.org",
     "@type": "AboutPage",
     "name": "About Classic Reinsurance Brokers",
     "description": "Zimbabwe's premier reinsurance broker delivering innovative and tailored reinsurance placements.",
     "mainEntity": {
         "@type": "Organization",
         "name": "Classic Reinsurance Brokers",
-        "url": "{{ url('/') }}",
+        "url": "<?php echo e(url('/')); ?>",
         "telephone": "+263242773192",
         "email": "info@classicre.co.zw",
         "address": { "@type": "PostalAddress", "streetAddress": "11th Floor Fidelity Life Tower, 5 Raleigh Street", "addressLocality": "Harare", "addressCountry": "ZW" },
@@ -24,11 +22,11 @@
     }
 }
 </script>
-@endpush
+<?php $__env->stopPush(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <section class="relative min-h-[60vh] lg:min-h-[70vh] flex items-center overflow-hidden bg-neutral-950">
-    <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('{{ asset('images/abouthero.png') }}')"></div>
+    <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('<?php echo e(asset('images/abouthero.png')); ?>')"></div>
     <div class="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-neutral-950/85 to-neutral-950"></div>
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute top-1/4 left-[15%] h-2 w-2 rounded-full bg-primary-500/40 particle" style="animation-delay: 0s"></div>
@@ -54,7 +52,7 @@
         <div class="grid items-center gap-16 lg:grid-cols-2">
             <div class="fade-up relative">
                 <div class="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-800">
-                    <img src="{{ asset('images/abouthero.png') }}" alt="Classic Reinsurance Brokers" class="h-full w-full object-cover">
+                    <img src="<?php echo e(asset('images/abouthero.png')); ?>" alt="Classic Reinsurance Brokers" class="h-full w-full object-cover">
                 </div>
             </div>
             <div class="fade-up" style="transition-delay: 0.1s">
@@ -70,8 +68,8 @@
                     <p class="text-sm text-primary-200">As a specialist <strong class="text-white">reinsurance broker</strong>, we connect insurance companies with leading global and regional reinsurance markets. We do not underwrite risk or assume liability directly; instead, we facilitate the placement of risk with leading reinsurers, giving our clients the capacity and expertise they need to write business with confidence.</p>
                 </div>
                 <div class="mt-8 flex flex-wrap gap-4">
-                    <a href="{{ route('contact') }}" class="btn btn-primary">Get in touch</a>
-                    <a href="{{ route('services') }}" class="btn btn-outline">Our services</a>
+                    <a href="<?php echo e(route('contact')); ?>" class="btn btn-primary">Get in touch</a>
+                    <a href="<?php echo e(route('services')); ?>" class="btn btn-outline">Our services</a>
                 </div>
             </div>
         </div>
@@ -152,7 +150,7 @@
         <div class="mt-12 grid gap-6 lg:grid-cols-3">
             <div class="fade-up card-glass overflow-hidden">
                 <div class="aspect-[16/9] bg-neutral-800">
-                    <img src="{{ asset('images/about-reinsurance-broking.jpg') }}" alt="Reinsurance Broking Services" class="h-full w-full object-cover">
+                    <img src="<?php echo e(asset('images/about-reinsurance-broking.jpg')); ?>" alt="Reinsurance Broking Services" class="h-full w-full object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="text-lg font-bold text-white">Reinsurance Broking Core Products</h3>
@@ -161,7 +159,7 @@
             </div>
             <div class="fade-up card-glass overflow-hidden" style="transition-delay: 0.1s">
                 <div class="aspect-[16/9] bg-neutral-800">
-                    <img src="{{ asset('images/aboutusabout.png') }}" alt="Reinsurance Services" class="h-full w-full object-cover">
+                    <img src="<?php echo e(asset('images/aboutusabout.png')); ?>" alt="Reinsurance Services" class="h-full w-full object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="text-lg font-bold text-white">Reinsurance Services</h3>
@@ -170,7 +168,7 @@
             </div>
             <div class="fade-up card-glass overflow-hidden" style="transition-delay: 0.2s">
                 <div class="aspect-[16/9] bg-neutral-800">
-                    <img src="{{ asset('images/calltoabout.png') }}" alt="Advisory Services" class="h-full w-full object-cover">
+                    <img src="<?php echo e(asset('images/calltoabout.png')); ?>" alt="Advisory Services" class="h-full w-full object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="text-lg font-bold text-white">Advisory Services</h3>
@@ -191,7 +189,7 @@
         <div class="mt-16 flex justify-center">
             <div class="fade-up text-center">
                 <div class="mx-auto h-40 w-40 overflow-hidden rounded-full bg-neutral-800 ring-4 ring-primary-600/30 shadow-lg">
-                    <img src="{{ asset('images/Kingstone.png') }}" alt="Kingstone Mhinda" class="h-full w-full object-cover">
+                    <img src="<?php echo e(asset('images/Kingstone.png')); ?>" alt="Kingstone Mhinda" class="h-full w-full object-cover">
                 </div>
                 <h3 class="mt-5 text-lg font-bold text-white">Kingstone Mhinda</h3>
                 <p class="text-sm font-semibold text-primary-500">Technical Director</p>
@@ -200,28 +198,28 @@
         <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-4xl mx-auto">
             <div class="fade-up text-center">
                 <div class="mx-auto h-32 w-32 overflow-hidden rounded-full bg-neutral-800 ring-4 ring-primary-600/20 shadow-lg">
-                    <img src="{{ asset('images/Nyasha.png') }}" alt="Nyasha E Whende" class="h-full w-full object-cover">
+                    <img src="<?php echo e(asset('images/Nyasha.png')); ?>" alt="Nyasha E Whende" class="h-full w-full object-cover">
                 </div>
                 <h3 class="mt-4 text-base font-bold text-white">Nyasha E Whende</h3>
                 <p class="text-xs font-semibold text-primary-500">Operations Manager</p>
             </div>
             <div class="fade-up text-center" style="transition-delay: 0.05s">
                 <div class="mx-auto h-32 w-32 overflow-hidden rounded-full bg-neutral-800 ring-4 ring-primary-600/20 shadow-lg">
-                    <img src="{{ asset('images/rachel.png') }}" alt="Rachel N. Hakutangwi" class="h-full w-full object-cover">
+                    <img src="<?php echo e(asset('images/rachel.png')); ?>" alt="Rachel N. Hakutangwi" class="h-full w-full object-cover">
                 </div>
                 <h3 class="mt-4 text-base font-bold text-white">Rachel N. Hakutangwi</h3>
                 <p class="text-xs font-semibold text-primary-500">Senior Reinsurance Broker</p>
             </div>
             <div class="fade-up text-center" style="transition-delay: 0.1s">
                 <div class="mx-auto h-32 w-32 overflow-hidden rounded-full bg-neutral-800 ring-4 ring-primary-600/20 shadow-lg">
-                    <img src="{{ asset('images/team/Tinashe.jpeg') }}" alt="Tinashe Y Chadenga" class="h-full w-full object-cover">
+                    <img src="<?php echo e(asset('images/team/Tinashe.jpeg')); ?>" alt="Tinashe Y Chadenga" class="h-full w-full object-cover">
                 </div>
                 <h3 class="mt-4 text-base font-bold text-white">Tinashe Y Chadenga</h3>
                 <p class="text-xs font-semibold text-primary-500">Assistant Accountant</p>
             </div>
             <div class="fade-up text-center" style="transition-delay: 0.15s">
                 <div class="mx-auto h-32 w-32 overflow-hidden rounded-full bg-neutral-800 ring-4 ring-primary-600/20 shadow-lg">
-                    <img src="{{ asset('images/team/Doreen.jpeg') }}" alt="Doreen Mabhiza" class="h-full w-full object-cover">
+                    <img src="<?php echo e(asset('images/team/Doreen.jpeg')); ?>" alt="Doreen Mabhiza" class="h-full w-full object-cover">
                 </div>
                 <h3 class="mt-4 text-base font-bold text-white">Doreen Mabhiza</h3>
                 <p class="text-xs font-semibold text-primary-500">Trainee Broker</p>
@@ -236,7 +234,7 @@
             <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">Partner with Classic Reinsurance Brokers</h2>
             <p class="mt-6 text-lg leading-relaxed text-primary-100">Let us help you access the reinsurance capacity and expertise your insurance portfolio needs. Reach out to our team today for a consultation.</p>
             <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <a href="{{ route('contact') }}" class="btn bg-white text-primary-700 hover:bg-primary-50 text-base px-8 py-3">
+                <a href="<?php echo e(route('contact')); ?>" class="btn bg-white text-primary-700 hover:bg-primary-50 text-base px-8 py-3">
                     Contact us today
                     <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg>
                 </a>
@@ -245,4 +243,6 @@
         </div>
     </div>
 </section>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\claud\OneDrive\Desktop\classicreinsurancebrokers\resources\views/pages/about.blade.php ENDPATH**/ ?>
