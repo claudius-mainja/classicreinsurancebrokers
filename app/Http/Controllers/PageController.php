@@ -27,8 +27,9 @@ class PageController extends Controller
         $products = [
             'motor-insurance' => [
                 'name' => 'Motor Insurance',
-                'subtitle' => 'Comprehensive reinsurance solutions for motor fleet and individual vehicle risks, providing financial protection against accidents, theft, and liability.',
-                'description' => 'Our Motor Insurance reinsurance solutions provide robust capacity and underwriting expertise across the full spectrum of automotive risks. From private passenger vehicles to large commercial fleets, we structure treaty and facultative programmes that deliver reliable protection and competitive pricing for our clients.',
+                'subtitle' => 'Reinsurance-to-reinsurance capacity solutions for motor portfolios, connecting reinsurers for fleet and individual vehicle risk distribution across Zimbabwe and Africa.',
+                'description' => 'Our Motor Insurance practice facilitates retrocession and co-reinsurance capacity across the full spectrum of automotive risks. From private passenger vehicles to large commercial fleets, we arrange treaty and facultative placements between reinsurers for reliable risk distribution and portfolio diversification.',
+                'fullDescription' => 'Our Motor Insurance practice facilitates retrocession and co-reinsurance capacity between reinsurers across the full spectrum of automotive risks in Zimbabwe and the region. We structure both treaty and facultative arrangements for private passenger vehicles, commercial fleets, third-party liability, and accidental damage exposures. Our team has deep experience in the Zimbabwean motor reinsurance market, enabling us to connect reinsurers with compatible capacity partners, negotiate competitive terms, and provide expert claims advocacy. We work with leading international and regional motor reinsurers to deliver tailored solutions that meet the unique needs of each portfolio, from small private vehicle schemes to large commercial fleet operations.',
                 'features' => [
                     'Private Vehicle Fleets',
                     'Commercial Vehicle Fleets',
@@ -38,22 +39,23 @@ class PageController extends Controller
                     'Fleet Management Solutions',
                 ],
                 'benefits' => [
-                    'Access to leading motor reinsurance markets with competitive capacity',
-                    'Tailored treaty structures for fleet portfolios of all sizes',
-                    'Expert claims advocacy and loss recovery support',
-                    'Regular market intelligence and pricing guidance',
+                    'Access to leading motor reinsurance markets through our intermediary network',
+                    'Tailored retrocession and co-reinsurance structures for fleet portfolios',
+                    'Portfolio diversification and accumulation management',
+                    'Market intelligence and pricing guidance for reinsurer partners',
                 ],
                 'process' => [
                     'Risk profiling and portfolio analysis',
-                    'Market strategy development',
-                    'Competitive placement with leading reinsurers',
+                    'Market strategy development for capacity sourcing',
+                    'Placement with compatible reinsurance partners',
                     'Ongoing programme monitoring and renewal management',
                 ],
             ],
             'household' => [
                 'name' => 'Household Insurance',
-                'subtitle' => 'Household reinsurance coverage protecting against property damage, theft, and liability risks for residential properties.',
-                'description' => 'Our Household Insurance reinsurance solutions provide comprehensive coverage for residential property risks, including buildings, contents, and associated perils. We support insurers with robust treaty capacity and facultative placement for household portfolios across Zimbabwe and the region.',
+                'subtitle' => 'Reinsurance-to-reinsurance capacity for residential property portfolios, connecting reinsurers for buildings, contents, and catastrophe protection.',
+                'description' => 'Our Household Insurance practice facilitates capacity sharing between reinsurers for residential property risks. We arrange treaty and facultative retrocession for household portfolios covering buildings, contents, and associated perils across Zimbabwe and the region.',
+                'fullDescription' => 'Our Household Insurance practice facilitates capacity sharing between reinsurers for residential property risks across Zimbabwe and the region. We arrange treaty and facultative retrocession for household portfolios covering buildings, contents, fire and allied perils, burglary, theft, and weather-related risks. Our team brings extensive experience in catastrophe exposure management for household books, helping reinsurer partners understand and mitigate accumulation risks. We structure flexible retrocession programmes that accommodate diverse risk profiles, from urban low-risk properties to high-value homes and rural exposures, ensuring optimal risk distribution and portfolio balance.',
                 'features' => [
                     'Buildings Insurance',
                     'Contents Insurance',
@@ -63,22 +65,23 @@ class PageController extends Controller
                     'Home Emergency Cover',
                 ],
                 'benefits' => [
-                    'Stable and secure reinsurance capacity for household portfolios',
+                    'Stable retrocession capacity for household portfolios',
                     'Flexible treaty structures accommodating diverse risk profiles',
                     'Catastrophe exposure management and aggregation control',
-                    'Expert underwriting guidance and claims support',
+                    'Portfolio diversification across property classes',
                 ],
                 'process' => [
                     'Portfolio exposure review and catastrophe modelling',
-                    'Optimal treaty structure design',
+                    'Optimal retrocession structure design',
                     'Placement with aligned reinsurance partners',
                     'Continuous portfolio monitoring and renewal optimisation',
                 ],
             ],
             'engineering' => [
                 'name' => 'Engineering Insurance',
-                'subtitle' => 'Specialized engineering reinsurance covering construction risks, machinery breakdown, and electronic equipment protection.',
-                'description' => 'Our Engineering Insurance reinsurance solutions deliver specialist capacity and technical underwriting expertise for complex engineering and construction risks. We provide treaty and facultative support across all major engineering classes, from infrastructure mega-projects to industrial machinery breakdown.',
+                'subtitle' => 'Reinsurance-to-reinsurance capacity for complex engineering and construction risks, connecting reinsurers for infrastructure and industrial portfolio distribution.',
+                'description' => 'Our Engineering Insurance practice facilitates retrocession and co-reinsurance capacity for complex engineering risks. We arrange treaty and facultative placements between reinsurers across all major engineering classes, from infrastructure mega-projects to industrial machinery breakdown.',
+                'fullDescription' => 'Our Engineering Insurance practice facilitates retrocession and co-reinsurance capacity between reinsurers for complex engineering and construction risks across Zimbabwe and the region. We arrange treaty and facultative placements across all major engineering classes, including contractor\'s all risks, erection all risks, plant and machinery breakdown, electronic equipment insurance, and delay in start-up. Our team has extensive experience in assessing and structuring capacity for infrastructure mega-projects, industrial facilities, and commercial construction. We connect reinsurers with leading engineering markets for optimal risk distribution, and provide dedicated claims advocacy with a technical engineering focus.',
                 'features' => [
                     'Contractor\'s All Risks',
                     'Erection All Risks',
@@ -88,10 +91,10 @@ class PageController extends Controller
                     'Infrastructure Project Cover',
                 ],
                 'benefits' => [
-                    'Specialist engineering underwriting expertise and market knowledge',
+                    'Specialist engineering capacity sourcing and market access',
                     'High-capacity facultative placement for major projects',
-                    'Comprehensive treaty support for engineering portfolios',
-                    'Dedicated claims handling with technical engineering focus',
+                    'Portfolio diversification across engineering classes',
+                    'Dedicated claims advocacy with technical engineering focus',
                 ],
                 'process' => [
                     'Technical risk assessment and engineering review',
@@ -102,8 +105,9 @@ class PageController extends Controller
             ],
             'assets-all-risks' => [
                 'name' => 'Assets All Risks',
-                'subtitle' => 'Comprehensive coverage for business assets against physical loss or damage from a wide range of perils.',
-                'description' => 'Our Assets All Risks reinsurance solutions provide broad-form protection for commercial and industrial property portfolios. We structure comprehensive programmes that cover physical assets against fire, natural perils, theft, and accidental damage, supported by robust catastrophe management and business interruption expertise.',
+                'subtitle' => 'Reinsurance-to-reinsurance capacity for commercial and industrial property portfolios, connecting reinsurers for broad-form asset protection.',
+                'description' => 'Our Assets All Risks practice facilitates retrocession and capacity sharing for commercial and industrial property portfolios. We structure co-reinsurance arrangements covering physical assets against fire, natural perils, theft, and accidental damage between reinsurer partners.',
+                'fullDescription' => 'Our Assets All Risks practice facilitates retrocession and capacity sharing for commercial and industrial property portfolios across Zimbabwe. We structure co-reinsurance arrangements covering physical assets against fire, natural perils, theft, and accidental damage, underpinned by robust catastrophe management and business interruption expertise. Our team works closely with reinsurer partners to assess asset exposures, conduct catastrophe modelling, and design optimal retention and risk distribution structures. We have access to leading property reinsurance markets, enabling us to arrange competitive capacity across a wide range of industrial, commercial, and manufacturing risks, from single-site facilities to multi-location portfolio programmes.',
                 'features' => [
                     'Property Damage',
                     'Business Interruption',
@@ -113,7 +117,7 @@ class PageController extends Controller
                     'Commercial Property Cover',
                 ],
                 'benefits' => [
-                    'Broad all-risks cover with competitive market capacity',
+                    'Broad all-risks capacity through intermediary network',
                     'Integrated catastrophe exposure management',
                     'Business interruption valuation and coverage expertise',
                     'Multi-year programme structuring for portfolio stability',
@@ -127,8 +131,9 @@ class PageController extends Controller
             ],
             'liability-insurance' => [
                 'name' => 'Liability Insurance',
-                'subtitle' => 'Protection against third-party liability claims, including public liability, product liability, and professional indemnity.',
-                'description' => 'Our Liability Insurance reinsurance solutions provide essential capacity for insurers writing third-party liability exposures. We cover a broad spectrum of liability classes, delivering expert underwriting support, claims advocacy, and access to leading international liability markets.',
+                'subtitle' => 'Reinsurance-to-reinsurance capacity for third-party liability exposures, connecting reinsurers for public, product, and professional indemnity portfolios.',
+                'description' => 'Our Liability Insurance practice facilitates retrocession and capacity sharing between reinsurers for third-party liability exposures across Zimbabwe and the region. We cover a broad spectrum of liability classes, delivering expert underwriting support and claims advocacy.',
+                'fullDescription' => 'Our Liability Insurance practice facilitates retrocession and capacity sharing between reinsurers for third-party liability exposures across Zimbabwe and the region. We cover a broad spectrum of liability classes including public liability, product liability, professional indemnity, employers\' liability, directors and officers liability, and environmental liability. Our team brings deep expertise in assessing complex liability risks and structuring multi-layered retrocession programmes that optimise risk distribution and cost. We have access to specialist liability and D&O markets globally, enabling us to arrange competitive terms for both standard and complex liability exposures. Our claims advocacy service ensures effective handling and equitable settlement of liability claims across the reinsurer network.',
                 'features' => [
                     'Public Liability',
                     'Product Liability',
@@ -138,10 +143,10 @@ class PageController extends Controller
                     'Environmental Liability',
                 ],
                 'benefits' => [
-                    'Access to specialist liability and D&O markets',
+                    'Access to specialist liability and D&O markets through intermediary network',
                     'Deep expertise in complex liability risk assessment',
                     'Claims advocacy and coverage advisory services',
-                    'Multi-layered programme structuring capability',
+                    'Multi-layered retrocession structuring capability',
                 ],
                 'process' => [
                     'Liability exposure analysis and benchmarking',
@@ -152,8 +157,9 @@ class PageController extends Controller
             ],
             'group-personal-accidents' => [
                 'name' => 'Group Personal Accidents',
-                'subtitle' => 'Coverage for groups of individuals against accidental injury, disability, or death, often provided as employee benefits.',
-                'description' => 'Our Group Personal Accidents reinsurance solutions provide comprehensive coverage for insurers offering accident and health benefits to corporate clients and affinity groups. We deliver reliable treaty capacity and facultative support across all GPA product variants.',
+                'subtitle' => 'Reinsurance-to-reinsurance capacity for group accident and health portfolios, connecting reinsurers for employee benefit risk distribution.',
+                'description' => 'Our Group Personal Accidents practice facilitates retrocession and capacity sharing between reinsurers for accident and health portfolios. We arrange treaty and facultative placements across all GPA product variants for the Zimbabwean and regional market.',
+                'fullDescription' => 'Our Group Personal Accidents practice facilitates retrocession and capacity sharing between reinsurers for accident and health portfolios across Zimbabwe. We arrange treaty and facultative placements across all GPA product variants, including accidental death, permanent and temporary disablement, medical expense reimbursement, and emergency evacuation. Our team has extensive experience in scheme design and risk assessment, helping reinsurer partners structure competitive and sustainable GPA portfolios. We work with leading accident and health reinsurers to provide consistent retrocession capacity, flexible terms for affinity schemes, and efficient claims advocacy that supports prompt benefit payments.',
                 'features' => [
                     'Accidental Death Cover',
                     'Permanent Disablement',
@@ -163,22 +169,23 @@ class PageController extends Controller
                     'Group Affinity Schemes',
                 ],
                 'benefits' => [
-                    'Consistent capacity for GPA treaty programmes',
+                    'Consistent retrocession capacity for GPA treaty programmes',
                     'Expert underwriting support for scheme design',
-                    'Efficient claims handling and management',
-                    'Flexible terms for affinity and group schemes',
+                    'Efficient claims advocacy and management',
+                    'Portfolio diversification across affinity and group schemes',
                 ],
                 'process' => [
                     'Scheme design and risk assessment',
                     'Treaty structuring and pricing',
-                    'Placement with aligned reinsurers',
+                    'Placement with aligned reinsurer partners',
                     'Claims management and renewal support',
                 ],
             ],
             'travel-insurance' => [
                 'name' => 'Travel Insurance',
-                'subtitle' => 'Coverage for travelers against unforeseen events such as trip cancellations, medical emergencies, and lost luggage.',
-                'description' => 'Our Travel Insurance reinsurance solutions support insurers providing domestic and international travel coverage. We offer treaty and facultative capacity for comprehensive travel products, including medical evacuation, trip cancellation, baggage, and personal accident benefits.',
+                'subtitle' => 'Reinsurance-to-reinsurance capacity for domestic and international travel portfolios, connecting reinsurers for medical evacuation and trip protection risks.',
+                'description' => 'Our Travel Insurance practice facilitates retrocession and capacity sharing between reinsurers for travel portfolios. We arrange treaty and facultative placements covering medical evacuation, trip cancellation, baggage, and personal accident exposures.',
+                'fullDescription' => 'Our Travel Insurance practice facilitates retrocession and capacity sharing between reinsurers for domestic and international travel portfolios. We arrange treaty and facultative placements for comprehensive travel products including medical evacuation, trip cancellation, baggage loss, personal accident, and emergency assistance. Our team has extensive experience in the African travel insurance market, enabling us to connect reinsurers with compatible capacity partners for the specific needs of travellers in the region. We work with leading travel reinsurers and global assistance networks to provide reliable retrocession capacity and efficient claims adjudication.',
                 'features' => [
                     'Medical Evacuation',
                     'Trip Cancellation',
@@ -188,22 +195,23 @@ class PageController extends Controller
                     'Domestic & International Cover',
                 ],
                 'benefits' => [
-                    'Reliable capacity for travel insurance programmes',
-                    'Global medical evacuation and assistance expertise',
+                    'Reliable retrocession capacity for travel insurance programmes',
+                    'Global medical evacuation and assistance network access',
                     'Efficient claim adjudication and payment processes',
-                    'Flexible cover for both domestic and international travel',
+                    'Flexible capacity for both domestic and international travel',
                 ],
                 'process' => [
                     'Product review and risk assessment',
                     'Capacity structuring and treaty design',
-                    'Placement with specialist travel reinsurers',
+                    'Placement with specialist travel reinsurer partners',
                     'Ongoing claims monitoring and programme review',
                 ],
             ],
             'goods-in-transit' => [
                 'name' => 'Goods In Transit',
-                'subtitle' => 'Protection for goods and merchandise while in transit by road, rail, sea, or air against damage, theft, or loss.',
-                'description' => 'Our Goods In Transit reinsurance solutions protect cargo moving across all modes of transport. We provide comprehensive marine cargo and transit coverage for insurers serving logistics companies, traders, and manufacturers, with access to leading marine reinsurance markets.',
+                'subtitle' => 'Reinsurance-to-reinsurance capacity for cargo and transit risks, connecting reinsurers for protection across all transport modes.',
+                'description' => 'Our Goods In Transit practice facilitates retrocession and capacity sharing for cargo moving across all modes of transport. We arrange marine cargo and transit coverage between reinsurer partners serving logistics, trading, and manufacturing sectors.',
+                'fullDescription' => 'Our Goods In Transit practice facilitates retrocession and capacity sharing for cargo moving across all modes of transport throughout Zimbabwe and the region. We arrange marine cargo and transit coverage between reinsurer partners serving logistics, trading, manufacturing, and agricultural sectors. Our team structures capacity for road transit, rail transit, air cargo, sea freight, and warehouse-to-warehouse movements, with stock throughput solutions for complex supply chains. We have access to leading marine and cargo reinsurance markets, enabling us to arrange competitive terms for a wide range of transit exposures. Our claims advocacy expertise ensures efficient resolution of transit losses across the reinsurer network.',
                 'features' => [
                     'Road Transit',
                     'Rail Transit',
@@ -213,10 +221,10 @@ class PageController extends Controller
                     'Stock Throughput',
                 ],
                 'benefits' => [
-                    'Broad transit cover across all transport modes',
-                    'Access to specialist marine and cargo reinsurers',
+                    'Broad transit capacity across all transport modes',
+                    'Access to specialist marine and cargo reinsurer partners',
                     'Warehouse-to-warehouse protection for complete logistics chains',
-                    'Expert claims handling for transit losses',
+                    'Expert claims advocacy for transit losses',
                 ],
                 'process' => [
                     'Logistics chain mapping and exposure assessment',
@@ -227,8 +235,9 @@ class PageController extends Controller
             ],
             'agriculture-insurance' => [
                 'name' => 'Agriculture Insurance',
-                'subtitle' => 'Specialized coverage for agricultural risks including crop failure, livestock mortality, and equipment damage.',
-                'description' => 'Our Agriculture Insurance reinsurance solutions provide essential protection for Zimbabwe\'s vital agricultural sector. We structure innovative programmes covering crop, livestock, and forestry risks, with expertise in weather-index products and multi-peril crop insurance schemes.',
+                'subtitle' => 'Reinsurance-to-reinsurance capacity for agricultural risk portfolios, connecting reinsurers for crop, livestock, and weather-index protection.',
+                'description' => 'Our Agriculture Insurance practice facilitates retrocession and capacity sharing for Zimbabwe\'s vital agricultural sector. We structure co-reinsurance arrangements between reinsurers covering crop, livestock, and forestry risks, with expertise in weather-index and parametric products.',
+                'fullDescription' => 'Our Agriculture Insurance practice facilitates retrocession and capacity sharing for Zimbabwe\'s vital agricultural sector, connecting reinsurers to support agricultural risk portfolios. We structure co-reinsurance arrangements covering crop insurance, livestock mortality, weather-index insurance, multi-peril crop cover, aquaculture, and forestry risks. Our team has deep expertise in agricultural risk assessment and experience working with government and development programmes on agricultural insurance schemes. We have access to specialist agricultural reinsurers and parametric risk transfer markets, enabling us to design sustainable capacity solutions that help protect Zimbabwe\'s food security and farming communities through effective risk distribution.',
                 'features' => [
                     'Crop Insurance',
                     'Livestock Mortality',
@@ -238,14 +247,14 @@ class PageController extends Controller
                     'Forestry Insurance',
                 ],
                 'benefits' => [
-                    'Specialist agricultural reinsurance expertise and market relationships',
+                    'Specialist agricultural retrocession expertise and market relationships',
                     'Innovative weather-index and parametric product capability',
                     'Government and development programme partnership experience',
-                    'Comprehensive portfolio support from crop to livestock',
+                    'Comprehensive portfolio diversification from crop to livestock',
                 ],
                 'process' => [
                     'Agricultural risk profiling and data analysis',
-                    'Product design and scheme structuring',
+                    'Capacity structuring and scheme design',
                     'Market placement and capacity aggregation',
                     'Claims monitoring and scheme performance review',
                 ],
@@ -266,8 +275,8 @@ class PageController extends Controller
         $specialties = [
             'aviation' => [
                 'name' => 'Aviation Insurance',
-                'description' => 'Comprehensive aviation reinsurance solutions covering hull, liability, and passenger risks for commercial and private aircraft.',
-                'fullDescription' => 'Our Aviation Insurance reinsurance practice delivers specialist capacity and technical underwriting expertise for aviation risks across Africa. We provide treaty and facultative support for airline fleets, general aviation, rotorcraft, airports, and aviation product manufacturers, with access to leading London and international aviation markets.',
+                'description' => 'Reinsurance-to-reinsurance capacity for aviation risks, connecting reinsurers for hull, liability, and passenger coverage across Africa.',
+                'fullDescription' => 'Our Aviation practice facilitates retrocession and co-reinsurance capacity for aviation risks across Africa. We arrange treaty and facultative placements between reinsurers for airline fleets, general aviation, rotorcraft, airports, and aviation product exposures, with access to leading London and international aviation markets. Our team brings specialist knowledge in assessing complex aviation risks and connecting reinsurers for optimal risk distribution.',
                 'features' => [
                     'Airline Hull & Liability',
                     'General Aviation',
@@ -277,22 +286,22 @@ class PageController extends Controller
                     'Aviation Product Liability',
                 ],
                 'benefits' => [
-                    'Access to Lloyd\'s and London company aviation markets',
-                    'Specialist aviation underwriting expertise',
+                    'Access to Lloyd\'s and London company aviation markets through intermediary network',
+                    'Specialist aviation underwriting expertise for capacity decisions',
                     'Fleet and single-risk facultative placement capability',
                     'Dedicated aviation claims advocacy',
                 ],
                 'process' => [
                     'Fleet or risk exposure assessment',
-                    'Aviation market strategy and selection',
+                    'Aviation market strategy and capacity sourcing',
                     'Facultative or treaty placement',
                     'Ongoing risk monitoring and renewal support',
                 ],
             ],
             'bankers-blanket' => [
                 'name' => 'Bankers\' Blanket Insurance',
-                'description' => 'Specialized coverage protecting financial institutions against fraud, theft, and other criminal activities.',
-                'fullDescription' => 'Our Bankers\' Blanket insurance solutions provide comprehensive protection for banks, microfinance institutions, and other financial services providers. We structure reinsurance programmes that cover fidelity guarantee, forgery, computer crime, and internal fraud, backed by deep expertise in financial institution risk.',
+                'description' => 'Reinsurance-to-reinsurance capacity for financial institution crime risks, connecting reinsurers for fidelity and fraud protection.',
+                'fullDescription' => 'Our Bankers\' Blanket practice facilitates retrocession and capacity sharing between reinsurers for financial institution crime risks. We structure co-reinsurance arrangements covering fidelity guarantee, forgery, computer crime, and internal fraud exposures, backed by deep expertise in financial institution risk. Our team connects reinsurers with specialist financial lines markets for optimal risk distribution across banks, microfinance institutions, and financial services providers.',
                 'features' => [
                     'Fidelity Guarantee',
                     'Forgery Cover',
@@ -302,7 +311,7 @@ class PageController extends Controller
                     'Financial Institution Cover',
                 ],
                 'benefits' => [
-                    'Specialist financial lines reinsurance capacity',
+                    'Specialist financial lines retrocession capacity',
                     'Deep understanding of banking operational risks',
                     'Comprehensive crime and fidelity coverage expertise',
                     'Discrete claims handling and advisory support',
@@ -316,20 +325,20 @@ class PageController extends Controller
             ],
             'construction-projects' => [
                 'name' => 'Construction Projects Insurance',
-                'description' => 'Tailored reinsurance solutions for major construction projects, covering contractors\' all risks and related liabilities.',
-                'fullDescription' => 'Our Construction Projects reinsurance practice supports insurers underwriting large-scale infrastructure and commercial construction risks. We provide high-capacity facultative placement and treaty support for contractors\' all risks, erection all risks, delay in start-up, and third-party liability exposures.',
+                'description' => 'Reinsurance-to-reinsurance capacity for construction project risks, connecting reinsurers for contractor\'s all risks and infrastructure protection.',
+                'fullDescription' => 'Mitigate underwriting exposure in the construction sector through our specialised retrocession and co-reinsurance solutions designed for construction projects. We facilitate capacity sharing between reinsurers throughout the entire construction lifecycle, from project initiation through to final completion or handover. Our intermediary services connect reinsurers with compatible partners for robust risk distribution on contractor\'s all risks, delay in start-up, and third-party liability exposures, ensuring balanced and diversified portfolios.',
                 'features' => [
+                    'Physical Structures Under Construction',
+                    'On-Site Materials, Equipment & Machinery',
                     'Contractor\'s All Risks',
-                    'Erection All Risks',
                     'Delay in Start-up',
                     'Third-Party Liability',
                     'Infrastructure Development',
-                    'Commercial Construction',
                 ],
                 'benefits' => [
                     'High-capacity facultative placement for mega-projects',
-                    'Specialist engineering and construction underwriting expertise',
-                    'Project lifecycle coverage from groundbreaking to completion',
+                    'Risk distribution from project initiation through to completion',
+                    'Portfolio diversification across construction classes',
                     'Dedicated construction claims advocacy',
                 ],
                 'process' => [
@@ -341,21 +350,21 @@ class PageController extends Controller
             ],
             'cyber' => [
                 'name' => 'Cyber Insurance',
-                'description' => 'Protection against cyber threats, data breaches, and associated business interruption and liability costs.',
-                'fullDescription' => 'Our Cyber Insurance reinsurance solutions help insurers navigate the rapidly evolving cyber risk landscape. We provide treaty and facultative capacity for data breach response, ransomware, network security liability, and business interruption, backed by access to leading global cyber markets and expert risk modelling.',
+                'description' => 'Reinsurance-to-reinsurance capacity for cyber risks, connecting reinsurers for data breach, ransomware, and cyberattack protection.',
+                'fullDescription' => 'Strengthen underwriting resilience against the escalating threat of cyber incidents through our specialised cyber retrocession and co-reinsurance solutions. We facilitate capacity sharing between reinsurers for comprehensive protection against Data Breaches, Cyberattacks, Ransomware, and Unauthorized Access and Data Destruction. Our intermediary services connect reinsurers with leading global cyber markets and expert risk modelling capabilities for optimal risk distribution and portfolio diversification.',
                 'features' => [
-                    'Data Breach Response',
-                    'Ransomware Cover',
+                    'Data Breaches',
+                    'Cyberattacks',
+                    'Ransomware',
+                    'Unauthorized Access & Data Destruction',
                     'Business Interruption',
-                    'Network Security Liability',
                     'Privacy Regulation Defence',
-                    'Cyber Extortion',
                 ],
                 'benefits' => [
-                    'Access to leading global cyber reinsurance markets',
-                    'Advanced cyber risk modelling and aggregation tools',
-                    'Incident response and crisis management expertise',
-                    'Regulatory and privacy liability coverage advisory',
+                    'Coverage for data breach costs and unauthorized disclosure of sensitive information',
+                    'Protection against financial repercussions from malicious cyberattacks',
+                    'Ransomware incident mitigation including recovery costs and ransom payments',
+                    'Access to leading global cyber reinsurance markets and incident response expertise',
                 ],
                 'process' => [
                     'Cyber exposure assessment and portfolio analysis',
@@ -366,8 +375,8 @@ class PageController extends Controller
             ],
             'kidnap-and-ransom' => [
                 'name' => 'Kidnap & Ransom Insurance',
-                'description' => 'Specialized coverage for kidnapping, ransom demands, and extortion threats against individuals and organizations.',
-                'fullDescription' => 'Our Kidnap & Ransom reinsurance solutions provide critical protection for insurers covering corporate executives, high-net-worth individuals, and organizations operating in high-risk environments. We deliver specialist capacity, crisis response expertise, and access to leading K&R markets worldwide.',
+                'description' => 'Reinsurance-to-reinsurance capacity for K&R risks, connecting reinsurers for kidnapping, extortion, and crisis response coverage.',
+                'fullDescription' => 'Our Kidnap & Ransom practice facilitates retrocession and co-reinsurance capacity between reinsurers for the high-severity, low-frequency risks associated with kidnapping, extortion, and ransom demands. We connect reinsurers with specialist K&R markets and crisis response networks worldwide, enabling effective risk distribution for corporate executive and high-net-worth individual exposures in high-risk environments.',
                 'features' => [
                     'Ransom Payments',
                     'Crisis Response Consultancy',
@@ -377,7 +386,7 @@ class PageController extends Controller
                     'High-Net-Worth Individual Cover',
                 ],
                 'benefits' => [
-                    'Specialist K&R capacity and crisis management network',
+                    'Specialist K&R retrocession capacity and crisis management network',
                     'Access to leading Lloyd\'s and London market experts',
                     'Comprehensive extortion and threat coverage expertise',
                     'Discrete and confidential handling protocols',
@@ -391,8 +400,8 @@ class PageController extends Controller
             ],
             'marine-hull' => [
                 'name' => 'Marine Hull Insurance',
-                'description' => 'Coverage for vessels against physical damage, collision liability, and other maritime risks.',
-                'fullDescription' => 'Our Marine Hull reinsurance practice delivers specialist capacity for ocean-going vessels, fishing fleets, and inland waterway craft operating in African waters. We provide treaty and facultative support for hull and machinery, war risks, and protection & indemnity exposures, backed by deep maritime underwriting experience.',
+                'description' => 'Reinsurance-to-reinsurance capacity for marine hull risks, connecting reinsurers for ocean-going vessels and inland waterway craft.',
+                'fullDescription' => 'Our Marine Hull practice facilitates retrocession and co-reinsurance capacity for ocean-going vessels, fishing fleets, and inland waterway craft operating in African waters. We arrange treaty and facultative placements between reinsurers for hull and machinery, war risks, and protection & indemnity exposures, backed by deep maritime underwriting experience and access to London and international marine markets.',
                 'features' => [
                     'Hull & Machinery',
                     'War Risks Cover',
@@ -402,7 +411,7 @@ class PageController extends Controller
                     'Inland Waterway Vessels',
                 ],
                 'benefits' => [
-                    'Access to London and international marine markets',
+                    'Access to London and international marine markets through intermediary network',
                     'Specialist hull and P&I underwriting expertise',
                     'Comprehensive war risk and geopolitical cover capability',
                     'Effective claims handling for maritime losses',
@@ -416,8 +425,8 @@ class PageController extends Controller
             ],
             'power-projects' => [
                 'name' => 'Power Projects Insurance',
-                'description' => 'Specialized coverage for power generation facilities during construction and operational phases.',
-                'fullDescription' => 'Our Power Projects reinsurance practice supports Africa\'s growing energy sector with specialist capacity for power generation facilities. We cover thermal, hydroelectric, solar, and wind energy projects through both construction and operational phases, with access to dedicated energy reinsurance markets.',
+                'description' => 'Reinsurance-to-reinsurance capacity for power generation and renewable energy projects, connecting reinsurers for construction and operational risks.',
+                'fullDescription' => 'Our Power Projects practice facilitates retrocession and co-reinsurance capacity for Africa\'s growing energy sector. We arrange treaty and facultative placements between reinsurers for thermal, hydroelectric, solar, and wind energy projects through both construction and operational phases, covering infrastructure damage, machinery breakdown, business interruption, and third-party liability exposures. Our team connects reinsurers with dedicated energy markets and renewable energy specialists for optimal risk distribution across the power sector.',
                 'features' => [
                     'Thermal Power Cover',
                     'Hydroelectric Projects',
@@ -427,7 +436,7 @@ class PageController extends Controller
                     'Business Interruption',
                 ],
                 'benefits' => [
-                    'Specialist energy and power reinsurance capacity',
+                    'Specialist energy and power retrocession capacity',
                     'Multi-phase coverage from construction to operation',
                     'Alternative and renewable energy project expertise',
                     'Technical engineering and loss prevention advisory',
@@ -441,8 +450,8 @@ class PageController extends Controller
             ],
             'political-risks' => [
                 'name' => 'Political Risks Insurance',
-                'description' => 'Protection against government actions, currency inconvertibility, and contract frustration in foreign markets.',
-                'fullDescription' => 'Our Political Risks reinsurance solutions protect cross-border investments and trade in emerging markets. We provide specialist capacity for expropriation, currency inconvertibility, contract frustration, and trade disruption, backed by access to leading political risk markets and geopolitical analysis expertise.',
+                'description' => 'Reinsurance-to-reinsurance capacity for political risk exposures, connecting reinsurers for cross-border investment and trade protection.',
+                'fullDescription' => 'Our Political Risks practice facilitates retrocession and co-reinsurance capacity for cross-border investments and trade in emerging markets, with particular expertise in the Zimbabwean and African context. We arrange capacity between reinsurers for expropriation, currency inconvertibility, contract frustration, trade disruption, and sovereign default exposures, backed by access to leading political risk markets and geopolitical analysis expertise. Our intermediary services enable reinsurers to diversify into political risk classes with informed risk assessment.',
                 'features' => [
                     'Expropriation Cover',
                     'Currency Inconvertibility',
@@ -466,8 +475,8 @@ class PageController extends Controller
             ],
             'political-violence-terrorism' => [
                 'name' => 'Political Violence & Terrorism Insurance',
-                'description' => 'Coverage against damage caused by political violence, terrorism, strikes, riots, and civil commotion.',
-                'fullDescription' => 'Our Political Violence & Terrorism reinsurance solutions provide critical protection in an increasingly complex global risk environment. We cover sabotage, terrorism, strikes, riots, civil commotion, and malicious damage across property, business interruption, and contingency exposures, with access to specialist terrorism pools and international markets.',
+                'description' => 'Reinsurance-to-reinsurance capacity for political violence and terrorism risks, connecting reinsurers for SRCC and sabotage protection.',
+                'fullDescription' => 'Our Political Violence & Terrorism practice facilitates retrocession and co-reinsurance capacity in an increasingly complex global risk environment. We arrange capacity between reinsurers for sabotage, terrorism, strikes, riots, civil commotion, and malicious damage across property, business interruption, and contingency exposures. Our intermediary services connect reinsurers with specialist terrorism pools and international markets for effective risk distribution and accumulation management.',
                 'features' => [
                     'Sabotage Cover',
                     'Terrorism Insurance',

@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
-@section('title', $product['name'])
+@section('title', $product['name'] . ' Reinsurance | Classic Reinsurance Brokers')
 @section('meta_description', $product['subtitle'])
-@section('og_title', $product['name'] . ' | Classic Reinsurance Brokers')
+@section('meta_keywords'){{ Str::slug($product['name']) }} reinsurance, {{ $product['name'] }} reinsurance Zimbabwe, {{ $product['name'] }} treaty, {{ $product['name'] }} facultative, insurance companies Zimbabwe, reinsurance intermediary, Classic Reinsurance Brokers {{ $product['name'] }}
+@endsection
+@section('og_title', $product['name'] . ' Reinsurance | Classic Reinsurance Brokers')
 @section('og_description', $product['subtitle'])
 
 @push('head')
@@ -10,10 +12,43 @@
 {
     "@@context": "https://schema.org",
     "@type": "Service",
-    "name": "{{ $product['name'] }}",
+    "name": "{{ $product['name'] }} Reinsurance",
     "description": "{{ $product['subtitle'] }}",
     "provider": { "@type": "InsuranceBrokerage", "name": "Classic Reinsurance Brokers", "url": "{{ url('/') }}" },
-    "areaServed": ["Zimbabwe"]
+    "areaServed": ["Zimbabwe"],
+    "serviceType": "Reinsurance Intermediary"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is {{ $product['name'] }} reinsurance?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{{ $product['name'] }} reinsurance provides insurance companies with risk transfer capacity for their {{ lcfirst($product['name']) }} portfolios. Classic Reinsurance Brokers arranges treaty and facultative placements with leading global and regional reinsurers."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How does Classic Reinsurance Brokers structure {{ $product['name'] }} reinsurance programmes?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "As a reinsurance-to-reinsurance intermediary, we connect reinsurance companies with other reinsurers to access additional capacity and expertise. We design proportional and non-proportional treaty structures tailored to each client's risk profile and portfolio needs."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Which markets do you access for {{ $product['name'] }} reinsurance?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We access capacity from leading global and regional reinsurance markets including Lloyd's, London company market, European reinsurers, South African, and Asian markets to structure optimal solutions for the Zimbabwean insurance sector."
+            }
+        }
+    ]
 }
 </script>
 @endpush
@@ -64,23 +99,23 @@ $allProducts = [
             </div>
             <div class="fade-up relative" style="transition-delay: 0.1s">
                 <div class="aspect-[4/3] overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                    <img src="{{ asset('images/' . Str::slug($product['name']) . '.png') }}" alt="{{ $product['name'] }}" class="h-full w-full object-cover" onerror="this.onerror=null;this.src='{{ asset('images/abstractpattern.png') }}'">
+                    <img src="{{ asset('images/' . Str::slug($product['name']) . '.png') }}" alt="{{ $product['name'] }}" class="h-full w-full object-cover" onerror="this.src='{{ asset('images/' . Str::slug($product['name']) . '.jpg') }}'; this.onerror=null">
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-@if(!empty($product['description']))
+@if(!empty($product['fullDescription']) || !empty($product['description']))
 <section class="bg-neutral-950 py-20 lg:py-28">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="grid gap-12 lg:grid-cols-5">
             <div class="fade-up lg:col-span-3">
                 <span class="section-label">Overview</span>
                 <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">About this product</h2>
-                <p class="mt-6 text-lg leading-relaxed text-neutral-300">{{ $product['description'] }}</p>
+                <p class="mt-6 text-lg leading-relaxed text-neutral-300">{{ $product['fullDescription'] ?? $product['description'] }}</p>
                 <div class="mt-6 rounded-xl border border-primary-500/20 bg-primary-500/5 p-4">
-                    <p class="text-sm text-primary-200">As a <strong class="text-white">reinsurance broker</strong>, we act as an intermediary between insurance companies and reinsurers — we do not underwrite risk or assume liability directly. We facilitate the placement of risk with leading global and regional reinsurers on behalf of our clients.</p>
+                    <p class="text-sm text-primary-200">As a <strong class="text-white">reinsurance-to-reinsurance intermediary</strong>, we connect reinsurance companies with other reinsurers to access additional capacity, specialised expertise, and risk diversification. We do not underwrite risk or assume liability directly. We facilitate the placement of risk with leading global and regional reinsurers on behalf of our clients.</p>
                 </div>
             </div>
             <div class="fade-up lg:col-span-2" style="transition-delay:0.1s">

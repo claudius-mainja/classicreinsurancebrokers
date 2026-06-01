@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Reinsurance Solutions & Advisory Services')
-@section('meta_description', 'Classic Reinsurance Brokers offers comprehensive reinsurance solutions and strategic advisory services across 9 core products and 9 specialty risk classes.')
-@section('og_title', 'Reinsurance & Advisory Services | Classic Reinsurance Brokers')
-@section('og_description', 'Explore our full range of reinsurance products, advisory services, and specialty risk insurance solutions tailored for the Zimbabwean and African markets.')
+@section('title', 'Reinsurance Intermediary Services & Solutions | Classic Reinsurance Brokers')
+@section('meta_description', 'Classic Reinsurance Brokers offers reinsurance-to-reinsurance intermediary services and capacity solutions across 9 core products and 9 specialty risk classes for the Zimbabwean and African reinsurance markets.')
+@section('meta_keywords', 'reinsurance intermediary Zimbabwe, reinsurance capacity, retrocession solutions, co-reinsurance, treaty reinsurance, facultative reinsurance, specialty risk insurance, reinsurance broker Africa, reinsurance-to-reinsurance, risk distribution Zimbabwe, reinsurance products Africa')
+@section('og_title', 'Reinsurance Intermediary Services | Classic Reinsurance Brokers')
+@section('og_description', 'Explore our reinsurance-to-reinsurance intermediary services, retrocession solutions, and specialty risk capacity tailored for the Zimbabwean and African reinsurance markets.')
 
 @push('head')
 <script type="application/ld+json">
@@ -11,9 +12,49 @@
     "@@context": "https://schema.org",
     "@@type": "ItemList",
     "name": "Classic Reinsurance Brokers Services",
-    "description": "Reinsurance products and specialty risk insurance solutions",
+    "description": "Reinsurance intermediary services, treaty reinsurance, facultative reinsurance, and specialty risk solutions",
     "url": "{{ url()->current() }}",
     "numberOfItems": 18
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What types of reinsurance services does Classic Reinsurance Brokers offer?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We offer comprehensive treaty reinsurance, facultative placement, alternative risk transfer, portfolio optimization, actuarial and analytics, market intelligence, regulatory and capital advisory, and strategic consulting services."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What core reinsurance products do you provide?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We provide reinsurance intermediary services across 9 core product classes: Motor Insurance, Household, Engineering, Assets All Risks, Liability Insurance, Group Personal Accidents, Travel Insurance, Goods In Transit, and Agriculture Insurance."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What specialty risk classes do you cover?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We cover 9 specialty risk classes: Aviation, Bankers' Blanket, Construction Projects, Cyber, Kidnap & Ransom, Marine Hull, Power Projects, Political Risks, and Political Violence & Terrorism."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How does Classic Reinsurance Brokers differ from other brokers?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We operate as a reinsurance-to-reinsurance intermediary, connecting reinsurers with other reinsurers for capacity, expertise, and diversification. We do not underwrite risk directly but facilitate retrocession and co-reinsurance placements between leading global and regional reinsurer partners."
+            }
+        }
+    ]
 }
 </script>
 @endpush
@@ -35,7 +76,7 @@
         <div class="max-w-3xl">
             <span class="fade-up inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-primary-200">Our services</span>
             <h1 class="fade-up mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl" style="transition-delay: 0.1s">Reinsurance Solutions & Advisory</h1>
-            <p class="fade-up mt-6 max-w-xl text-lg leading-relaxed text-neutral-300" style="transition-delay: 0.2s">We understand the complex world of risk management. That's why we offer a comprehensive suite of services designed to empower you, our valued clients, to navigate the ever-changing insurance landscape.</p>
+            <p class="fade-up mt-6 max-w-xl text-lg leading-relaxed text-neutral-300" style="transition-delay: 0.2s">We navigate the complex world of risk distribution. Our comprehensive suite of intermediary services connects reinsurers across 9 core products and 9 specialty risk classes for optimal capacity sharing.</p>
             <div class="fade-up mt-8 flex flex-wrap gap-4" style="transition-delay: 0.3s">
                 <a href="#reinsurance-products" class="btn bg-white text-primary-700 hover:bg-primary-50">Reinsurance solutions</a>
                 <a href="#specialty-risk" class="btn btn-outline-white">Specialty risk</a>
@@ -50,7 +91,7 @@
         <div class="fade-up max-w-2xl">
             <span class="section-label text-primary-600">Core offerings</span>
             <h2 class="mt-4 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">Reinsurance Products</h2>
-            <p class="mt-4 text-lg leading-relaxed text-neutral-600">Traditional reinsurance capacity across nine core classes, designed to support primary insurers with reliable risk transfer and technical expertise.</p>
+            <p class="mt-4 text-lg leading-relaxed text-neutral-600">Traditional reinsurance capacity across nine core classes, connecting reinsurers for reliable retrocession, co-reinsurance, and portfolio diversification.</p>
         </div>
         <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <a href="{{ route('services.product', 'motor-insurance') }}" class="fade-up card border-neutral-200 bg-white p-6 group hover:shadow-lg hover:shadow-primary-500/10">
@@ -135,7 +176,7 @@
         <div class="fade-up max-w-2xl">
             <span class="section-label text-primary-400">Complex & emerging risks</span>
             <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">Specialty Risk Insurance</h2>
-            <p class="mt-4 text-lg leading-relaxed text-neutral-400">Bespoke reinsurance capacity for complex, high-value, and emerging risks that demand deep technical underwriting expertise and access to global reinsurance markets.</p>
+            <p class="mt-4 text-lg leading-relaxed text-neutral-400">Bespoke retrocession and co-reinsurance capacity for complex, high-value, and emerging risks, connecting reinsurers with specialist markets across Africa and globally.</p>
         </div>
         <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <a href="{{ route('services.specialty', 'aviation') }}" class="fade-up card-glass p-6 group">
@@ -219,7 +260,7 @@
     <div class="mx-auto max-w-3xl px-6 text-center lg:px-8">
         <div class="fade-up">
             <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">Ready to partner with us?</h2>
-            <p class="mt-6 text-lg leading-relaxed text-primary-100">Contact our team to discuss how Classic Reinsurance Brokers can support your underwriting needs with tailored reinsurance capacity, technical expertise, and market access.</p>
+            <p class="mt-6 text-lg leading-relaxed text-primary-100">Contact our team to discuss how Classic Reinsurance Brokers can facilitate your capacity requirements with tailored retrocession arrangements, technical expertise, and market access.</p>
             <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
                 <a href="{{ route('contact') }}" class="btn bg-white text-primary-700 hover:bg-primary-50 text-base px-8 py-3">Get in touch</a>
                 <a href="tel:+263242773192" class="btn btn-outline-white text-base px-8 py-3">+263 242 773192/3/4</a>

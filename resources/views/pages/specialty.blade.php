@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
-@section('title', $specialty['name'])
+@section('title', $specialty['name'] . ' Specialty Reinsurance | Classic Reinsurance Brokers')
 @section('meta_description', $specialty['description'])
-@section('og_title', $specialty['name'] . ' | Classic Reinsurance Brokers')
+@section('meta_keywords'){{ Str::slug($specialty['name']) }} specialty reinsurance, {{ $specialty['name'] }} insurance Zimbabwe, specialty risk insurance, complex risk reinsurance, emerging risk coverage Zimbabwe, Classic Reinsurance Brokers specialty
+@endsection
+@section('og_title', $specialty['name'] . ' Specialty Reinsurance | Classic Reinsurance Brokers')
 @section('og_description', $specialty['description'])
 
 @push('head')
@@ -10,11 +12,43 @@
 {
     "@@context": "https://schema.org",
     "@type": "Service",
-    "name": "{{ $specialty['name'] }}",
+    "name": "{{ $specialty['name'] }} Specialty Reinsurance",
     "description": "{{ $specialty['description'] }}",
-    "serviceType": "Specialty Insurance",
+    "serviceType": "Specialty Reinsurance",
     "provider": { "@type": "InsuranceBrokerage", "name": "Classic Reinsurance Brokers", "url": "{{ url('/') }}" },
-    "areaServed": ["Zimbabwe"]
+    "areaServed": ["Zimbabwe", "Africa"]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is {{ $specialty['name'] }} specialty reinsurance?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{{ $specialty['name'] }} specialty reinsurance provides dedicated risk transfer capacity for complex and emerging risks that require deep underwriting expertise. Classic Reinsurance Brokers facilitates these placements with leading global specialty markets."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Which markets provide {{ $specialty['name'] }} reinsurance capacity?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We access global specialty reinsurance markets including Lloyd's, London company market, and international specialty reinsurers to secure capacity for {{ lcfirst($specialty['name']) }} risks."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is {{ $specialty['name'] }} reinsurance available in Zimbabwe?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Classic Reinsurance Brokers provides {{ lcfirst($specialty['name']) }} reinsurance intermediary services to insurance companies in Zimbabwe, connecting them with global specialty markets for complex risk transfer solutions."
+            }
+        }
+    ]
 }
 </script>
 @endpush
@@ -69,7 +103,7 @@ $allSpecialties = [
                 $specImagePng = 'images/specialty/' . Str::slug($specialty['name']) . '.png';
                 @endphp
                 <div class="aspect-[4/3] overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                    <img src="{{ asset($specImage) }}" alt="{{ $specialty['name'] }}" class="h-full w-full object-cover" onerror="this.onerror=null;this.src='{{ asset($specImagePng) }}';this.onerror=null;this.src='{{ asset('images/hero-pattern.png') }}'">
+                    <img src="{{ asset($specImage) }}" alt="{{ $specialty['name'] }}" class="h-full w-full object-cover" onerror="this.src='{{ asset($specImagePng) }}'; this.onerror=null">
                 </div>
             </div>
         </div>
@@ -85,7 +119,7 @@ $allSpecialties = [
                 <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">{{ $specialty['name'] }} Reinsurance</h2>
                 <p class="mt-6 text-lg leading-relaxed text-neutral-300">{{ $specialty['fullDescription'] }}</p>
                 <div class="mt-6 rounded-xl border border-primary-500/20 bg-primary-500/5 p-4">
-                    <p class="text-sm text-primary-200">As a <strong class="text-white">reinsurance broker</strong>, we act as an intermediary between insurance companies and specialty reinsurers — we do not underwrite risk or assume liability directly. We facilitate the placement of complex and emerging risks with leading global specialty markets.</p>
+                    <p class="text-sm text-primary-200">As a <strong class="text-white">reinsurance-to-reinsurance intermediary</strong>, we connect reinsurance companies with other specialty reinsurers to access additional capacity, specialised expertise, and risk diversification. We do not underwrite risk or assume liability directly. We facilitate the placement of complex and emerging risks with leading global specialty markets.</p>
                 </div>
             </div>
             <div class="fade-up lg:col-span-2" style="transition-delay:0.1s">

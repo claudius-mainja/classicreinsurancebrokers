@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Us')
-@section('meta_description', 'Get in touch with Classic Reinsurance Brokers — Zimbabwe\'s premier reinsurance broker. Call +263 242 773192 or visit us in Harare.')
-@section('og_title', 'Contact Classic Reinsurance Brokers')
-@section('og_description', 'Reach out to Zimbabwe\'s premier reinsurance broker for tailored reinsurance solutions across Africa.')
+@section('title', 'Contact Us | Classic Reinsurance Brokers')
+@section('meta_description', 'Get in touch with Classic Reinsurance Brokers — Zimbabwe\'s premier reinsurance-to-reinsurance intermediary. Call +263 242 773192 or visit our Harare office at 11th Floor Fidelity Life Tower.')
+@section('meta_keywords', 'contact Classic Reinsurance Brokers, reinsurance broker Zimbabwe phone, Harare reinsurance broker address, reinsurance intermediary contact, insurance broker Harare Zimbabwe, +263 242 773192, info@classicre.co.zw')
+@section('og_title', 'Contact Classic Reinsurance Brokers | Harare Office')
+@section('og_description', 'Reach out to Zimbabwe\'s premier reinsurance-to-reinsurance intermediary for tailored reinsurance solutions across Africa. Call +263 242 773192 or email info@classicre.co.zw.')
 
 @push('head')
 <script type="application/ld+json">

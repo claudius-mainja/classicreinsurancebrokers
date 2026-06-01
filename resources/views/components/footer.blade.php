@@ -93,7 +93,7 @@
             </div>
         </div>
         <div class="mt-6 text-center">
-            <p class="text-xs text-neutral-700">Designed and developed by <a href="https://www.blacklemur.co.zw" target="_blank" rel="noopener" class="text-primary-500 hover:text-primary-400 transition-colors">Blacklemur Innovations</a></p>
+            <p class="text-xs text-neutral-700">Designed and developed by <a href="https://www.blacklemur.co.zw" target="_blank" rel="noopener" class="text-primary-500 hover:text-primary-400 transition-colors">Claudius Mainja (Blacklemur Innovations)</a></p>
         </div>
     </div>
 </footer>
