@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect all requests to public_html
+    RewriteCond %{REQUEST_URI} !^/public_html/
+    RewriteRule ^(.*)$ public_html/$1 [L]
+</IfModule>
+
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+# Deny access to sensitive files
+<FilesMatch "\.(env|json|lock|log|md|phar|sh|sqlite)$">
+    Require all denied
+</FilesMatch>
+
+# Deny access to sensitive directories
+<IfModule mod_authz_core.c>
+    <DirectoryMatch "^(.*/)?(app|bootstrap|config|database|resources|routes|storage|vendor)/">
+        Require all denied
+    </DirectoryMatch>
+</IfModule>
