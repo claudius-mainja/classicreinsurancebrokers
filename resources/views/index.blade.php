@@ -141,98 +141,145 @@
     </div>
 </section>
 
-<section class="bg-neutral-950 py-20 lg:py-28 overflow-hidden">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="fade-up text-center max-w-3xl mx-auto">
+<section class="bg-neutral-950 py-20 lg:py-28 overflow-hidden relative">
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[700px] bg-primary-500/5 rounded-full blur-[120px]"></div>
+        <div class="absolute top-1/4 left-1/6 w-2 h-2 bg-primary-400/30 rounded-full animate-float" style="animation-delay: 0s; animation-duration: 7s;"></div>
+        <div class="absolute top-1/3 right-1/5 w-1.5 h-1.5 bg-primary-300/20 rounded-full animate-float" style="animation-delay: 1.5s; animation-duration: 9s;"></div>
+        <div class="absolute bottom-1/3 left-1/4 w-2 h-2 bg-primary-500/20 rounded-full animate-float" style="animation-delay: 3s; animation-duration: 6s;"></div>
+    </div>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 relative">
+        <div class="stagger-children text-center max-w-3xl mx-auto">
             <span class="section-label text-primary-400 justify-center">What we do</span>
             <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl font-heading">Comprehensive Reinsurance Solutions</h2>
             <p class="mt-4 text-lg leading-relaxed text-neutral-400">We connect insurance companies with leading global and regional reinsurance markets, delivering the capacity and expertise you need to grow your portfolio with confidence.</p>
         </div>
-        <div class="mt-16 space-y-20">
+        <div class="mt-16 space-y-24">
             {{-- Reinsurance Services --}}
-            <div>
-                <div class="fade-up mb-10 max-w-2xl">
-                    <h3 class="text-2xl font-bold text-white font-heading">Reinsurance Services</h3>
-                    <p class="mt-2 text-lg text-neutral-400">Core treaty and facultative solutions backed by strong global and regional market relationships.</p>
+            <div class="grid items-center gap-12 lg:grid-cols-5">
+                <div class="lg:col-span-2 reveal-scale">
+                    <div class="relative overflow-hidden rounded-2xl group aspect-[4/3]">
+                        <img src="{{ asset('images/about-reinsurance-broking.jpg') }}" alt="Global reinsurance partnerships" class="h-full w-full object-cover parallax transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/10 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <div class="glass-strong inline-flex items-center gap-3 rounded-xl px-4 py-3">
+                                <svg class="h-6 w-6 text-primary-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582"/></svg>
+                                <div>
+                                    <div class="text-sm font-bold text-white">Global Reach</div>
+                                    <div class="text-xs text-neutral-300">Strong reinsurer relationships worldwide</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid gap-8 lg:grid-cols-4">
-                    <div class="fade-up card-glass group p-6 lg:p-8 text-center">
-                        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                            <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3"/></svg>
-                        </div>
-                        <h3 class="mt-5 text-lg font-bold text-white">Treaty Reinsurance</h3>
-                        <p class="mt-2 text-sm leading-relaxed text-neutral-400">We arrange proportional and non-proportional treaty placements with leading reinsurers, giving insurance companies the capacity and stability they need to underwrite with confidence across their portfolios.</p>
+                <div class="lg:col-span-3">
+                    <div class="fade-up mb-8">
+                        <h3 class="text-2xl font-bold text-white font-heading">Reinsurance Services</h3>
+                        <p class="mt-2 text-lg text-neutral-400">Core treaty and facultative solutions backed by strong global and regional market relationships.</p>
                     </div>
-                    <div class="fade-up card-glass group p-6 lg:p-8 text-center" style="transition-delay: 0.1s">
-                        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                            <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg>
+                    <div class="grid gap-6 sm:grid-cols-2 stagger-children">
+                        <div class="card-glass group p-6 lg:p-8 text-center">
+                            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
+                                <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3"/></svg>
+                            </div>
+                            <h3 class="mt-5 text-lg font-bold text-white">Treaty Reinsurance</h3>
+                            <p class="mt-2 text-sm leading-relaxed text-neutral-400">We arrange proportional and non-proportional treaty placements with leading reinsurers, giving insurance companies the capacity and stability they need to underwrite with confidence across their portfolios.</p>
                         </div>
-                        <h3 class="mt-5 text-lg font-bold text-white">Facultative Placement</h3>
-                        <p class="mt-2 text-sm leading-relaxed text-neutral-400">We place individual risks with leading global and regional reinsurers, giving insurance companies access to specialist capacity for large or complex exposures that exceed treaty limits.</p>
-                    </div>
-                    <div class="fade-up card-glass group p-6 lg:p-8 text-center" style="transition-delay: 0.2s">
-                        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                            <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33"/></svg>
+                        <div class="card-glass group p-6 lg:p-8 text-center">
+                            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
+                                <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg>
+                            </div>
+                            <h3 class="mt-5 text-lg font-bold text-white">Facultative Placement</h3>
+                            <p class="mt-2 text-sm leading-relaxed text-neutral-400">We place individual risks with leading global and regional reinsurers, giving insurance companies access to specialist capacity for large or complex exposures that exceed treaty limits.</p>
                         </div>
-                        <h3 class="mt-5 text-lg font-bold text-white">Alternative Risk Transfer</h3>
-                        <p class="mt-2 text-sm leading-relaxed text-neutral-400">We help insurance companies explore innovative risk transfer solutions including parametric triggers, structured reinsurance, and capital market instruments to diversify their reinsurance strategy.</p>
-                    </div>
-                    <div class="fade-up card-glass group p-6 lg:p-8 text-center" style="transition-delay: 0.3s">
-                        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                            <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+                        <div class="card-glass group p-6 lg:p-8 text-center">
+                            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
+                                <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33"/></svg>
+                            </div>
+                            <h3 class="mt-5 text-lg font-bold text-white">Alternative Risk Transfer</h3>
+                            <p class="mt-2 text-sm leading-relaxed text-neutral-400">We help insurance companies explore innovative risk transfer solutions including parametric triggers, structured reinsurance, and capital market instruments to diversify their reinsurance strategy.</p>
                         </div>
-                        <h3 class="mt-5 text-lg font-bold text-white">Portfolio Optimization</h3>
-                        <p class="mt-2 text-sm leading-relaxed text-neutral-400">We help insurance companies achieve the optimal balance between retained and ceded risk through advanced analytics, market intelligence, and strategic programme design tailored to your portfolio.</p>
+                        <div class="card-glass group p-6 lg:p-8 text-center">
+                            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
+                                <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+                            </div>
+                            <h3 class="mt-5 text-lg font-bold text-white">Portfolio Optimization</h3>
+                            <p class="mt-2 text-sm leading-relaxed text-neutral-400">We help insurance companies achieve the optimal balance between retained and ceded risk through advanced analytics, market intelligence, and strategic programme design tailored to your portfolio.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             {{-- Advisory Services --}}
-            <div>
-                <div class="fade-up mb-10 max-w-2xl">
-                    <h3 class="text-2xl font-bold text-white font-heading">Advisory Services</h3>
-                    <p class="mt-2 text-lg text-neutral-400">Strategic insight and analytical support to strengthen your reinsurance decision-making and programme performance.</p>
+            <div class="grid items-center gap-12 lg:grid-cols-5">
+                <div class="lg:col-span-3 lg:order-1 order-2">
+                    <div class="fade-up mb-8">
+                        <h3 class="text-2xl font-bold text-white font-heading">Advisory Services</h3>
+                        <p class="mt-2 text-lg text-neutral-400">Strategic insight and analytical support to strengthen your reinsurance decision-making and programme performance.</p>
+                    </div>
+                    <div class="grid gap-6 sm:grid-cols-2 stagger-children">
+                        <div class="card-glass group p-6 lg:p-8 text-center">
+                            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
+                                <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                            </div>
+                            <h3 class="mt-5 text-lg font-bold text-white">Actuarial & Analytics</h3>
+                            <p class="mt-2 text-sm leading-relaxed text-neutral-400">We provide actuarial modelling and analytical support to help insurance companies quantify risk exposures, optimise retention levels, and develop data-driven reinsurance strategies.</p>
+                        </div>
+                        <div class="card-glass group p-6 lg:p-8 text-center">
+                            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
+                                <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3"/></svg>
+                            </div>
+                            <h3 class="mt-5 text-lg font-bold text-white">Market Intelligence</h3>
+                            <p class="mt-2 text-sm leading-relaxed text-neutral-400">Stay ahead with our market insights, capacity trends, and pricing forecasts, enabling insurance companies to make strategic reinsurance decisions in dynamic market conditions.</p>
+                        </div>
+                        <div class="card-glass group p-6 lg:p-8 text-center">
+                            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
+                                <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.42 15.17l-4.59 4.59M18 10.5l-5.17 5.17M10.5 6l5.17-5.17M6 13.5l5.17-5.17M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <h3 class="mt-5 text-lg font-bold text-white">Regulatory & Capital Advisory</h3>
+                            <p class="mt-2 text-sm leading-relaxed text-neutral-400">We guide insurance companies through complex regulatory requirements with expert advice on capital modelling, solvency optimisation, and IPEC compliance in Zimbabwe.</p>
+                        </div>
+                        <div class="card-glass group p-6 lg:p-8 text-center">
+                            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
+                                <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                            </div>
+                            <h3 class="mt-5 text-lg font-bold text-white">Strategic Consulting</h3>
+                            <p class="mt-2 text-sm leading-relaxed text-neutral-400">Enhance your competitive position with our strategic advice on market entry, portfolio diversification, and long-term reinsurance partnership development.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid gap-8 lg:grid-cols-4">
-                    <div class="fade-up card-glass group p-6 lg:p-8 text-center">
-                        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                            <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                <div class="lg:col-span-2 lg:order-2 order-1 reveal-scale">
+                    <div class="relative overflow-hidden rounded-2xl group aspect-[4/3]">
+                        <img src="{{ asset('images/serviceshero.png') }}" alt="Strategic advisory services" class="h-full w-full object-cover parallax transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/10 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <div class="glass-strong inline-flex items-center gap-3 rounded-xl px-4 py-3">
+                                <svg class="h-6 w-6 text-primary-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                                <div>
+                                    <div class="text-sm font-bold text-white">Strategic Insight</div>
+                                    <div class="text-xs text-neutral-300">Data-driven analytics & market expertise</div>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="mt-5 text-lg font-bold text-white">Actuarial & Analytics</h3>
-                        <p class="mt-2 text-sm leading-relaxed text-neutral-400">We provide actuarial modelling and analytical support to help insurance companies quantify risk exposures, optimise retention levels, and develop data-driven reinsurance strategies.</p>
-                    </div>
-                    <div class="fade-up card-glass group p-6 lg:p-8 text-center" style="transition-delay: 0.1s">
-                        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                            <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3"/></svg>
-                        </div>
-                        <h3 class="mt-5 text-lg font-bold text-white">Market Intelligence</h3>
-                        <p class="mt-2 text-sm leading-relaxed text-neutral-400">Stay ahead with our market insights, capacity trends, and pricing forecasts, enabling insurance companies to make strategic reinsurance decisions in dynamic market conditions.</p>
-                    </div>
-                    <div class="fade-up card-glass group p-6 lg:p-8 text-center" style="transition-delay: 0.2s">
-                        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                            <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.42 15.17l-4.59 4.59M18 10.5l-5.17 5.17M10.5 6l5.17-5.17M6 13.5l5.17-5.17M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        </div>
-                        <h3 class="mt-5 text-lg font-bold text-white">Regulatory & Capital Advisory</h3>
-                        <p class="mt-2 text-sm leading-relaxed text-neutral-400">We guide insurance companies through complex regulatory requirements with expert advice on capital modelling, solvency optimisation, and IPEC compliance in Zimbabwe.</p>
-                    </div>
-                    <div class="fade-up card-glass group p-6 lg:p-8 text-center" style="transition-delay: 0.3s">
-                        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                            <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                        </div>
-                        <h3 class="mt-5 text-lg font-bold text-white">Strategic Consulting</h3>
-                        <p class="mt-2 text-sm leading-relaxed text-neutral-400">Enhance your competitive position with our strategic advice on market entry, portfolio diversification, and long-term reinsurance partnership development.</p>
                     </div>
                 </div>
             </div>
 
             {{-- Specialty Market Expertise --}}
             <div>
-                <div class="fade-up mb-10 max-w-2xl">
-                    <h3 class="text-2xl font-bold text-white font-heading">Specialty Market Expertise</h3>
-                    <p class="mt-2 text-lg text-neutral-400">Deep specialist knowledge across the full spectrum of complex and emerging reinsurance markets.</p>
+                <div class="relative overflow-hidden rounded-2xl mb-12 group">
+                    <img src="{{ asset('images/specialty/constructionprojecthero.png') }}" alt="Specialty market expertise" class="h-full w-full object-cover parallax transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-primary-950/60 to-neutral-950/90"></div>
+                    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(248,113,113,0.1),transparent_60%)]"></div>
+                    <div class="relative px-6 py-10 lg:px-10 lg:py-14">
+                        <div class="fade-up max-w-2xl">
+                            <h3 class="text-2xl font-bold text-white font-heading">Specialty Market Expertise</h3>
+                            <p class="mt-2 text-lg text-neutral-200">Deep specialist knowledge across the full spectrum of complex and emerging reinsurance markets.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                    <div class="fade-up card-glass flex items-center gap-4 p-5 group">
+                <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 stagger-children">
+                    <div class="card-glass flex items-center gap-4 p-5 group">
                         <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5M5 12l7-7 7 7"/></svg>
                         </div>
@@ -241,7 +288,7 @@
                             <p class="text-xs text-neutral-500 mt-0.5">Natural catastrophe exposure management</p>
                         </div>
                     </div>
-                    <div class="fade-up card-glass flex items-center gap-4 p-5 group" style="transition-delay: 0.05s">
+                    <div class="card-glass flex items-center gap-4 p-5 group">
                         <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
@@ -250,7 +297,7 @@
                             <p class="text-xs text-neutral-500 mt-0.5">Hull, cargo, offshore energy risks</p>
                         </div>
                     </div>
-                    <div class="fade-up card-glass flex items-center gap-4 p-5 group" style="transition-delay: 0.1s">
+                    <div class="card-glass flex items-center gap-4 p-5 group">
                         <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5M5 12l7-7 7 7"/></svg>
                         </div>
@@ -259,7 +306,7 @@
                             <p class="text-xs text-neutral-500 mt-0.5">Hull, liability, airline, general aviation</p>
                         </div>
                     </div>
-                    <div class="fade-up card-glass flex items-center gap-4 p-5 group" style="transition-delay: 0.15s">
+                    <div class="card-glass flex items-center gap-4 p-5 group">
                         <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                         </div>
@@ -268,7 +315,7 @@
                             <p class="text-xs text-neutral-500 mt-0.5">Data breach, ransomware, network liability</p>
                         </div>
                     </div>
-                    <div class="fade-up card-glass flex items-center gap-4 p-5 group" style="transition-delay: 0.2s">
+                    <div class="card-glass flex items-center gap-4 p-5 group">
                         <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
@@ -277,7 +324,7 @@
                             <p class="text-xs text-neutral-500 mt-0.5">Expropriation, currency, contract frustration</p>
                         </div>
                     </div>
-                    <div class="fade-up card-glass flex items-center gap-4 p-5 group" style="transition-delay: 0.25s">
+                    <div class="card-glass flex items-center gap-4 p-5 group">
                         <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
@@ -286,7 +333,7 @@
                             <p class="text-xs text-neutral-500 mt-0.5">Mortality, morbidity, critical illness</p>
                         </div>
                     </div>
-                    <div class="fade-up card-glass flex items-center gap-4 p-5 group" style="transition-delay: 0.3s">
+                    <div class="card-glass flex items-center gap-4 p-5 group">
                         <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 1.106l1.054 2.108A1 1 0 0121 14v3a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-7a2 2 0 012-2h3m4 0V5a2 2 0 00-2-2H7a1 1 0 00-.707.293L4 5m10 5H8m4 0h2"/></svg>
                         </div>
@@ -295,7 +342,7 @@
                             <p class="text-xs text-neutral-500 mt-0.5">Fleet, third-party, professional indemnity</p>
                         </div>
                     </div>
-                    <div class="fade-up card-glass flex items-center gap-4 p-5 group" style="transition-delay: 0.35s">
+                    <div class="card-glass flex items-center gap-4 p-5 group">
                         <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.573-1.066z"/></svg>
                         </div>
@@ -304,7 +351,7 @@
                             <p class="text-xs text-neutral-500 mt-0.5">CAR, EAR, plant & machinery</p>
                         </div>
                     </div>
-                    <div class="fade-up card-glass flex items-center gap-4 p-5 group" style="transition-delay: 0.4s">
+                    <div class="card-glass flex items-center gap-4 p-5 group">
                         <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
                         </div>
@@ -323,28 +370,6 @@
     </div>
 </section>
 
-<section class="bg-neutral-950 border-y border-neutral-800 py-16 lg:py-20">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div class="fade-up text-center">
-                <div class="stat-value">10+</div>
-                <p class="stat-label">Years of experience</p>
-            </div>
-            <div class="fade-up text-center" style="transition-delay: 0.1s">
-                <div class="stat-value">50+</div>
-                <p class="stat-label">Insurance partners</p>
-            </div>
-            <div class="fade-up text-center" style="transition-delay: 0.2s">
-                <div class="stat-value">9</div>
-                <p class="stat-label">Core product classes</p>
-            </div>
-            <div class="fade-up text-center" style="transition-delay: 0.3s">
-                <div class="stat-value">9</div>
-                <p class="stat-label">Specialty risk lines</p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section class="bg-neutral-950 py-20 lg:py-28">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
