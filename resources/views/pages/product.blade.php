@@ -2,12 +2,23 @@
 
 @section('title', $product['name'] . ' Reinsurance | Classic Reinsurance Brokers')
 @section('meta_description', $product['subtitle'])
-@section('meta_keywords'){{ Str::slug($product['name']) }} reinsurance, {{ $product['name'] }} reinsurance Zimbabwe, {{ $product['name'] }} treaty, {{ $product['name'] }} facultative, insurance companies Zimbabwe, reinsurance intermediary, Classic Reinsurance Brokers {{ $product['name'] }}
+@section('meta_keywords'){{ Str::slug($product['name']) }} reinsurance, {{ $product['name'] }} reinsurance Zimbabwe, {{ $product['name'] }} treaty, {{ $product['name'] }} facultative, insurance companies Zimbabwe, reinsurance intermediary, Classic Reinsurance Brokers {{ $product['name'] }}, {{ $product['name'] }} reinsurance Harare, {{ $product['name'] }} reinsurance Bulawayo, {{ $product['name'] }} reinsurance Masvingo, {{ $product['name'] }} reinsurance Avondale, {{ $product['name'] }} reinsurance Borrowdale
 @endsection
 @section('og_title', $product['name'] . ' Reinsurance | Classic Reinsurance Brokers')
 @section('og_description', $product['subtitle'])
 
 @push('head')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "{{ route('services') }}" },
+        { "@type": "ListItem", "position": 3, "name": "{{ $product['name'] }}", "item": "{{ url()->current() }}" }
+    ]
+}
+</script>
 <script type="application/ld+json">
 {
     "@@context": "https://schema.org",

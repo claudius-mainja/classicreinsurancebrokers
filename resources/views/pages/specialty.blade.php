@@ -2,12 +2,23 @@
 
 @section('title', $specialty['name'] . ' Specialty Reinsurance | Classic Reinsurance Brokers')
 @section('meta_description', $specialty['description'])
-@section('meta_keywords'){{ Str::slug($specialty['name']) }} specialty reinsurance, {{ $specialty['name'] }} insurance Zimbabwe, specialty risk insurance, complex risk reinsurance, emerging risk coverage Zimbabwe, Classic Reinsurance Brokers specialty
+@section('meta_keywords'){{ Str::slug($specialty['name']) }} specialty reinsurance, {{ $specialty['name'] }} insurance Zimbabwe, specialty risk insurance, complex risk reinsurance, emerging risk coverage Zimbabwe, Classic Reinsurance Brokers specialty, {{ $specialty['name'] }} reinsurance Harare, {{ $specialty['name'] }} reinsurance Bulawayo, {{ $specialty['name'] }} reinsurance Masvingo, specialty risk Zimbabwe cities
 @endsection
 @section('og_title', $specialty['name'] . ' Specialty Reinsurance | Classic Reinsurance Brokers')
 @section('og_description', $specialty['description'])
 
 @push('head')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "{{ route('services') }}" },
+        { "@type": "ListItem", "position": 3, "name": "{{ $specialty['name'] }}", "item": "{{ url()->current() }}" }
+    ]
+}
+</script>
 <script type="application/ld+json">
 {
     "@@context": "https://schema.org",

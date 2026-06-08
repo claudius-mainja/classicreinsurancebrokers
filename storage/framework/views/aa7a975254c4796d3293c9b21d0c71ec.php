@@ -51,20 +51,6 @@
 </script>
 <?php $__env->stopPush(); ?>
 
-<?php
-$allSpecialties = [
-    'aviation' => 'Aviation',
-    'bankers-blanket' => 'Bankers\' Blanket',
-    'construction-projects' => 'Construction Projects',
-    'cyber' => 'Cyber',
-    'kidnap-and-ransom' => 'Kidnap & Ransom',
-    'marine-hull' => 'Marine Hull',
-    'power-projects' => 'Power Projects',
-    'political-risks' => 'Political Risks',
-    'political-violence-terrorism' => 'Political Violence & Terrorism',
-];
-?>
-
 <?php $__env->startSection('content'); ?>
 <section class="relative min-h-[50vh] flex items-center overflow-hidden bg-neutral-950">
     <div class="absolute inset-0 bg-cover bg-center bg-fixed opacity-15" style="background-image: url('<?php echo e(asset('images/hero-pattern.png')); ?>')"></div>

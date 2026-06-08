@@ -1,11 +1,21 @@
 @extends('layouts.app')
 
 @section('title', 'Privacy Policy')
-@section('meta_description', 'Read the Privacy Policy of Classic Reinsurance Brokers. Learn how we collect, use, protect, and handle your personal information in compliance with Zimbabwean data protection laws.')
+@section('meta_description', 'Read the Privacy Policy of Classic Reinsurance Brokers. Learn how we collect, use, protect, and handle your personal information in compliance with Zimbabwean data protection laws. Serving insurance and reinsurance companies in Harare, Bulawayo, Masvingo and all Zimbabwe cities.')
 @section('og_title', 'Privacy Policy | Classic Reinsurance Brokers')
 @section('og_description', 'Classic Reinsurance Brokers is committed to protecting your privacy. Understand how we collect, use, and safeguard your personal data.')
 
 @push('head')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "{{ url()->current() }}" }
+    ]
+}
+</script>
 <script type="application/ld+json">
 {
     "@@context": "https://schema.org",

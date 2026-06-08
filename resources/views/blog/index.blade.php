@@ -1,11 +1,21 @@
 @extends('layouts.app')
 
 @section('title', 'Reinsurance Insights')
-@section('meta_description', 'Expert insights, analysis, and thought leadership on reinsurance, risk management, and the Zimbabwean insurance market from Classic Reinsurance Brokers.')
+@section('meta_description', 'Expert insights, analysis, and thought leadership on reinsurance, risk management, and the Zimbabwean insurance market from Classic Reinsurance Brokers. Insights for insurance and reinsurance companies in Harare, Bulawayo, Masvingo, Avondale, Borrowdale, Chishawasha, Highlands and across Zimbabwe.')
 @section('og_title', 'Reinsurance Insights | Classic Reinsurance Brokers Blog')
 @section('og_description', 'Expert reinsurance insights, market analysis, and thought leadership from Zimbabwe\'s premier reinsurance broker.')
 
 @push('head')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@type": "ListItem", "position": 2, "name": "Insights", "item": "{{ url()->current() }}" }
+    ]
+}
+</script>
 <script type="application/ld+json">
 {
     "@@context": "https://schema.org",

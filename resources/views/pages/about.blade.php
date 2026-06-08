@@ -1,12 +1,22 @@
 @extends('layouts.app')
 
 @section('title', 'About Us — Classic Reinsurance Brokers')
-@section('meta_description', 'Classic Reinsurance Brokers is Zimbabwe\'s premier reinsurance broker, delivering innovative and tailored reinsurance placements since 2015. Learn about our mission, vision, values, and leadership team.')
-@section('meta_keywords', 'about Classic Reinsurance Brokers, reinsurance broker Zimbabwe history, Kingstone Mhinda, reinsurance broker Harare, reinsurance company Zimbabwe, insurance broker Zimbabwe, reinsurance broker team, insurance and reinsurance Zimbabwe')
+@section('meta_description', 'Classic Reinsurance Brokers is Zimbabwe\'s premier reinsurance broker, delivering innovative and tailored reinsurance placements since 2015. Learn about our mission, vision, values, and leadership team. Serving Harare, Bulawayo, Masvingo, Avondale, Borrowdale, Chishawasha, Highlands and all Zimbabwe.')
+@section('meta_keywords', 'about Classic Reinsurance Brokers, reinsurance broker Zimbabwe history, Kingstone Mhinda, reinsurance broker Harare, reinsurance company Zimbabwe, insurance broker Zimbabwe, reinsurance broker team, insurance and reinsurance Zimbabwe, reinsurance broker Bulawayo, reinsurance broker Masvingo, reinsurance broker Avondale, reinsurance broker Borrowdale, reinsurance broker Zimbabwe cities, insurance companies Zimbabwe, reinsurance companies Zimbabwe')
 @section('og_title', 'About Classic Reinsurance Brokers — Premier Reinsurance Broker')
 @section('og_description', 'Learn about Zimbabwe\'s premier reinsurance broker — our mission, vision, values, leadership team, and comprehensive reinsurance broking services since 2015.')
 
 @push('head')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@type": "ListItem", "position": 2, "name": "About Us", "item": "{{ url()->current() }}" }
+    ]
+}
+</script>
 <script type="application/ld+json">
 {
     "@@context": "https://schema.org",

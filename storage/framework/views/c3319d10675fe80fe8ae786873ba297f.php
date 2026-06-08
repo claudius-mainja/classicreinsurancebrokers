@@ -25,17 +25,95 @@
     <meta name="twitter:image" content="<?php echo $__env->yieldContent('og_image', asset('images/og-image.png')); ?>">
     <meta name="robots" content="<?php echo $__env->yieldContent('robots', 'index, follow'); ?>">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+    
+    <meta name="chatgpt:title" content="<?php echo $__env->yieldContent('og_title', config('app.name')); ?>">
+    <meta name="chatgpt:description" content="<?php echo $__env->yieldContent('meta_description', config('app.name') . ' — Zimbabwe\'s premier reinsurance broker.'); ?>">
+    <meta name="perplexity:title" content="<?php echo $__env->yieldContent('og_title', config('app.name')); ?>">
+    <meta name="perplexity:description" content="<?php echo $__env->yieldContent('meta_description', config('app.name') . ' — Zimbabwe\'s premier reinsurance broker.'); ?>">
+    <meta name="perplexity:site" content="Classic Reinsurance Brokers">
+    <meta name="perplexity:locale" content="en_ZW">
+
     <link rel="canonical" href="<?php echo e(url()->current()); ?>">
     <link rel="icon" type="image/png" href="<?php echo e(asset('images/favicon.png')); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <?php echo app('Illuminate\Foundation\Vite')(['resources/js/app.js', 'resources/css/app.css']); ?>
+
+    
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(config('services.google_tag_manager')): ?>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','<?php echo e(config('services.google_tag_manager')); ?>');</script>
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+
+    
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(config('services.google_analytics')): ?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo e(config('services.google_analytics')); ?>"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','<?php echo e(config('services.google_analytics')); ?>');</script>
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+
+    
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(config('services.google_ads')): ?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo e(config('services.google_ads')); ?>"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','<?php echo e(config('services.google_ads')); ?>');</script>
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+
+    
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(config('services.facebook_pixel')): ?>
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '<?php echo e(config('services.facebook_pixel')); ?>');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=<?php echo e(config('services.facebook_pixel')); ?>&ev=PageView&noscript=1"/></noscript>
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+
+    
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(config('services.meta_ads_pixel')): ?>
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '<?php echo e(config('services.meta_ads_pixel')); ?>');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=<?php echo e(config('services.meta_ads_pixel')); ?>&ev=PageView&noscript=1"/></noscript>
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+
     <?php echo $__env->yieldPushContent('head'); ?>
+
+    
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "InsuranceBrokerage",
+        "@type": "WebSite",
+        "name": "<?php echo e(config('app.name')); ?>",
+        "url": "<?php echo e(url('/')); ?>",
+        "description": "Zimbabwe's premier reinsurance broker connecting insurance companies with leading global and regional reinsurance markets.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "<?php echo e(url('/search')); ?>?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["InsuranceBrokerage", "LocalBusiness"],
         "name": "Classic Reinsurance Brokers",
         "description": "Zimbabwe's premier reinsurance broker connecting insurance companies with leading global and regional reinsurance markets for treaty, facultative, and specialty reinsurance solutions.",
         "url": "<?php echo e(url('/')); ?>",
@@ -51,17 +129,41 @@
         },
         "foundingDate": "2015",
         "founder": { "@type": "Person", "name": "Kingstone Mhinda" },
-        "areaServed": ["Zimbabwe", "Africa"],
+        "areaServed": [
+            "Zimbabwe", "Africa",
+            "Harare", "Bulawayo", "Masvingo", "Chitungwiza", "Mutare",
+            "Gweru", "Kwekwe", "Kadoma", "Chegutu", "Chinhoyi",
+            "Karoi", "Kariba", "Victoria Falls", "Hwange",
+            "Bindura", "Marondera", "Rusape", "Chipinge",
+            "Avondale", "Borrowdale", "Chishawasha", "Highlands"
+        ],
         "priceRange": "$$",
+        "image": "<?php echo e(asset('images/og-image.png')); ?>",
+        "logo": "<?php echo e(asset('images/logo.png')); ?>",
         "sameAs": [
             "https://linkedin.com/company/classicreinsurancebrokers",
             "https://web.facebook.com/classicreinsurancebrokers"
         ],
-        "knowsAbout": ["Treaty Reinsurance", "Facultative Reinsurance", "Advisory Services", "Specialty Risk Insurance", "Reinsurance Intermediary Services"]
+        "knowsAbout": [
+            "Treaty Reinsurance", "Facultative Reinsurance", "Advisory Services",
+            "Specialty Risk Insurance", "Reinsurance Intermediary Services",
+            "Motor Reinsurance", "Household Reinsurance", "Engineering Reinsurance",
+            "Assets All Risks Reinsurance", "Liability Reinsurance",
+            "Group Personal Accidents Reinsurance", "Travel Reinsurance",
+            "Goods In Transit Reinsurance", "Agriculture Reinsurance",
+            "Aviation Reinsurance", "Cyber Reinsurance", "Political Risk Reinsurance"
+        ],
+        "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "16:30" }
+        ]
     }
     </script>
 </head>
 <body class="bg-neutral-950 text-neutral-300 antialiased">
+    
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(config('services.google_tag_manager')): ?>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo e(config('services.google_tag_manager')); ?>" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
     <div class="reading-progress" x-data="{ progress: 0 }" x-init="window.addEventListener('scroll', () => { progress = Math.min((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100, 100) })" :style="`width: ${progress}%`"></div>
 

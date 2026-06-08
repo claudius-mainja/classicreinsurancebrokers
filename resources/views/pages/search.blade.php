@@ -1,11 +1,21 @@
 @extends('layouts.app')
 
 @section('title', 'Search Results')
-@section('meta_description', 'Search Classic Reinsurance Brokers website for reinsurance services, products, and information.')
+@section('meta_description', 'Search Classic Reinsurance Brokers website for reinsurance services, products, and information. Your reinsurance broker for insurance and reinsurance companies across Harare, Bulawayo, Masvingo, Avondale, Borrowdale, Chishawasha, Highlands and all Zimbabwe cities.')
 @section('og_title', 'Search Results | Classic Reinsurance Brokers')
 @section('og_description', 'Find reinsurance services, products, and resources at Classic Reinsurance Brokers.')
 
 @push('head')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@type": "ListItem", "position": 2, "name": "Search", "item": "{{ url()->current() }}" }
+    ]
+}
+</script>
 <script type="application/ld+json">
 {
     "@@context": "https://schema.org",

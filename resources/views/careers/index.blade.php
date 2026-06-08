@@ -1,11 +1,21 @@
 @extends('layouts.app')
 
 @section('title', 'Join Our Team')
-@section('meta_description', 'Explore career opportunities at Classic Reinsurance Brokers — Zimbabwe\'s premier reinsurance broker.')
+@section('meta_description', 'Explore career opportunities at Classic Reinsurance Brokers — Zimbabwe\'s premier reinsurance broker. Serving insurance and reinsurance companies in Harare, Bulawayo, Masvingo, Avondale, Borrowdale, Chishawasha, Highlands and all cities across Zimbabwe.')
 @section('og_title', 'Careers at Classic Reinsurance Brokers')
 @section('og_description', 'Join Zimbabwe\'s premier reinsurance broker and build a rewarding career in reinsurance, risk management, and insurance broking.')
 
 @push('head')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@type": "ListItem", "position": 2, "name": "Careers", "item": "{{ url()->current() }}" }
+    ]
+}
+</script>
 <script type="application/ld+json">
 {
     "@@context": "https://schema.org",

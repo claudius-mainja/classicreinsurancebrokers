@@ -1,11 +1,20 @@
 @extends('layouts.app')
 
 @section('title', config('app.name') . ' — Zimbabwe\'s Premier Reinsurance Broker')
-@section('meta_description', 'Classic Reinsurance Brokers — Zimbabwe\'s leading reinsurance broker, delivering expert treaty and facultative reinsurance placements to insurance companies across Zimbabwe since 2015.')
-@section('meta_keywords', 'reinsurance broker Zimbabwe, reinsurance broker Harare, treaty reinsurance Zimbabwe, facultative reinsurance, reinsurance advisory, Classic Reinsurance Brokers, insurance company reinsurance, African reinsurance broker, risk management Zimbabwe, insurance broker Zimbabwe, reinsurance intermediary Zimbabwe')
+@section('meta_description', 'Classic Reinsurance Brokers — Zimbabwe\'s leading reinsurance broker, delivering expert treaty and facultative reinsurance placements to insurance companies across Zimbabwe since 2015. Based in Harare serving Avondale, Borrowdale, Chishawasha, Highlands, Bulawayo, Masvingo and all Zimbabwe cities.')
+@section('meta_keywords', 'reinsurance broker Zimbabwe, reinsurance broker Harare, treaty reinsurance Zimbabwe, facultative reinsurance, reinsurance advisory, Classic Reinsurance Brokers, insurance company reinsurance, African reinsurance broker, risk management Zimbabwe, insurance broker Zimbabwe, reinsurance intermediary Zimbabwe, reinsurance broker Avondale, reinsurance broker Borrowdale, reinsurance broker Chishawasha, reinsurance broker Highlands, reinsurance broker Bulawayo, reinsurance broker Masvingo, reinsurance broker Chitungwiza, reinsurance broker Mutare, reinsurance broker Gweru, insurance broker Zimbabwe, reinsurance broker Africa')
 @section('og_title', config('app.name') . ' — Premier Reinsurance Broker in Zimbabwe')
 
 @push('head')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" }
+    ]
+}
+</script>
 <script type="application/ld+json">
 {
     "@@context": "https://schema.org",

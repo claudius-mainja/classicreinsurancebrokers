@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>404 - Page Not Found | {{ config('app.name') }}</title>
-    <meta name="description" content="The page you are looking for could not be found. Classic Reinsurance Brokers - Zimbabwe's premier reinsurance broker.">
+    <meta name="description" content="The page you are looking for could not be found. Classic Reinsurance Brokers - Zimbabwe's premier reinsurance broker serving insurance and reinsurance companies in Harare, Bulawayo, Masvingo, Avondale, Borrowdale, Chishawasha, Highlands and all Zimbabwe cities.">
     <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="{{ url()->current() }}" />
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">

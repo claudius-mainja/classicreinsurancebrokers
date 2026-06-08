@@ -8,8 +8,19 @@
 @push('head')
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "JobPosting",
+    "@@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@type": "ListItem", "position": 2, "name": "Careers", "item": "{{ route('careers') }}" },
+        { "@type": "ListItem", "position": 3, "name": "{{ $job->title }}", "item": "{{ url()->current() }}" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "JobPosting",
     "title": "{{ $job->title }}",
     "description": "{{ Str::limit(strip_tags($job->description), 200) }}",
     "datePosted": "{{ $job->posted_at->toIso8601String() }}",

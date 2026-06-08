@@ -38,30 +38,18 @@
                                 <div class="p-6">
                                     <h3 class="text-xs font-semibold uppercase tracking-widest text-primary-600">Reinsurance Products</h3>
                                     <ul class="mt-4 space-y-0.5">
-                                        <li><a href="<?php echo e(route('services.product', 'motor-insurance')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Motor Insurance</a></li>
-                                        <li><a href="<?php echo e(route('services.product', 'household')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Household</a></li>
-                                        <li><a href="<?php echo e(route('services.product', 'engineering')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Engineering</a></li>
-                                        <li><a href="<?php echo e(route('services.product', 'assets-all-risks')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Assets All Risks</a></li>
-                                        <li><a href="<?php echo e(route('services.product', 'liability-insurance')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Liability Insurance</a></li>
-                                        <li><a href="<?php echo e(route('services.product', 'group-personal-accidents')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Group Personal Accidents</a></li>
-                                        <li><a href="<?php echo e(route('services.product', 'travel-insurance')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Travel Insurance</a></li>
-                                        <li><a href="<?php echo e(route('services.product', 'goods-in-transit')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Goods In Transit</a></li>
-                                        <li><a href="<?php echo e(route('services.product', 'agriculture-insurance')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Agriculture Insurance</a></li>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $sharedProducts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <li><a href="<?php echo e(route('services.product', $p->slug)); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600"><?php echo e($p->name); ?></a></li>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                     </ul>
                                 </div>
                                 
                                 <div class="p-6">
                                     <h3 class="text-xs font-semibold uppercase tracking-widest text-primary-600">Specialty Risk Insurance</h3>
                                     <ul class="mt-4 space-y-0.5">
-                                        <li><a href="<?php echo e(route('services.specialty', 'aviation')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Aviation</a></li>
-                                        <li><a href="<?php echo e(route('services.specialty', 'bankers-blanket')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Bankers' Blanket</a></li>
-                                        <li><a href="<?php echo e(route('services.specialty', 'construction-projects')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Construction Projects</a></li>
-                                        <li><a href="<?php echo e(route('services.specialty', 'cyber')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Cyber</a></li>
-                                        <li><a href="<?php echo e(route('services.specialty', 'kidnap-and-ransom')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Kidnap & Ransom</a></li>
-                                        <li><a href="<?php echo e(route('services.specialty', 'marine-hull')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Marine Hull</a></li>
-                                        <li><a href="<?php echo e(route('services.specialty', 'power-projects')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Power Projects</a></li>
-                                        <li><a href="<?php echo e(route('services.specialty', 'political-risks')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Political Risks</a></li>
-                                        <li><a href="<?php echo e(route('services.specialty', 'political-violence-terrorism')); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Political Violence & Terrorism</a></li>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $sharedSpecialties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $s): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <li><a href="<?php echo e(route('services.specialty', $s->slug)); ?>" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600"><?php echo e($s->name); ?></a></li>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                     </ul>
                                 </div>
                             </div>
@@ -78,7 +66,7 @@
             </div>
 
             <div class="hidden lg:flex lg:items-center lg:gap-3">
-                <a href="tel:+263242773192" class="text-sm text-neutral-500 hover:text-primary-600 transition-colors">+263 242 773192</a>
+                <a href="<?php echo e(asset('images/company_profile.pdf')); ?>" target="_blank" class="btn btn-dark text-sm">Company Profile</a>
                 <a href="<?php echo e(route('contact')); ?>" class="btn btn-primary text-sm">Get a Quote</a>
             </div>
 
@@ -101,25 +89,13 @@
                 </button>
                 <div x-show="mobServices" x-collapse class="mt-1 space-y-1 pl-4">
                     <p class="px-4 pt-3 text-xs font-semibold uppercase tracking-widest text-primary-600">Reinsurance Products</p>
-                    <a href="<?php echo e(route('services.product', 'motor-insurance')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Motor Insurance</a>
-                    <a href="<?php echo e(route('services.product', 'household')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Household</a>
-                    <a href="<?php echo e(route('services.product', 'engineering')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Engineering</a>
-                    <a href="<?php echo e(route('services.product', 'assets-all-risks')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Assets All Risks</a>
-                    <a href="<?php echo e(route('services.product', 'liability-insurance')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Liability Insurance</a>
-                    <a href="<?php echo e(route('services.product', 'group-personal-accidents')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Group Personal Accidents</a>
-                    <a href="<?php echo e(route('services.product', 'travel-insurance')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Travel Insurance</a>
-                    <a href="<?php echo e(route('services.product', 'goods-in-transit')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Goods In Transit</a>
-                    <a href="<?php echo e(route('services.product', 'agriculture-insurance')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Agriculture Insurance</a>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $sharedProducts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <a href="<?php echo e(route('services.product', $p->slug)); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600"><?php echo e($p->name); ?></a>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                     <p class="px-4 pt-3 text-xs font-semibold uppercase tracking-widest text-primary-600">Specialty Risk Insurance</p>
-                    <a href="<?php echo e(route('services.specialty', 'aviation')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Aviation</a>
-                    <a href="<?php echo e(route('services.specialty', 'bankers-blanket')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Bankers' Blanket</a>
-                    <a href="<?php echo e(route('services.specialty', 'construction-projects')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Construction Projects</a>
-                    <a href="<?php echo e(route('services.specialty', 'cyber')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Cyber</a>
-                    <a href="<?php echo e(route('services.specialty', 'kidnap-and-ransom')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Kidnap & Ransom</a>
-                    <a href="<?php echo e(route('services.specialty', 'marine-hull')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Marine Hull</a>
-                    <a href="<?php echo e(route('services.specialty', 'power-projects')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Power Projects</a>
-                    <a href="<?php echo e(route('services.specialty', 'political-risks')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Political Risks</a>
-                    <a href="<?php echo e(route('services.specialty', 'political-violence-terrorism')); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Political Violence & Terrorism</a>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $sharedSpecialties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $s): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <a href="<?php echo e(route('services.specialty', $s->slug)); ?>" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600"><?php echo e($s->name); ?></a>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                 </div>
             </div>
             <a href="<?php echo e(route('blog.index')); ?>" @click="open = false" class="block rounded-lg px-4 py-3 text-base font-medium text-neutral-700 hover:bg-primary-50 hover:text-primary-600">Insights</a>
@@ -127,7 +103,7 @@
             <a href="<?php echo e(route('contact')); ?>" @click="open = false" class="block rounded-lg px-4 py-3 text-base font-medium text-neutral-700 hover:bg-primary-50 hover:text-primary-600">Contact</a>
             <div class="pt-4 border-t border-neutral-200 mt-4">
                 <a href="<?php echo e(route('contact')); ?>" @click="open = false" class="btn btn-primary w-full justify-center">Get a Quote</a>
-                <a href="tel:+263242773192" @click="open = false" class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-neutral-300 px-6 py-2.5 text-sm font-semibold text-neutral-700 transition-all hover:bg-neutral-50 mt-2">+263 242 773192</a>
+                <a href="<?php echo e(asset('images/company_profile.pdf')); ?>" target="_blank" @click="open = false" class="btn btn-dark w-full justify-center mt-2">Company Profile</a>
             </div>
         </div>
     </div>

@@ -1,12 +1,22 @@
 @extends('layouts.app')
 
 @section('title', 'Contact Us | Classic Reinsurance Brokers')
-@section('meta_description', 'Get in touch with Classic Reinsurance Brokers — Zimbabwe\'s premier reinsurance broker. Call +263 242 773192 or visit our Harare office at 11th Floor Fidelity Life Tower.')
-@section('meta_keywords', 'contact Classic Reinsurance Brokers, reinsurance broker Zimbabwe phone, Harare reinsurance broker address, reinsurance broker contact, insurance broker Harare Zimbabwe, +263 242 773192, info@classicre.co.zw')
+@section('meta_description', 'Get in touch with Classic Reinsurance Brokers — Zimbabwe\'s premier reinsurance broker. Call +263 242 773192 or visit our Harare office at 11th Floor Fidelity Life Tower. Serving insurance and reinsurance companies across Harare, Bulawayo, Masvingo, Avondale, Borrowdale, Chishawasha, Highlands and all Zimbabwe cities.')
+@section('meta_keywords', 'contact Classic Reinsurance Brokers, reinsurance broker Zimbabwe phone, Harare reinsurance broker address, reinsurance broker contact, insurance broker Harare Zimbabwe, +263 242 773192, info@classicre.co.zw, reinsurance broker Bulawayo contact, reinsurance broker Masvingo, reinsurance broker Avondale, reinsurance broker Borrowdale, reinsurance broker Highlands, insurance companies Zimbabwe, reinsurance companies Zimbabwe')
 @section('og_title', 'Contact Classic Reinsurance Brokers | Harare Office')
 @section('og_description', 'Reach out to Zimbabwe\'s premier reinsurance broker for tailored reinsurance placements across Africa. Call +263 242 773192 or email info@classicre.co.zw.')
 
 @push('head')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "{{ url()->current() }}" }
+    ]
+}
+</script>
 <script type="application/ld+json">
 {
     "@@context": "https://schema.org",

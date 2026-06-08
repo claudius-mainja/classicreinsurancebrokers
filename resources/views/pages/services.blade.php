@@ -1,12 +1,22 @@
 @extends('layouts.app')
 
 @section('title', 'Reinsurance Broking Services & Solutions | Classic Reinsurance Brokers')
-@section('meta_description', 'Classic Reinsurance Brokers offers professional reinsurance broking services across 9 core products and 9 specialty risk classes, connecting insurance companies with leading global and regional reinsurance markets.')
-@section('meta_keywords', 'reinsurance broker Zimbabwe, reinsurance broking services, treaty reinsurance, facultative reinsurance, specialty risk insurance, reinsurance broker Africa, insurance company reinsurance, risk transfer Zimbabwe, reinsurance products Africa, insurance broker Zimbabwe')
+@section('meta_description', 'Classic Reinsurance Brokers offers professional reinsurance broking services across 9 core products and 9 specialty risk classes, connecting insurance companies with leading global and regional reinsurance markets. Serving Harare, Bulawayo, Masvingo, Avondale, Borrowdale, Chishawasha, Highlands and all Zimbabwe.')
+@section('meta_keywords', 'reinsurance broker Zimbabwe, reinsurance broking services, treaty reinsurance, facultative reinsurance, specialty risk insurance, reinsurance broker Africa, insurance company reinsurance, risk transfer Zimbabwe, reinsurance products Africa, insurance broker Zimbabwe, reinsurance broker Harare, reinsurance broker Bulawayo, reinsurance broker Masvingo, reinsurance broker Avondale, reinsurance broker Borrowdale, reinsurance services Zimbabwe, insurance companies Zimbabwe, reinsurance companies Zimbabwe')
 @section('og_title', 'Reinsurance Broking Services | Classic Reinsurance Brokers')
 @section('og_description', 'Explore our professional reinsurance broking services — connecting insurance companies with leading global and regional reinsurance markets for treaty, facultative, and specialty risk solutions.')
 
 @push('head')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "{{ url()->current() }}" }
+    ]
+}
+</script>
 <script type="application/ld+json">
 {
     "@@context": "https://schema.org",

@@ -35,4 +35,15 @@ return [
         ],
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Tracking & Analytics
+    |--------------------------------------------------------------------------
+    */
+    'google_tag_manager' => env('GOOGLE_TAG_MANAGER_ID'),
+    'google_analytics' => env('GOOGLE_ANALYTICS_ID'),
+    'google_ads' => env('GOOGLE_ADS_ID'),
+    'facebook_pixel' => env('FACEBOOK_PIXEL_ID'),
+    'meta_ads_pixel' => env('META_ADS_PIXEL_ID'),
+
 ];

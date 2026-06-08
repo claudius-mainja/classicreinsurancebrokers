@@ -1,11 +1,21 @@
 @extends('layouts.app')
 
 @section('title', 'Terms & Conditions')
-@section('meta_description', 'Read the Terms & Conditions of Classic Reinsurance Brokers. Understand the terms governing the use of our website and reinsurance broking services.')
+@section('meta_description', 'Read the Terms & Conditions of Classic Reinsurance Brokers. Understand the terms governing the use of our website and reinsurance broking services for insurance and reinsurance companies in Harare, Bulawayo, Masvingo, Avondale, Borrowdale, Chishawasha, Highlands and all Zimbabwe cities.')
 @section('og_title', 'Terms & Conditions | Classic Reinsurance Brokers')
 @section('og_description', 'Classic Reinsurance Brokers Terms & Conditions — governing the use of our website, services, and the legal relationship between clients and our firm.')
 
 @push('head')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@type": "ListItem", "position": 2, "name": "Terms & Conditions", "item": "{{ url()->current() }}" }
+    ]
+}
+</script>
 <script type="application/ld+json">
 {
     "@@context": "https://schema.org",
