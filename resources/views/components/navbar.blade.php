@@ -38,30 +38,18 @@
                                 <div class="p-6">
                                     <h3 class="text-xs font-semibold uppercase tracking-widest text-primary-600">Reinsurance Products</h3>
                                     <ul class="mt-4 space-y-0.5">
-                                        <li><a href="{{ route('services.product', 'motor-insurance') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Motor Insurance</a></li>
-                                        <li><a href="{{ route('services.product', 'household') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Household</a></li>
-                                        <li><a href="{{ route('services.product', 'engineering') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Engineering</a></li>
-                                        <li><a href="{{ route('services.product', 'assets-all-risks') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Assets All Risks</a></li>
-                                        <li><a href="{{ route('services.product', 'liability-insurance') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Liability Insurance</a></li>
-                                        <li><a href="{{ route('services.product', 'group-personal-accidents') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Group Personal Accidents</a></li>
-                                        <li><a href="{{ route('services.product', 'travel-insurance') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Travel Insurance</a></li>
-                                        <li><a href="{{ route('services.product', 'goods-in-transit') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Goods In Transit</a></li>
-                                        <li><a href="{{ route('services.product', 'agriculture-insurance') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Agriculture Insurance</a></li>
+                                        @foreach($sharedProducts as $p)
+                                        <li><a href="{{ route('services.product', $p->slug) }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">{{ $p->name }}</a></li>
+                                        @endforeach
                                     </ul>
                                 </div>
                                 {{-- Column 2: Specialty Risk Insurance --}}
                                 <div class="p-6">
                                     <h3 class="text-xs font-semibold uppercase tracking-widest text-primary-600">Specialty Risk Insurance</h3>
                                     <ul class="mt-4 space-y-0.5">
-                                        <li><a href="{{ route('services.specialty', 'aviation') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Aviation</a></li>
-                                        <li><a href="{{ route('services.specialty', 'bankers-blanket') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Bankers' Blanket</a></li>
-                                        <li><a href="{{ route('services.specialty', 'construction-projects') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Construction Projects</a></li>
-                                        <li><a href="{{ route('services.specialty', 'cyber') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Cyber</a></li>
-                                        <li><a href="{{ route('services.specialty', 'kidnap-and-ransom') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Kidnap & Ransom</a></li>
-                                        <li><a href="{{ route('services.specialty', 'marine-hull') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Marine Hull</a></li>
-                                        <li><a href="{{ route('services.specialty', 'power-projects') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Power Projects</a></li>
-                                        <li><a href="{{ route('services.specialty', 'political-risks') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Political Risks</a></li>
-                                        <li><a href="{{ route('services.specialty', 'political-violence-terrorism') }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">Political Violence & Terrorism</a></li>
+                                        @foreach($sharedSpecialties as $s)
+                                        <li><a href="{{ route('services.specialty', $s->slug) }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-600">{{ $s->name }}</a></li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
@@ -78,7 +66,7 @@
             </div>
 
             <div class="hidden lg:flex lg:items-center lg:gap-3">
-                <a href="tel:+263242773192" class="text-sm text-neutral-500 hover:text-primary-600 transition-colors">+263 242 773192</a>
+                <a href="{{ asset('images/company_profile.pdf') }}" target="_blank" class="btn btn-dark text-sm">Company Profile</a>
                 <a href="{{ route('contact') }}" class="btn btn-primary text-sm">Get a Quote</a>
             </div>
 
@@ -101,25 +89,13 @@
                 </button>
                 <div x-show="mobServices" x-collapse class="mt-1 space-y-1 pl-4">
                     <p class="px-4 pt-3 text-xs font-semibold uppercase tracking-widest text-primary-600">Reinsurance Products</p>
-                    <a href="{{ route('services.product', 'motor-insurance') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Motor Insurance</a>
-                    <a href="{{ route('services.product', 'household') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Household</a>
-                    <a href="{{ route('services.product', 'engineering') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Engineering</a>
-                    <a href="{{ route('services.product', 'assets-all-risks') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Assets All Risks</a>
-                    <a href="{{ route('services.product', 'liability-insurance') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Liability Insurance</a>
-                    <a href="{{ route('services.product', 'group-personal-accidents') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Group Personal Accidents</a>
-                    <a href="{{ route('services.product', 'travel-insurance') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Travel Insurance</a>
-                    <a href="{{ route('services.product', 'goods-in-transit') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Goods In Transit</a>
-                    <a href="{{ route('services.product', 'agriculture-insurance') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Agriculture Insurance</a>
+                    @foreach($sharedProducts as $p)
+                    <a href="{{ route('services.product', $p->slug) }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">{{ $p->name }}</a>
+                    @endforeach
                     <p class="px-4 pt-3 text-xs font-semibold uppercase tracking-widest text-primary-600">Specialty Risk Insurance</p>
-                    <a href="{{ route('services.specialty', 'aviation') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Aviation</a>
-                    <a href="{{ route('services.specialty', 'bankers-blanket') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Bankers' Blanket</a>
-                    <a href="{{ route('services.specialty', 'construction-projects') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Construction Projects</a>
-                    <a href="{{ route('services.specialty', 'cyber') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Cyber</a>
-                    <a href="{{ route('services.specialty', 'kidnap-and-ransom') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Kidnap & Ransom</a>
-                    <a href="{{ route('services.specialty', 'marine-hull') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Marine Hull</a>
-                    <a href="{{ route('services.specialty', 'power-projects') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Power Projects</a>
-                    <a href="{{ route('services.specialty', 'political-risks') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Political Risks</a>
-                    <a href="{{ route('services.specialty', 'political-violence-terrorism') }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">Political Violence & Terrorism</a>
+                    @foreach($sharedSpecialties as $s)
+                    <a href="{{ route('services.specialty', $s->slug) }}" @click="open = false" class="block rounded-lg px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600">{{ $s->name }}</a>
+                    @endforeach
                 </div>
             </div>
             <a href="{{ route('blog.index') }}" @click="open = false" class="block rounded-lg px-4 py-3 text-base font-medium text-neutral-700 hover:bg-primary-50 hover:text-primary-600">Insights</a>
@@ -127,7 +103,7 @@
             <a href="{{ route('contact') }}" @click="open = false" class="block rounded-lg px-4 py-3 text-base font-medium text-neutral-700 hover:bg-primary-50 hover:text-primary-600">Contact</a>
             <div class="pt-4 border-t border-neutral-200 mt-4">
                 <a href="{{ route('contact') }}" @click="open = false" class="btn btn-primary w-full justify-center">Get a Quote</a>
-                <a href="tel:+263242773192" @click="open = false" class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-neutral-300 px-6 py-2.5 text-sm font-semibold text-neutral-700 transition-all hover:bg-neutral-50 mt-2">+263 242 773192</a>
+                <a href="{{ asset('images/company_profile.pdf') }}" target="_blank" @click="open = false" class="btn btn-dark w-full justify-center mt-2">Company Profile</a>
             </div>
         </div>
     </div>

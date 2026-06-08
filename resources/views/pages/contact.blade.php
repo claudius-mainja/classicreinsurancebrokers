@@ -156,62 +156,25 @@
             <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">Frequently asked questions</h2>
             <p class="mt-4 text-lg text-neutral-400">Quick answers to common questions about our services and how we can help your business.</p>
         </div>
+        @if($faqs->isNotEmpty())
         <div class="mt-12 space-y-3" x-data="{ open: null }">
-            <div class="fade-up card-glass transition-all duration-200" :class="open === 1 ? 'ring-1 ring-primary-600/30' : ''">
-                <button @click="open = open === 1 ? null : 1" class="flex w-full items-center justify-between px-6 py-5 text-left">
-                    <span class="text-sm font-semibold text-white">What reinsurance broking services does Classic Reinsurance Brokers offer?</span>
-                    <svg class="h-4 w-4 shrink-0 text-neutral-500 transition-transform duration-200" :class="open === 1 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            @foreach($faqs as $i => $faq)
+            <div class="fade-up card-glass transition-all duration-200" :class="open === {{ $i + 1 }} ? 'ring-1 ring-primary-600/30' : ''">
+                <button @click="open = open === {{ $i + 1 }} ? null : {{ $i + 1 }}" class="flex w-full items-center justify-between px-6 py-5 text-left">
+                    <span class="text-sm font-semibold text-white">{{ $faq->question }}</span>
+                    <svg class="h-4 w-4 shrink-0 text-neutral-500 transition-transform duration-200" :class="open === {{ $i + 1 }} ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </button>
-                <div x-show="open === 1" x-collapse>
-                    <div class="border-t border-white/10 px-6 py-5 text-sm leading-relaxed text-neutral-400">We provide comprehensive reinsurance broking services across nine core products including Motor, Household, Engineering, Assets All Risks, Liability, Group Personal Accidents, Travel, Goods In Transit, and Agriculture Insurance. We also specialise in nine specialty risk classes such as Aviation, Cyber, Political Risks, and more. Additionally, we offer strategic reinsurance advisory services.</div>
+                <div x-show="open === {{ $i + 1 }}" x-collapse>
+                    <div class="border-t border-white/10 px-6 py-5 text-sm leading-relaxed text-neutral-400">{!! $faq->answer !!}</div>
                 </div>
             </div>
-            <div class="fade-up card-glass transition-all duration-200" :class="open === 2 ? 'ring-1 ring-primary-600/30' : ''">
-                <button @click="open = open === 2 ? null : 2" class="flex w-full items-center justify-between px-6 py-5 text-left">
-                    <span class="text-sm font-semibold text-white">How can I get a reinsurance quote?</span>
-                    <svg class="h-4 w-4 shrink-0 text-neutral-500 transition-transform duration-200" :class="open === 2 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
-                <div x-show="open === 2" x-collapse>
-                    <div class="border-t border-white/10 px-6 py-5 text-sm leading-relaxed text-neutral-400">You can request a quote by filling out our contact form, calling us at +263 242 773192/3/4, or emailing info@classicre.co.zw. Our team will respond within 24 hours to discuss your specific requirements and provide a tailored reinsurance solution.</div>
-                </div>
-            </div>
-            <div class="fade-up card-glass transition-all duration-200" :class="open === 3 ? 'ring-1 ring-primary-600/30' : ''">
-                <button @click="open = open === 3 ? null : 3" class="flex w-full items-center justify-between px-6 py-5 text-left">
-                    <span class="text-sm font-semibold text-white">Which markets do you serve?</span>
-                    <svg class="h-4 w-4 shrink-0 text-neutral-500 transition-transform duration-200" :class="open === 3 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
-                <div x-show="open === 3" x-collapse>
-                    <div class="border-t border-white/10 px-6 py-5 text-sm leading-relaxed text-neutral-400">We primarily serve insurance companies across Zimbabwe and the broader African market. Our extensive network of global and regional reinsurer relationships allows us to access capacity from markets including London, Lloyd's, Europe, South Africa, and Asia to structure optimal solutions for our clients.</div>
-                </div>
-            </div>
-            <div class="fade-up card-glass transition-all duration-200" :class="open === 4 ? 'ring-1 ring-primary-600/30' : ''">
-                <button @click="open = open === 4 ? null : 4" class="flex w-full items-center justify-between px-6 py-5 text-left">
-                    <span class="text-sm font-semibold text-white">What types of reinsurance treaties do you arrange?</span>
-                    <svg class="h-4 w-4 shrink-0 text-neutral-500 transition-transform duration-200" :class="open === 4 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
-                <div x-show="open === 4" x-collapse>
-                    <div class="border-t border-white/10 px-6 py-5 text-sm leading-relaxed text-neutral-400">We arrange both proportional (quota share, surplus) and non-proportional (excess of loss, stop loss) treaty reinsurance structures. Our team designs bespoke programmes that align with each client's risk appetite, portfolio characteristics, and growth objectives.</div>
-                </div>
-            </div>
-            <div class="fade-up card-glass transition-all duration-200" :class="open === 5 ? 'ring-1 ring-primary-600/30' : ''">
-                <button @click="open = open === 5 ? null : 5" class="flex w-full items-center justify-between px-6 py-5 text-left">
-                    <span class="text-sm font-semibold text-white">How do you handle claims advocacy?</span>
-                    <svg class="h-4 w-4 shrink-0 text-neutral-500 transition-transform duration-200" :class="open === 5 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
-                <div x-show="open === 5" x-collapse>
-                    <div class="border-t border-white/10 px-6 py-5 text-sm leading-relaxed text-neutral-400">Our claims advocacy service ensures that your claims are managed efficiently and fairly. We assist with claim preparation, documentation, submission, and negotiation with reinsurers to ensure prompt and equitable settlement. Our team acts as your dedicated advocate throughout the claims process.</div>
-                </div>
-            </div>
-            <div class="fade-up card-glass transition-all duration-200" :class="open === 6 ? 'ring-1 ring-primary-600/30' : ''">
-                <button @click="open = open === 6 ? null : 6" class="flex w-full items-center justify-between px-6 py-5 text-left">
-                    <span class="text-sm font-semibold text-white">Is Classic Reinsurance Brokers regulated?</span>
-                    <svg class="h-4 w-4 shrink-0 text-neutral-500 transition-transform duration-200" :class="open === 6 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
-                <div x-show="open === 6" x-collapse>
-                    <div class="border-t border-white/10 px-6 py-5 text-sm leading-relaxed text-neutral-400">Yes, Classic Reinsurance Brokers is a licensed and regulated insurance brokerage firm operating in compliance with the Insurance and Pensions Commission (IPEC) of Zimbabwe. We adhere to the highest standards of professional conduct, financial security, and regulatory compliance.</div>
-                </div>
-            </div>
+            @endforeach
         </div>
+        @else
+        <div class="mt-12 text-center text-neutral-500">
+            <p>No FAQs available yet. Please check back later.</p>
+        </div>
+        @endif
     </div>
 </section>
 @endsection

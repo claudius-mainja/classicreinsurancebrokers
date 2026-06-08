@@ -188,45 +188,31 @@
             <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">Meet the team</h2>
             <p class="mt-4 text-lg text-neutral-400">The experienced professionals driving Classic Reinsurance Brokers forward.</p>
         </div>
+        @if($teamMembers->isNotEmpty())
+        @php $featured = $teamMembers->shift(); @endphp
         <div class="mt-16 flex justify-center">
             <div class="fade-up text-center">
                 <div class="mx-auto h-40 w-40 overflow-hidden rounded-full bg-neutral-800 ring-4 ring-primary-600/30 shadow-lg">
-                    <img src="{{ asset('images/Kingstone.png') }}" alt="Kingstone Mhinda" class="h-full w-full object-cover">
+                    <img src="{{ asset('images/' . $featured->image) }}" alt="{{ $featured->name }}" class="h-full w-full object-cover">
                 </div>
-                <h3 class="mt-5 text-lg font-bold text-white">Kingstone Mhinda</h3>
-                <p class="text-sm font-semibold text-primary-500">Technical Director</p>
+                <h3 class="mt-5 text-lg font-bold text-white">{{ $featured->name }}</h3>
+                <p class="text-sm font-semibold text-primary-500">{{ $featured->position }}</p>
             </div>
         </div>
+        @if($teamMembers->isNotEmpty())
         <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-4xl mx-auto">
-            <div class="fade-up text-center">
+            @foreach($teamMembers as $i => $member)
+            <div class="fade-up text-center" @if($i > 0) style="transition-delay: {{ 0.05 * $i }}s"@endif>
                 <div class="mx-auto h-32 w-32 overflow-hidden rounded-full bg-neutral-800 ring-4 ring-primary-600/20 shadow-lg">
-                    <img src="{{ asset('images/Nyasha.png') }}" alt="Nyasha E Whende" class="h-full w-full object-cover">
+                    <img src="{{ asset('images/' . $member->image) }}" alt="{{ $member->name }}" class="h-full w-full object-cover">
                 </div>
-                <h3 class="mt-4 text-base font-bold text-white">Nyasha E Whende</h3>
-                <p class="text-xs font-semibold text-primary-500">Operations Manager</p>
+                <h3 class="mt-4 text-base font-bold text-white">{{ $member->name }}</h3>
+                <p class="text-xs font-semibold text-primary-500">{{ $member->position }}</p>
             </div>
-            <div class="fade-up text-center" style="transition-delay: 0.05s">
-                <div class="mx-auto h-32 w-32 overflow-hidden rounded-full bg-neutral-800 ring-4 ring-primary-600/20 shadow-lg">
-                    <img src="{{ asset('images/rachel.png') }}" alt="Rachel N. Hakutangwi" class="h-full w-full object-cover">
-                </div>
-                <h3 class="mt-4 text-base font-bold text-white">Rachel N. Hakutangwi</h3>
-                <p class="text-xs font-semibold text-primary-500">Senior Reinsurance Broker</p>
-            </div>
-            <div class="fade-up text-center" style="transition-delay: 0.1s">
-                <div class="mx-auto h-32 w-32 overflow-hidden rounded-full bg-neutral-800 ring-4 ring-primary-600/20 shadow-lg">
-                    <img src="{{ asset('images/team/Tinashe.jpeg') }}" alt="Tinashe Y Chadenga" class="h-full w-full object-cover">
-                </div>
-                <h3 class="mt-4 text-base font-bold text-white">Tinashe Y Chadenga</h3>
-                <p class="text-xs font-semibold text-primary-500">Assistant Accountant</p>
-            </div>
-            <div class="fade-up text-center" style="transition-delay: 0.15s">
-                <div class="mx-auto h-32 w-32 overflow-hidden rounded-full bg-neutral-800 ring-4 ring-primary-600/20 shadow-lg">
-                    <img src="{{ asset('images/team/Doreen.jpeg') }}" alt="Doreen Mabhiza" class="h-full w-full object-cover">
-                </div>
-                <h3 class="mt-4 text-base font-bold text-white">Doreen Mabhiza</h3>
-                <p class="text-xs font-semibold text-primary-500">Trainee Broker</p>
-            </div>
+            @endforeach
         </div>
+        @endif
+        @endif
     </div>
 </section>
 

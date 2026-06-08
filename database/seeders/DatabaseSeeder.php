@@ -22,5 +22,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->command->info('Admin user created: info@classicre.co.zw / ClassicAdmin2026!');
+
+        $this->call(ServiceSeeder::class);
+        $this->call(ContentSeeder::class);
     }
 }

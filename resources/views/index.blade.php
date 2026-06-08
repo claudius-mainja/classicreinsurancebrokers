@@ -379,87 +379,19 @@
             <p class="mt-4 text-lg leading-relaxed text-neutral-400">Professional reinsurance broking across nine core classes, giving insurance companies access to reliable capacity backed by strong relationships with leading global and regional reinsurers.</p>
         </div>
         <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <a href="{{ route('services.product', 'motor-insurance') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl">
+            @forelse($sharedProducts as $i => $p)
+            <a href="{{ route('services.product', $p->slug) }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" @if($i > 0) style="transition-delay: {{ $i * 0.05 }}s"@endif>
                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
                     <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 1.106l1.054 2.108A1 1 0 0121 14v3a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-7a2 2 0 012-2h3m4 0V5a2 2 0 00-2-2H7a1 1 0 00-.707.293L4 5m10 5H8m4 0h2"/></svg>
                 </div>
                 <div class="min-w-0">
-                    <h3 class="text-sm font-semibold text-white group-hover:text-primary-400 transition-colors">Motor Insurance</h3>
-                    <p class="text-xs text-neutral-500 mt-0.5">Private & commercial vehicle fleets</p>
+                    <h3 class="text-sm font-semibold text-white group-hover:text-primary-400 transition-colors">{{ $p->name }}</h3>
+                    <p class="text-xs text-neutral-500 mt-0.5">{{ Str::of(strip_tags($p->subtitle ?? $p->description ?? ''))->limit(60) }}</p>
                 </div>
             </a>
-            <a href="{{ route('services.product', 'household') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.05s">
-                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-                </div>
-                <div class="min-w-0">
-                    <h3 class="text-sm font-semibold text-white group-hover:text-primary-400 transition-colors">Household</h3>
-                    <p class="text-xs text-neutral-500 mt-0.5">Buildings & contents cover</p>
-                </div>
-            </a>
-            <a href="{{ route('services.product', 'engineering') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.1s">
-                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.573-1.066z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                </div>
-                <div class="min-w-0">
-                    <h3 class="text-sm font-semibold text-white group-hover:text-primary-400 transition-colors">Engineering</h3>
-                    <p class="text-xs text-neutral-500 mt-0.5">CAR, EAR, plant & machinery</p>
-                </div>
-            </a>
-            <a href="{{ route('services.product', 'assets-all-risks') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.15s">
-                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-                </div>
-                <div class="min-w-0">
-                    <h3 class="text-sm font-semibold text-white group-hover:text-primary-400 transition-colors">Assets All Risks</h3>
-                    <p class="text-xs text-neutral-500 mt-0.5">Commercial & industrial assets</p>
-                </div>
-            </a>
-            <a href="{{ route('services.product', 'liability-insurance') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.2s">
-                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                </div>
-                <div class="min-w-0">
-                    <h3 class="text-sm font-semibold text-white group-hover:text-primary-400 transition-colors">Liability Insurance</h3>
-                    <p class="text-xs text-neutral-500 mt-0.5">Public, product, professional indemnity</p>
-                </div>
-            </a>
-            <a href="{{ route('services.product', 'goods-in-transit') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.25s">
-                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
-                </div>
-                <div class="min-w-0">
-                    <h3 class="text-sm font-semibold text-white group-hover:text-primary-400 transition-colors">Goods In Transit</h3>
-                    <p class="text-xs text-neutral-500 mt-0.5">Marine cargo & transportation</p>
-                </div>
-            </a>
-            <a href="{{ route('services.product', 'group-personal-accidents') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.3s">
-                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                </div>
-                <div class="min-w-0">
-                    <h3 class="text-sm font-semibold text-white group-hover:text-primary-400 transition-colors">Group Personal Accidents</h3>
-                    <p class="text-xs text-neutral-500 mt-0.5">Employer & affinity group cover</p>
-                </div>
-            </a>
-            <a href="{{ route('services.product', 'travel-insurance') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.35s">
-                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
-                </div>
-                <div class="min-w-0">
-                    <h3 class="text-sm font-semibold text-white group-hover:text-primary-400 transition-colors">Travel Insurance</h3>
-                    <p class="text-xs text-neutral-500 mt-0.5">Medical, trip, baggage cover</p>
-                </div>
-            </a>
-            <a href="{{ route('services.product', 'agriculture-insurance') }}" class="fade-up card-glass flex items-center gap-4 p-5 group rounded-xl" style="transition-delay: 0.4s">
-                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:ring-primary-400">
-                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
-                </div>
-                <div class="min-w-0">
-                    <h3 class="text-sm font-semibold text-white group-hover:text-primary-400 transition-colors">Agriculture Insurance</h3>
-                    <p class="text-xs text-neutral-500 mt-0.5">Crop, livestock & forestry</p>
-                </div>
-            </a>
+            @empty
+            <div class="col-span-full text-center text-neutral-500 py-8">No products available yet.</div>
+            @endforelse
         </div>
         <div class="fade-up mt-10 text-center">
             <a href="{{ route('services') }}" class="btn btn-outline border-neutral-500 text-neutral-300 hover:bg-white/10">View all products & specialties <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg></a>
@@ -521,6 +453,41 @@
         </div>
     </div>
 </section>
+
+@if($testimonials->isNotEmpty())
+<section class="bg-neutral-950 py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="fade-up text-center max-w-2xl mx-auto">
+            <span class="section-label text-primary-400">Testimonials</span>
+            <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl font-heading">What our clients say</h2>
+            <p class="mt-4 text-lg text-neutral-400">Hear from the insurance companies we partner with across Zimbabwe and the region.</p>
+        </div>
+        <div class="mt-12 grid gap-8 md:grid-cols-3">
+            @foreach($testimonials as $i => $testimonial)
+            <div class="fade-up card-glass p-6 flex flex-col" @if($i > 0) style="transition-delay: {{ 0.1 * $i }}s"@endif>
+                <div class="flex items-center gap-1 text-primary-400 mb-4">
+                    @for($s = 1; $s <= 5; $s++)
+                    <svg class="h-4 w-4 {{ $s <= $testimonial->rating ? 'text-primary-400' : 'text-neutral-600' }}" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    @endfor
+                </div>
+                <p class="text-sm leading-relaxed text-neutral-300 flex-1">"{{ $testimonial->content }}"</p>
+                <div class="mt-6 flex items-center gap-3 pt-4 border-t border-white/10">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-600/20 text-primary-400 text-sm font-bold">
+                        {{ substr($testimonial->name, 0, 1) }}
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-white">{{ $testimonial->name }}</p>
+                        @if($testimonial->position || $testimonial->company)
+                        <p class="text-xs text-neutral-500">{{ $testimonial->position }}@if($testimonial->position && $testimonial->company), @endif{{ $testimonial->company }}</p>
+                        @endif
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+@endif
 
 <section class="hero-gradient py-20 lg:py-28">
     <div class="mx-auto max-w-3xl px-6 text-center lg:px-8">

@@ -53,20 +53,6 @@
 </script>
 @endpush
 
-@php
-$allProducts = [
-    'motor-insurance' => 'Motor Insurance',
-    'household' => 'Household',
-    'engineering' => 'Engineering',
-    'assets-all-risks' => 'Assets All Risks',
-    'liability-insurance' => 'Liability Insurance',
-    'group-personal-accidents' => 'Group Personal Accidents',
-    'travel-insurance' => 'Travel Insurance',
-    'goods-in-transit' => 'Goods In Transit',
-    'agriculture-insurance' => 'Agriculture Insurance',
-];
-@endphp
-
 @section('content')
 <section class="relative min-h-[50vh] flex items-center overflow-hidden bg-neutral-950">
     <div class="absolute inset-0 bg-cover bg-center bg-fixed opacity-15" style="background-image: url('{{ asset('images/hero-pattern.png') }}')"></div>
