@@ -1,0 +1,150 @@
+---
+import '../../styles/app.css';
+import Footer from '../astro/Footer.astro';
+import Navbar from '../react/Navbar.tsx';
+import SiteAnimations from '../react/SiteAnimations.tsx';
+import type { SEOProps } from '../astro/SEOHead.astro';
+import SEOHead from '../astro/SEOHead.astro';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  canonical?: string;
+  robots?: string;
+  jsonLd?: string;
+}
+
+const { title, description, keywords, ogTitle, ogDescription, ogImage, canonical, robots, jsonLd } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en-ZW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <SEOHead
+    title={title}
+    description={description}
+    keywords={keywords}
+    ogTitle={ogTitle}
+    ogDescription={ogDescription}
+    ogImage={ogImage}
+    canonical={canonical}
+    robots={robots}
+    jsonLd={jsonLd}
+  />
+
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json" set:html={jsonLd || ''}></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Classic Reinsurance Brokers",
+    "url": "https://www.classicre.co.zw",
+    "description": "Zimbabwe's premier reinsurance broker connecting insurance companies with leading global and regional reinsurance markets.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.classicre.co.zw/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["InsuranceBrokerage", "LocalBusiness"],
+    "name": "Classic Reinsurance Brokers",
+    "description": "Zimbabwe's premier reinsurance broker connecting insurance companies with leading global and regional reinsurance markets for treaty, facultative, and specialty reinsurance solutions.",
+    "url": "https://www.classicre.co.zw",
+    "telephone": "+263242773192",
+    "email": "info@classicre.co.zw",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "11th Floor Fidelity Life Tower, 5 Raleigh Street",
+      "addressLocality": "Harare",
+      "addressRegion": "Harare",
+      "addressCountry": "ZW",
+      "postalCode": "BW 118"
+    },
+    "foundingDate": "2015",
+    "founder": { "@type": "Person", "name": "Kingstone Mhinda" },
+    "areaServed": ["Zimbabwe", "Africa", "Harare", "Bulawayo", "Masvingo", "Chitungwiza", "Mutare", "Gweru", "Kwekwe", "Kadoma", "Chegutu", "Chinhoyi", "Karoi", "Kariba", "Victoria Falls", "Hwange", "Bindura", "Marondera", "Rusape", "Chipinge", "Avondale", "Borrowdale", "Chishawasha", "Highlands"],
+    "priceRange": "$$",
+    "image": "/images/og-image.png",
+    "logo": "/images/logo.png",
+    "sameAs": [
+      "https://linkedin.com/company/classicreinsurancebrokers",
+      "https://web.facebook.com/classicreinsurancebrokers"
+    ],
+    "knowsAbout": [
+      "Treaty Reinsurance", "Facultative Reinsurance", "Advisory Services",
+      "Specialty Risk Insurance", "Reinsurance Intermediary Services",
+      "Motor Reinsurance", "Household Reinsurance", "Engineering Reinsurance",
+      "Assets All Risks Reinsurance", "Liability Reinsurance",
+      "Group Personal Accidents Reinsurance", "Travel Reinsurance",
+      "Goods In Transit Reinsurance", "Agriculture Reinsurance",
+      "Aviation Reinsurance", "Cyber Reinsurance", "Political Risk Reinsurance"
+    ],
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "16:30" }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-neutral-950 text-neutral-300 antialiased">
+  <Navbar client:load />
+  <SiteAnimations client:load />
+
+  <main class="min-h-screen">
+    <slot />
+  </main>
+
+  <Footer />
+
+  <script>
+  (function() {
+    var selector = '.fade-up, .fade-in, .fade-left, .fade-right, .reveal, .scale-in, .slide-up-blur, .stagger-fade, .img-reveal';
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll(selector).forEach(function(el) {
+      observer.observe(el);
+    });
+  })();
+  </script>
+
+  <script>
+  (function() {
+    var css = document.createElement('style');
+    css.textContent = [
+      '[data-lenis-prevent] { overscroll-behavior: contain; }',
+      '[data-lenis-stopped] { overflow: hidden; }',
+      '.lenis-smooth { scroll-behavior: auto; }',
+      '.lenis-smooth html { scroll-behavior: auto; }',
+      '.lenis-smooth body { scroll-behavior: auto; }',
+      '.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }'
+    ].join('');
+    document.head.appendChild(css);
+  })();
+  </script>
+</body>
+</html>

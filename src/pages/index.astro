@@ -1,0 +1,281 @@
+---
+import AppLayout from '../components/layouts/AppLayout.astro';
+import AnimatedSection from '../components/react/AnimatedSection.tsx';
+import Counter from '../components/react/Counter.tsx';
+import ParticleBg from '../components/react/ParticleBg.tsx';
+import { products } from '../data/products';
+import { specialties } from '../data/specialties';
+import { site } from '../data/site';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+const recentPosts = posts.sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime()).slice(0, 3);
+---
+
+<AppLayout
+  ogTitle="Classic Reinsurance Brokers — Premier Reinsurance Broker in Zimbabwe"
+  canonical="https://www.classicre.co.zw"
+>
+  <section class="relative min-h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/herobg.png" alt="" class="h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-primary-900/80 via-primary-900/60 to-neutral-950/90"></div>
+    </div>
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-1/4 left-[20%] h-2 w-2 bg-primary-400/30 rounded-full animate-float" style="animation-delay: 0s; animation-duration: 6s"></div>
+      <div class="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-primary-300/20 rounded-full animate-float" style="animation-delay: 1s; animation-duration: 8s"></div>
+      <div class="absolute top-2/3 left-1/3 w-2.5 h-2.5 bg-primary-500/25 rounded-full animate-float" style="animation-delay: 2s; animation-duration: 7s"></div>
+      <div class="absolute bottom-1/4 right-[20%] w-1 h-1 bg-primary-200/30 rounded-full animate-float" style="animation-delay: 0.5s; animation-duration: 9s"></div>
+      <div class="absolute top-1/2 left-3/4 w-2 h-2 bg-primary-400/20 rounded-full animate-float" style="animation-delay: 1.5s; animation-duration: 5s"></div>
+      <div class="absolute bottom-1/3 left-[16%] w-1.5 h-1.5 bg-primary-300/25 rounded-full animate-float" style="animation-delay: 3s; animation-duration: 7.5s"></div>
+    </div>
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8 py-24 lg:py-32 w-full">
+      <div class="max-w-3xl stagger-fade">
+        <span class="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold text-primary-200 border border-primary-700/50">
+          Trusted by insurers across Zimbabwe
+        </span>
+        <h1 class="mt-6 text-5xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl font-sora">
+          Your reinsurance broker.
+        </h1>
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-neutral-300 sm:text-xl">
+          Classic Reinsurance Brokers connects insurance companies with leading reinsurance markets — delivering expert treaty, facultative, and advisory services that strengthen your capacity to write business with confidence.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact" class="btn btn-primary text-base px-8 py-3">
+            Start a conversation
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg>
+          </a>
+          <a href="/services" class="btn border border-neutral-400 text-neutral-200 hover:bg-white/10 text-base px-8 py-3">Our services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <AnimatedSection animation="fade-up">
+    <section class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid items-center gap-16 lg:grid-cols-2">
+          <div>
+            <span class="inline-block rounded-full bg-primary-500/10 px-4 py-1 text-xs font-semibold text-primary-400 border border-primary-500/20">About</span>
+            <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl font-sora">Who we are</h2>
+            <p class="mt-6 text-lg leading-relaxed text-neutral-400">
+              Classic Reinsurance Brokers is a leading independent reinsurance brokerage firm headquartered in Harare, Zimbabwe. We specialise in providing comprehensive reinsurance broking, advisory, and risk management solutions to insurance companies across Zimbabwe and the broader African market.
+            </p>
+            <p class="mt-4 text-lg leading-relaxed text-neutral-400">
+              Founded on integrity, professionalism, and technical excellence, our team brings decades of combined experience in the insurance and reinsurance industry.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="/about" class="btn border border-white/30 text-neutral-200 hover:bg-white/10">Learn more about us</a>
+            </div>
+          </div>
+          <div>
+            <div class="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-800 img-reveal">
+              <img src="/images/abouthome.png" alt="Classic Reinsurance Brokers" class="h-full w-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </AnimatedSection>
+
+  <section class="py-24 lg:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <span class="section-label">What we do</span>
+        <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl font-sora">Connecting insurers to global reinsurance markets</h2>
+        <p class="mt-4 text-lg leading-relaxed text-neutral-400">As an independent reinsurance broker, we give insurance companies access to the capacity, expertise, and terms they need to serve their policyholders with confidence. We facilitate the placement of risk with leading global and regional reinsurers — we do not underwrite risk or assume liability directly.</p>
+      </div>
+      <div class="mt-16 grid gap-8 md:grid-cols-2">
+        <AnimatedSection animation="fade-up">
+          <div class="group relative rounded-2xl border border-white/10 bg-white/5 p-8 lg:p-10 transition-all duration-500 hover:border-primary-500/30 hover:-translate-y-1">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white">
+              <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3-3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3"/></svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-white font-sora">Reinsurance Broking</h3>
+            <p class="mt-3 text-neutral-400 leading-relaxed">We structure and place treaty and facultative reinsurance programmes that optimise risk transfer and capital efficiency. Our deep relationships with leading global and regional reinsurers give insurance companies access to the capacity they need.</p>
+            <a href="/services" class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-400 transition-colors hover:text-primary-300">
+              Explore <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg>
+            </a>
+          </div>
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up" delay={100}>
+          <div class="group relative rounded-2xl border border-white/10 bg-white/5 p-8 lg:p-10 transition-all duration-500 hover:border-primary-500/30 hover:-translate-y-1">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white">
+              <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582"/></svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-white font-sora">Advisory Services</h3>
+            <p class="mt-3 text-neutral-400 leading-relaxed">Strategic risk analysis, market intelligence, and regulatory guidance that help insurance companies optimise their reinsurance programmes, navigate complex requirements, and make informed underwriting decisions.</p>
+            <a href="/services" class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-400 transition-colors hover:text-primary-300">
+              Explore <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg>
+            </a>
+          </div>
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up" delay={200}>
+          <div class="group relative rounded-2xl border border-white/10 bg-white/5 p-8 lg:p-10 transition-all duration-500 hover:border-primary-500/30 hover:-translate-y-1">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white">
+              <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5M5 12l7-7 7 7"/></svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-white font-sora">Specialty Risk</h3>
+            <p class="mt-3 text-neutral-400 leading-relaxed">Nine specialist risk classes covering complex and emerging exposures — from aviation and cyber to political risk and construction — connecting insurers with global specialty reinsurance markets.</p>
+            <a href="/services#specialty-risk" class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-400 transition-colors hover:text-primary-300">
+              Explore <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg>
+            </a>
+          </div>
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up" delay={300}>
+          <div class="group relative rounded-2xl border border-white/10 bg-white/5 p-8 lg:p-10 transition-all duration-500 hover:border-primary-500/30 hover:-translate-y-1">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white">
+              <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751"/></svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-white font-sora">Claims Advocacy</h3>
+            <p class="mt-3 text-neutral-400 leading-relaxed">Expert support throughout the reinsurance claims lifecycle — from notification and documentation to negotiation and settlement — ensuring insurers receive the full benefit of their reinsurance protections.</p>
+            <a href="/services" class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-400 transition-colors hover:text-primary-300">
+              Explore <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg>
+            </a>
+          </div>
+        </AnimatedSection>
+      </div>
+    </div>
+  </section>
+
+  <AnimatedSection animation="fade-up">
+    <section class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <span class="inline-block rounded-full bg-primary-500/10 px-4 py-1 text-xs font-semibold text-primary-400 border border-primary-500/20">Products</span>
+          <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl font-sora">Reinsurance products</h2>
+          <p class="mt-4 text-lg leading-relaxed text-neutral-400">Professional reinsurance broking across nine core classes, giving insurance companies access to reliable capacity backed by strong relationships with leading global and regional reinsurers.</p>
+        </div>
+        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 stagger-fade">
+          {products.map((p, i) => (
+            <a href={`/services/product/${p.slug}`} class="rounded-xl border border-white/10 bg-white/5 flex items-center gap-4 p-5 group transition-all duration-300 hover:border-primary-500/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-500/5">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:shadow-lg group-hover:shadow-primary-500/20">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 1.106l1.054 2.108A1 1 0 0121 14v3a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-7a2 2 0 012-2h3m4 0V5a2 2 0 00-2-2H7a1 1 0 00-.707.293L4 5m10 5H8m4 0h2"/></svg>
+              </div>
+              <div class="min-w-0">
+                <h3 class="text-sm font-semibold text-white group-hover:text-primary-400 transition-colors">{p.name}</h3>
+                <p class="text-xs text-neutral-500 mt-0.5">{p.subtitle.slice(0, 60)}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+        <div class="mt-10 text-center">
+          <a href="/services" class="btn border border-white/30 text-neutral-300 hover:bg-white/10">View all products & specialties <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </AnimatedSection>
+
+  <AnimatedSection animation="fade-up">
+    <section class="bg-neutral-900/50 py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid items-center gap-16 lg:grid-cols-2">
+          <div class="order-2 lg:order-1">
+            <div class="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-800">
+              <img src="/images/HomeContact.png" alt="Why Classic Reinsurance Brokers" class="h-full w-full object-cover opacity-90" loading="lazy" />
+            </div>
+          </div>
+          <div class="order-1 lg:order-2">
+            <span class="inline-block rounded-full bg-primary-500/10 px-4 py-1 text-xs font-semibold text-primary-400 border border-primary-500/20">Why us</span>
+            <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl font-sora">Why Classic Reinsurance Brokers</h2>
+            <p class="mt-6 text-lg leading-relaxed text-neutral-400">What sets us apart in the reinsurance broking landscape.</p>
+            <div class="mt-8 space-y-6">
+              <div class="flex gap-4">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-white">Deep Market Expertise</h3>
+                  <p class="text-sm text-neutral-400 mt-1">Intimate understanding of Zimbabwean insurance markets with strong local and international reinsurer relationships.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-white">Client-First Approach</h3>
+                  <p class="text-sm text-neutral-400 mt-1">Personalised attention and tailored reinsurance programmes designed around your specific portfolio needs.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-white">Technical Excellence</h3>
+                  <p class="text-sm text-neutral-400 mt-1">Deep technical knowledge combined with innovative thinking to develop creative reinsurance strategies.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-white">Dedicated Support</h3>
+                  <p class="text-sm text-neutral-400 mt-1">Responsive, accessible support throughout the entire reinsurance lifecycle from programme design to claims advocacy.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </AnimatedSection>
+
+
+
+  {recentPosts.length > 0 && (
+    <AnimatedSection animation="fade-up">
+      <section class="border-t border-white/5 py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto">
+            <span class="inline-block rounded-full bg-primary-500/10 px-4 py-1 text-xs font-semibold text-primary-400 border border-primary-500/20">Insights</span>
+            <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl font-sora">Latest from our blog</h2>
+            <p class="mt-4 text-lg text-neutral-400">Expert analysis and thought leadership on reinsurance and risk management.</p>
+          </div>
+          <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 stagger-fade">
+            {recentPosts.map((post) => (
+              <article class="rounded-xl border border-white/10 bg-white/5 overflow-hidden transition-all duration-300 hover:border-primary-500/30 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary-500/5 group">
+                <a href={`/blog/${post.slug}`} class="block">
+                  <div class="aspect-[16/9] overflow-hidden bg-neutral-800">
+                    <img src={post.data.featuredImage || '/images/blog-placeholder.jpg'} alt={post.data.title} class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" />
+                  </div>
+                </a>
+                <div class="p-6">
+                  <div class="mb-3 flex flex-wrap items-center gap-2">
+                    <span class="rounded-full bg-primary-500/20 px-3 py-0.5 text-xs font-medium text-primary-300">{post.data.category || 'Insurance'}</span>
+                    <span class="text-xs text-neutral-500">{new Date(post.data.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                  </div>
+                  <h3 class="text-lg font-bold text-white transition-colors group-hover:text-primary-400"><a href={`/blog/${post.slug}`}>{post.data.title}</a></h3>
+                  <p class="mt-2 text-sm leading-relaxed text-neutral-400 line-clamp-3">{post.data.excerpt}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div class="mt-10 text-center">
+            <a href="/blog" class="btn border border-white/30 text-neutral-300 hover:bg-white/10">View all insights <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg></a>
+          </div>
+        </div>
+      </section>
+    </AnimatedSection>
+  )}
+
+  <AnimatedSection animation="fade-up">
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary-900/60 via-primary-800/30 to-neutral-950 py-20 lg:py-28">
+      <div class="mx-auto max-w-3xl px-6 text-center lg:px-8 relative z-10">
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl font-sora">Partner with Classic Reinsurance Brokers</h2>
+        <p class="mt-6 text-lg leading-relaxed text-primary-100">Let our team help you connect with the right reinsurance markets for your portfolio. Reach out today for a confidential consultation.</p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact" class="btn bg-white text-primary-700 hover:bg-primary-50 text-base px-8 py-3">
+            Get in touch
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg>
+          </a>
+          <a href="tel:{site.phoneRaw}" class="btn border border-white/30 text-white hover:bg-white/10 text-base px-8 py-3">{site.phone}</a>
+        </div>
+      </div>
+    </section>
+  </AnimatedSection>
+</AppLayout>

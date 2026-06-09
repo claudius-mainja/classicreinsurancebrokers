@@ -1,0 +1,24 @@
+---
+export interface Props {
+  items: { label: string; href?: string }[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav class="fade-up flex items-center gap-2 text-sm text-neutral-400 mb-8">
+  {items.map((item, i) => (
+    <>
+      {i > 0 && (
+        <svg class="h-3.5 w-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4" />
+        </svg>
+      )}
+      {item.href ? (
+        <a href={item.href} class="transition-colors hover:text-white whitespace-nowrap">{item.label}</a>
+      ) : (
+        <span class="text-white whitespace-nowrap">{item.label}</span>
+      )}
+    </>
+  ))}
+</nav>

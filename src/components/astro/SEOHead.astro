@@ -1,0 +1,55 @@
+---
+export interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  canonical?: string;
+  robots?: string;
+  jsonLd?: string;
+}
+
+const { title, description, keywords, ogTitle, ogDescription, ogImage, canonical, robots, jsonLd } = Astro.props;
+const siteName = 'Classic Reinsurance Brokers';
+const defaultTitle = siteName + ' — Zimbabwe\'s Premier Reinsurance Broker';
+const defaultDescription = 'Classic Reinsurance Brokers — Zimbabwe\'s leading reinsurance broker, delivering expert treaty and facultative reinsurance placements to insurance companies across Zimbabwe since 2015.';
+const defaultKeywords = 'reinsurance broker Zimbabwe, reinsurance broker Harare, treaty reinsurance Zimbabwe, facultative reinsurance, reinsurance advisory, Classic Reinsurance Brokers';
+const siteUrl = 'https://www.classicre.co.zw';
+const ogImg = ogImage || '/images/og-image.png';
+const pageTitle = title ? title + ' | ' + siteName : defaultTitle;
+---
+
+<title>{pageTitle}</title>
+<meta name="description" content={description || defaultDescription} />
+<meta name="keywords" content={keywords || defaultKeywords} />
+<meta name="author" content="Classic Reinsurance Brokers" />
+<meta name="geo.region" content="ZW" />
+<meta name="geo.placename" content="Harare" />
+<meta name="geo.position" content="-17.8252;31.0335" />
+<meta name="ICBM" content="-17.8252, 31.0335" />
+<meta name="robots" content={robots || 'index, follow'} />
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+<meta property="og:title" content={ogTitle || pageTitle} />
+<meta property="og:description" content={ogDescription || description || defaultDescription} />
+<meta property="og:image" content={ogImg} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonical || siteUrl} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:locale" content="en_ZW" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={ogTitle || pageTitle} />
+<meta name="twitter:description" content={ogDescription || description || defaultDescription} />
+<meta name="twitter:image" content={ogImg} />
+
+<meta name="chatgpt:title" content={ogTitle || pageTitle} />
+<meta name="chatgpt:description" content={description || defaultDescription} />
+<meta name="perplexity:title" content={ogTitle || pageTitle} />
+<meta name="perplexity:description" content={description || defaultDescription} />
+<meta name="perplexity:site" content={siteName} />
+<meta name="perplexity:locale" content="en_ZW" />
+
+<link rel="canonical" href={canonical || siteUrl} />

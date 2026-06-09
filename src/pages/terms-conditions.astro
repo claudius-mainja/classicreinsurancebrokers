@@ -1,0 +1,96 @@
+---
+import AppLayout from '../components/layouts/AppLayout.astro';
+import Breadcrumb from '../components/astro/Breadcrumb.astro';
+import AnimatedSection from '../components/react/AnimatedSection.tsx';
+import { site } from '../data/site';
+---
+
+<AppLayout
+  title="Terms & Conditions"
+  description="Classic Reinsurance Brokers Terms and Conditions — the terms governing the use of our website and reinsurance broking services."
+  keywords="terms and conditions, Classic Reinsurance Brokers terms, reinsurance broker Zimbabwe terms, website terms of use"
+  robots="index, follow"
+  canonical="https://www.classicre.co.zw/terms-conditions"
+>
+  <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Terms & Conditions' }]} />
+
+  <section class="relative min-h-[45vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/serviceshero.png" alt="" class="h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-neutral-950/85 to-neutral-950"></div>
+    </div>
+    <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-20 lg:py-24 w-full">
+      <div class="max-w-3xl">
+        <span class="fade-up inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-primary-200">Terms & Conditions</span>
+        <h1 class="fade-up mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl" style="transition-delay: 0.1s">Terms & Conditions</h1>
+        <p class="fade-up mt-4 text-sm text-neutral-400" style="transition-delay: 0.2s">Last updated: January 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <AnimatedSection animation="fade-up">
+    <section class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl">
+
+          <div class="space-y-8 text-sm leading-relaxed text-neutral-400">
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">1. Acceptance of Terms</h2>
+              <p class="mt-3">By accessing and using the website of {site.legalName} ("we", "our", "us"), you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our website.</p>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">2. Professional Services</h2>
+              <p class="mt-3">Classic Reinsurance Brokers is registered as a reinsurance broker with the Insurance and Pensions Commission of Zimbabwe (IPEC). Our professional reinsurance broking services are provided subject to separate terms agreed in writing with our clients. Nothing on this website constitutes a binding offer of reinsurance coverage or broking services.</p>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">3. Intellectual Property</h2>
+              <p class="mt-3">All content on this website, including text, graphics, logos, images, and software, is the property of Classic Reinsurance Brokers or its licensors and is protected by Zimbabwean and international copyright laws. You may not reproduce, distribute, modify, or create derivative works without our prior written consent.</p>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">4. Use of Website</h2>
+              <p class="mt-3">You agree to use this website only for lawful purposes and in a manner that does not infringe the rights of others or restrict their use and enjoyment of the website. Prohibited activities include transmitting harmful code, attempting unauthorised access, or using the website for fraudulent purposes.</p>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">5. Disclaimer</h2>
+              <p class="mt-3">The information on this website is provided for general informational purposes only and does not constitute professional advice. While we strive to keep the information accurate and up to date, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information contained on the website.</p>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">6. Limitation of Liability</h2>
+              <p class="mt-3">To the fullest extent permitted by law, Classic Reinsurance Brokers shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising out of your access to, use of, or inability to use this website or any information provided herein.</p>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">7. Third-Party Links</h2>
+              <p class="mt-3">Our website may contain links to third-party websites. These links are provided for your convenience only. We have no control over the content of those websites and assume no responsibility for their content, privacy practices, or terms of use.</p>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">8. Governing Law</h2>
+              <p class="mt-3">These Terms and Conditions are governed by and construed in accordance with the laws of Zimbabwe. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts of Zimbabwe.</p>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">9. Changes to Terms</h2>
+              <p class="mt-3">We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting to this page. Your continued use of the website after any changes constitutes acceptance of the new terms.</p>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">10. Contact</h2>
+              <p class="mt-3">If you have any questions about these Terms and Conditions, please contact us:</p>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li>Email: <a href="mailto:{site.email}" class="text-primary-400 hover:text-primary-300">{site.email}</a></li>
+                <li>Phone: {site.phone}</li>
+                <li>Address: {site.address.street}, {site.address.street2}, {site.address.city}, {site.address.country}</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </AnimatedSection>
+</AppLayout>

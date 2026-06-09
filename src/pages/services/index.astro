@@ -1,0 +1,107 @@
+---
+import AppLayout from '../../components/layouts/AppLayout.astro';
+import Breadcrumb from '../../components/astro/Breadcrumb.astro';
+import AnimatedSection from '../../components/react/AnimatedSection.tsx';
+import ParticleBg from '../../components/react/ParticleBg.tsx';
+import { products } from '../../data/products';
+import { specialties } from '../../data/specialties';
+import { site } from '../../data/site';
+---
+
+<AppLayout
+  title="Reinsurance Broking Services & Solutions"
+  description="Classic Reinsurance Brokers offers professional reinsurance broking services across 9 core products and 9 specialty risk classes, connecting insurance companies with leading global and regional reinsurance markets."
+  keywords="reinsurance broker Zimbabwe, reinsurance broking services, treaty reinsurance, facultative reinsurance, specialty risk insurance, reinsurance broker Africa, insurance company reinsurance"
+  ogTitle="Reinsurance Broking Services | Classic Reinsurance Brokers"
+  ogDescription="Explore our professional reinsurance broking services — connecting insurance companies with leading global and regional reinsurance markets for treaty, facultative, and specialty risk solutions."
+  canonical="https://www.classicre.co.zw/services"
+>
+  <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Services' }]} />
+
+  <section class="relative min-h-[55vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/serviceshero.png" alt="" class="h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-neutral-950/85 to-neutral-950"></div>
+    </div>
+    <ParticleBg particleCount={20} />
+    <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-24 lg:py-32 w-full">
+      <div class="max-w-3xl stagger-fade">
+        <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-primary-200">Our services</span>
+        <h1 class="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Reinsurance Broking & Advisory</h1>
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-neutral-300">We connect insurance companies with leading reinsurance markets. Our comprehensive suite of broking services spans 9 core products and 9 specialty risk classes, delivering the capacity and expertise you need to grow with confidence.</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#reinsurance-products" class="btn bg-white text-primary-700 hover:bg-primary-50">Reinsurance solutions</a>
+          <a href="#specialty-risk" class="btn border border-white/30 text-white hover:bg-white/10">Specialty risk</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <AnimatedSection animation="fade-up">
+    <section id="reinsurance-products" class="bg-neutral-50 py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <span class="inline-block rounded-full bg-primary-600/10 px-4 py-1 text-xs font-semibold text-primary-700 border border-primary-600/20">Core offerings</span>
+          <h2 class="mt-4 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl font-sora">Reinsurance Products</h2>
+          <p class="mt-4 text-lg leading-relaxed text-neutral-600">Professional reinsurance broking across nine core classes, connecting insurance companies with leading markets for reliable capacity and portfolio support.</p>
+        </div>
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 stagger-fade">
+          {products.map((p, i) => (
+            <a
+              href={`/services/product/${p.slug}`}
+              class="rounded-xl border border-neutral-200 bg-white p-6 group hover:border-primary-500/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-500/10 transition-all duration-300"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-600/10 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 1.106l1.054 2.108A1 1 0 0121 14v3a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-7a2 2 0 012-2h3m4 0V5a2 2 0 00-2-2H7a1 1 0 00-.707.293L4 5m10 5H8m4 0h2"/></svg>
+              </div>
+              <h3 class="mt-4 text-lg font-bold text-neutral-900 group-hover:text-primary-600 transition-colors">{p.name}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-neutral-500">{p.subtitle.slice(0, 120)}</p>
+              <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600">Learn more <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </AnimatedSection>
+
+  <AnimatedSection animation="fade-up">
+    <section id="specialty-risk" class="bg-neutral-950 py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <span class="inline-block rounded-full bg-primary-500/10 px-4 py-1 text-xs font-semibold text-primary-400 border border-primary-500/20">Complex & emerging risks</span>
+          <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl font-sora">Specialty Risk Insurance</h2>
+          <p class="mt-4 text-lg leading-relaxed text-neutral-400">Specialist broking services for complex, high-value, and emerging risks, connecting insurance companies with global specialty reinsurance markets across Africa and beyond.</p>
+        </div>
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 stagger-fade">
+          {specialties.map((s, i) => (
+            <a
+              href={`/services/specialty/${s.slug}`}
+              class="rounded-xl border border-white/10 bg-white/5 p-6 group hover:border-primary-500/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-500/10 text-primary-400 transition-colors group-hover:bg-primary-500 group-hover:text-white">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5M5 12l7-7 7 7"/></svg>
+              </div>
+              <h3 class="mt-4 text-lg font-bold text-white group-hover:text-primary-400 transition-colors">{s.name}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-neutral-500">{s.description.slice(0, 120)}</p>
+              <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-400">Learn more <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 12h-15m11.667-4l3.333 4-3.333 4"/></svg></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </AnimatedSection>
+
+  <AnimatedSection animation="fade-up">
+    <section class="relative overflow-hidden border-t border-white/5 py-20 lg:py-28">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-900/30 via-neutral-950 to-primary-950/20"></div>
+      <div class="relative mx-auto max-w-3xl px-6 text-center lg:px-8">
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl font-sora">Ready to partner with us?</h2>
+        <p class="mt-6 text-lg leading-relaxed text-neutral-300">Contact our team to discuss how Classic Reinsurance Brokers can connect your insurance portfolio with the right reinsurance capacity, technical expertise, and market access.</p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact" class="btn bg-white text-primary-700 hover:bg-primary-50 text-base px-8 py-3">Get in touch</a>
+          <a href="tel:{site.phoneRaw}" class="btn border border-white/30 text-white hover:bg-white/10 text-base px-8 py-3">{site.phone}</a>
+        </div>
+      </div>
+    </section>
+  </AnimatedSection>
+</AppLayout>

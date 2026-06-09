@@ -1,0 +1,73 @@
+---
+import AppLayout from '../components/layouts/AppLayout.astro';
+import Breadcrumb from '../components/astro/Breadcrumb.astro';
+import { site } from '../data/site';
+import { products } from '../data/products';
+import { specialties } from '../data/specialties';
+---
+
+<AppLayout
+  title="Search"
+  description="Search Classic Reinsurance Brokers — find reinsurance products, services, articles, and information about Zimbabwe's premier reinsurance broker."
+  keywords="search, Classic Reinsurance Brokers, reinsurance broker Zimbabwe, find reinsurance"
+  robots="index, follow"
+  canonical="https://www.classicre.co.zw/search"
+>
+  <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Search' }]} />
+
+  <section class="relative min-h-[55vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/serviceshero.png" alt="" class="h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-neutral-950/85 to-neutral-950"></div>
+    </div>
+    <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-24 lg:py-32 w-full">
+      <div class="max-w-3xl">
+        <span class="fade-up inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-primary-200">Search</span>
+        <h1 class="fade-up mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl" style="transition-delay: 0.1s">Search <span class="text-primary-400">Our Site</span></h1>
+        <p class="fade-up mt-6 max-w-xl text-lg leading-relaxed text-neutral-300" style="transition-delay: 0.2s">Find reinsurance products, services, insights, and more. Press <kbd class="rounded border border-white/10 bg-white/10 px-2 py-0.5 text-sm text-neutral-400">Ctrl+K</kbd> from any page to search instantly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-3">
+        <div class="lg:col-span-2">
+          <h2 class="text-2xl font-bold text-white font-sora">Browse our services</h2>
+          <p class="mt-2 text-neutral-400">Explore our full range of reinsurance products and specialty risk classes.</p>
+          <div class="mt-8 space-y-8">
+            <div>
+              <h3 class="text-lg font-semibold text-white">Reinsurance Products</h3>
+              <div class="mt-4 grid gap-3 sm:grid-cols-2">
+                {products.map((p) => (
+                  <a href={`/services/product/${p.slug}`} class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-neutral-300 transition-all hover:border-primary-500/30 hover:text-primary-400">
+                    <span class="h-2 w-2 rounded-full bg-primary-400 shrink-0"></span>
+                    {p.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-white">Specialty Risk Insurance</h3>
+              <div class="mt-4 grid gap-3 sm:grid-cols-2">
+                {specialties.map((s) => (
+                  <a href={`/services/specialty/${s.slug}`} class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-neutral-300 transition-all hover:border-primary-500/30 hover:text-primary-400">
+                    <span class="h-2 w-2 rounded-full bg-primary-400 shrink-0"></span>
+                    {s.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="sticky top-24 rounded-xl border border-white/10 bg-gradient-to-br from-primary-900/60 via-primary-800/30 to-neutral-900 p-6 text-center">
+            <h3 class="text-base font-bold text-white">Need help?</h3>
+            <p class="mt-2 text-sm text-neutral-300">Contact our team for personalised reinsurance advice.</p>
+            <a href="/contact" class="btn mt-4 inline-flex w-full items-center justify-center bg-primary-600 text-white hover:bg-primary-500 text-sm">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</AppLayout>

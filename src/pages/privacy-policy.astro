@@ -1,0 +1,136 @@
+---
+import AppLayout from '../components/layouts/AppLayout.astro';
+import Breadcrumb from '../components/astro/Breadcrumb.astro';
+import AnimatedSection from '../components/react/AnimatedSection.tsx';
+import { site } from '../data/site';
+---
+
+<AppLayout
+  title="Privacy Policy"
+  description="Classic Reinsurance Brokers Privacy Policy — how we collect, use, and protect your personal information in compliance with Zimbabwean data protection laws."
+  keywords="privacy policy, data protection Zimbabwe, Classic Reinsurance Brokers privacy, personal information Zimbabwe"
+  robots="index, follow"
+  canonical="https://www.classicre.co.zw/privacy-policy"
+>
+  <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Privacy Policy' }]} />
+
+  <section class="relative min-h-[45vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/serviceshero.png" alt="" class="h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-neutral-950/85 to-neutral-950"></div>
+    </div>
+    <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-20 lg:py-24 w-full">
+      <div class="max-w-3xl">
+        <span class="fade-up inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-primary-200">Privacy Policy</span>
+        <h1 class="fade-up mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl" style="transition-delay: 0.1s">Privacy Policy</h1>
+        <p class="fade-up mt-4 text-sm text-neutral-400" style="transition-delay: 0.2s">Last updated: January 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <AnimatedSection animation="fade-up">
+    <section class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl">
+
+          <div class="space-y-8 text-sm leading-relaxed text-neutral-400">
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">1. Introduction</h2>
+              <p class="mt-3">{site.legalName} ("we", "our", "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <a href="https://www.classicre.co.zw" class="text-primary-400 hover:text-primary-300">www.classicre.co.zw</a>.</p>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">2. Information We Collect</h2>
+              <div class="mt-3 space-y-3">
+                <p><strong class="text-white">Personal Information:</strong> We may collect personal information that you voluntarily provide to us when you fill out forms on our website, including your name, email address, phone number, and company name.</p>
+                <p><strong class="text-white">Automatically Collected Information:</strong> When you visit our website, we may automatically collect certain information including your IP address, browser type, operating system, referring URLs, and browsing behaviour through cookies and similar technologies.</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">3. How We Use Your Information</h2>
+              <p class="mt-3">We use the information we collect for the following purposes:</p>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li>To respond to your enquiries and provide reinsurance broking services</li>
+                <li>To improve our website and user experience</li>
+                <li>To comply with legal and regulatory obligations under Zimbabwean law</li>
+                <li>To send relevant communications about our services (with your consent)</li>
+                <li>To detect and prevent fraudulent or malicious activity</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">4. Legal Basis for Processing</h2>
+              <p class="mt-3">We process your personal information based on the following legal grounds:</p>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li><strong class="text-white">Consent:</strong> Where you have given us explicit consent to process your data</li>
+                <li><strong class="text-white">Contractual Necessity:</strong> Where processing is necessary for the performance of a contract with you</li>
+                <li><strong class="text-white">Legal Obligation:</strong> Where we are required to process data to comply with applicable laws</li>
+                <li><strong class="text-white">Legitimate Interests:</strong> Where processing is necessary for our legitimate business interests</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">5. Data Sharing and Disclosure</h2>
+              <p class="mt-3">We do not sell your personal information. We may share your information with:</p>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li>Reinsurers and markets as necessary to arrange your reinsurance placements</li>
+                <li>Regulatory authorities as required by law (IPEC, ZIMRA, etc.)</li>
+                <li>Service providers who assist us in operating our website and business</li>
+                <li>Professional advisors including legal and compliance consultants</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">6. Data Retention</h2>
+              <p class="mt-3">We retain your personal information for as long as necessary to fulfil the purposes for which it was collected, or as required by applicable laws and regulations. Reinsurance placement records are retained for the period required by Zimbabwean insurance regulations.</p>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">7. Your Rights</h2>
+              <p class="mt-3">Under applicable data protection laws, you have the right to:</p>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li>Access your personal information held by us</li>
+                <li>Request correction of inaccurate information</li>
+                <li>Request deletion of your information (subject to legal retention requirements)</li>
+                <li>Object to processing of your information</li>
+                <li>Request restriction of processing</li>
+                <li>Withdraw consent at any time</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">8. Cookies</h2>
+              <p class="mt-3">Our website uses cookies to enhance your browsing experience. You can control cookie preferences through your browser settings. For more information, see our Cookie Policy.</p>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">9. Security</h2>
+              <p class="mt-3">We implement appropriate technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction. However, no method of electronic storage or transmission is 100% secure.</p>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">10. Third-Party Links</h2>
+              <p class="mt-3">Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of those websites. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">11. Changes to This Policy</h2>
+              <p class="mt-3">We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy on this page and updating the "Last updated" date.</p>
+            </section>
+
+            <section>
+              <h2 class="text-xl font-semibold text-white font-sora">12. Contact Us</h2>
+              <p class="mt-3">If you have any questions about this Privacy Policy or wish to exercise your data protection rights, please contact us:</p>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li>Email: <a href="mailto:{site.email}" class="text-primary-400 hover:text-primary-300">{site.email}</a></li>
+                <li>Phone: {site.phone}</li>
+                <li>Address: {site.address.street}, {site.address.street2}, {site.address.city}, {site.address.country}</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </AnimatedSection>
+</AppLayout>
