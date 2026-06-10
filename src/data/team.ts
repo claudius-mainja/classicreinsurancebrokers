@@ -7,7 +7,7 @@ export interface TeamMember {
 export const team: TeamMember[] = [
   {
     name: 'Kingstone Mhinda',
-    position: 'General Manager',
+    position: 'Technical Director',
     image: 'Kingstone.png',
   },
   {
@@ -21,13 +21,13 @@ export const team: TeamMember[] = [
     image: 'rachel.png',
   },
   {
-    name: 'Doreen Moyo',
-    position: 'Reinsurance Analyst',
-    image: 'team/Doreen.jpeg',
+    name: 'Tinashe Y. Chadenga',
+    position: 'Assistant Accountant',
+    image: 'team/Tinashe.jpeg',
   },
   {
-    name: 'Tinashe Makoni',
-    position: 'Claims & Operations Officer',
-    image: 'team/Tinashe.jpeg',
+    name: 'Doreen Mabhiza',
+    position: 'Trainee Broker',
+    image: 'team/Doreen.jpeg',
   },
 ];
