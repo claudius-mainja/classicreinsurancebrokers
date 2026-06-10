@@ -1,0 +1,162 @@
+backend:
+  name: github
+  repo: claudius-mainja/classicreinsurancebrokers
+  branch: main
+  base_url: https://classicre-oauth-proxy.onrender.com
+  auth_endpoint: api/auth
+
+local_backend: false
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: blog
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: src/content/blog
+    create: true
+    delete: true
+    preview_path: blog/{{slug}}
+    sortable_fields: ["publishedAt", "title"]
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        hint: The full title of the blog post
+
+      - label: Excerpt
+        name: excerpt
+        widget: text
+        hint: A short summary shown on the blog listing page (1-2 sentences)
+
+      - label: Published Date
+        name: publishedAt
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        format: YYYY-MM-DD
+        default: "{{now}}"
+
+      - label: Author
+        name: author
+        widget: string
+        default: "Kingstone Mhinda"
+
+      - label: Author Avatar
+        name: authorAvatar
+        widget: image
+        default: /images/team-placeholder.jpg
+        required: false
+        hint: Upload a photo or use the default
+
+      - label: Category
+        name: category
+        widget: string
+        default: "Company News"
+        hint: e.g. Company News, Market Intelligence, Industry Insights
+
+      - label: Tags
+        name: tags
+        widget: list
+        default: ["reinsurance"]
+        hint: e.g. reinsurance, Zimbabwe, treaty, facultative
+
+      - label: Featured Image
+        name: featuredImage
+        widget: image
+        default: /images/herobg.png
+        required: false
+
+      - label: Reading Time
+        name: readingTime
+        widget: string
+        default: "5"
+        hint: Estimated reading time in minutes
+
+      - label: OG Image
+        name: ogImage
+        widget: image
+        required: false
+        hint: Optional image for social sharing (overrides featured image)
+
+      - label: Body
+        name: body
+        widget: markdown
+        hint: Main content of the blog post. Supports markdown formatting.
+
+  - name: jobs
+    label: Job Openings
+    label_singular: Job Opening
+    folder: src/content/jobs
+    create: true
+    delete: true
+    preview_path: careers
+    sortable_fields: ["closingDate", "title"]
+    fields:
+      - label: Job Title
+        name: title
+        widget: string
+        hint: e.g. Senior Reinsurance Broker
+
+      - label: Location
+        name: location
+        widget: string
+        default: "Harare, Zimbabwe"
+
+      - label: Employment Type
+        name: type
+        widget: select
+        options: ["Full-time", "Part-time", "Contract", "Internship"]
+        default: "Full-time"
+
+      - label: Department
+        name: department
+        widget: string
+        hint: e.g. Broking, Operations, Finance, Advisory
+
+      - label: Description
+        name: description
+        widget: text
+        hint: A brief overview of the role (shown on the careers page)
+
+      - label: Requirements
+        name: requirements
+        widget: list
+        field:
+          label: Requirement
+          name: req
+          widget: string
+        hint: List the key qualifications and experience needed
+
+      - label: Salary Range
+        name: salaryRange
+        widget: string
+        required: false
+        hint: e.g. Negotiable based on experience, $30,000 - $45,000
+
+      - label: Closing Date
+        name: closingDate
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        format: YYYY-MM-DD
+        required: false
+        hint: Applications close on this date
+
+      - label: Published
+        name: published
+        widget: boolean
+        default: true
+        hint: Unpublish to hide without deleting
+
+      - label: Body (Full Description)
+        name: body
+        widget: markdown
+        required: false
+        hint: Optional detailed job description with sections, formatting, etc.

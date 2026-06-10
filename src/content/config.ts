@@ -16,6 +16,22 @@ const blogCollection = defineCollection({
   }),
 });
 
+const jobsCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    location: z.string().default('Harare, Zimbabwe'),
+    type: z.enum(['Full-time', 'Part-time', 'Contract', 'Internship']).default('Full-time'),
+    department: z.string(),
+    description: z.string(),
+    requirements: z.array(z.string()).default([]),
+    salaryRange: z.string().optional(),
+    closingDate: z.date().optional(),
+    published: z.boolean().default(true),
+  }),
+});
+
 export const collections = {
   blog: blogCollection,
+  jobs: jobsCollection,
 };
