@@ -2,8 +2,8 @@ backend:
   name: github
   repo: claudius-mainja/classicreinsurancebrokers
   branch: main
-  base_url: https://classicre-oauth-proxy.onrender.com
-  auth_endpoint: api/auth
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
 local_backend: false
 

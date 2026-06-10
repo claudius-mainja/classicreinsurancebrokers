@@ -22,7 +22,7 @@ This allows the CMS to log you in securely with your GitHub account.
 3. Fill in:
    - **Application name:** `Classic Re CMS`
    - **Homepage URL:** `https://www.classicre.co.zw`
-   - **Authorization callback URL:** `https://classicre-oauth-proxy.onrender.com/api/callback`
+   - **Authorization callback URL:** `https://api.netlify.com/auth/callback`
 4. Click **"Register application"**
 5. You'll see a **Client ID** and **Client Secret** — copy both somewhere safe
 
