@@ -7,10 +7,20 @@ import { site } from '../data/site';
 
 <AppLayout
   title="Privacy Policy"
-  description="Classic Reinsurance Brokers Privacy Policy — how we collect, use, and protect your personal information in compliance with Zimbabwean data protection laws."
-  keywords="privacy policy, data protection Zimbabwe, Classic Reinsurance Brokers privacy, personal information Zimbabwe"
+  description="Classic Reinsurance Brokers Privacy Policy — how we collect, use, and protect your personal information in compliance with Zimbabwean data protection laws. Classic Reinsurance Brokers is committed to protecting your privacy."
+  keywords="privacy policy, data protection Zimbabwe, Classic Reinsurance Brokers privacy, personal information Zimbabwe, reinsurance broker Zimbabwe privacy"
+  ogTitle="Privacy Policy | Classic Reinsurance Brokers"
+  ogDescription="Privacy policy for Classic Reinsurance Brokers — how we collect, use, and protect your personal information in compliance with Zimbabwean data protection laws."
   robots="index, follow"
   canonical="https://www.classicre.co.zw/privacy-policy"
+  breadcrumbJsonLd={`{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.classicre.co.zw" },
+      { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://www.classicre.co.zw/privacy-policy" }
+    ]
+  }`}
 >
   <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Privacy Policy' }]} />
 

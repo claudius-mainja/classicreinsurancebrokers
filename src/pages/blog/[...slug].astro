@@ -26,11 +26,20 @@ const encodedTitle = encodeURIComponent(post.data.title);
 <AppLayout
   title={post.data.title}
   description={post.data.excerpt}
-  keywords={`${post.data.category || 'reinsurance'}, reinsurance insights, ${post.data.tags?.join(', ') || ''}`}
+  keywords={`${post.data.category || 'reinsurance'}, reinsurance insights Zimbabwe, ${post.data.tags?.join(', ') || ''}, reinsurance broker Zimbabwe, insurance companies Zimbabwe, reinsurance companies Zimbabwe`}
   ogTitle={post.data.title}
   ogDescription={post.data.excerpt}
   ogImage={post.data.featuredImage || '/images/og-image.png'}
   canonical={currentUrl}
+  breadcrumbJsonLd={`{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.classicre.co.zw" },
+      { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.classicre.co.zw/blog" },
+      { "@type": "ListItem", "position": 3, "name": "${post.data.title.replace(/"/g, '\\"')}", "item": "${currentUrl}" }
+    ]
+  }`}
 >
   <ReadingProgress client:load />
 

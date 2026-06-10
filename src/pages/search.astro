@@ -8,10 +8,20 @@ import { specialties } from '../data/specialties';
 
 <AppLayout
   title="Search"
-  description="Search Classic Reinsurance Brokers — find reinsurance products, services, articles, and information about Zimbabwe's premier reinsurance broker."
-  keywords="search, Classic Reinsurance Brokers, reinsurance broker Zimbabwe, find reinsurance"
+  description="Search Classic Reinsurance Brokers — find reinsurance products, services, articles, and information about Zimbabwe's premier reinsurance broker. Search treaty reinsurance, facultative solutions, and specialty risk classes."
+  keywords="search, Classic Reinsurance Brokers, reinsurance broker Zimbabwe, find reinsurance, reinsurance companies Zimbabwe search, insurance broker Zimbabwe search"
+  ogTitle="Search | Classic Reinsurance Brokers"
+  ogDescription="Search Classic Reinsurance Brokers — find reinsurance products, services, and information about Zimbabwe's premier reinsurance broker."
   robots="index, follow"
   canonical="https://www.classicre.co.zw/search"
+  breadcrumbJsonLd={`{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.classicre.co.zw" },
+      { "@type": "ListItem", "position": 2, "name": "Search", "item": "https://www.classicre.co.zw/search" }
+    ]
+  }`}
 >
   <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Search' }]} />
 

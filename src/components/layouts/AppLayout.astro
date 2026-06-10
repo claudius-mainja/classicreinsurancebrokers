@@ -5,6 +5,7 @@ import Navbar from '../react/Navbar.tsx';
 import SiteAnimations from '../react/SiteAnimations.tsx';
 import type { SEOProps } from '../astro/SEOHead.astro';
 import SEOHead from '../astro/SEOHead.astro';
+import { site } from '../../data/site';
 
 export interface Props {
   title?: string;
@@ -16,9 +17,13 @@ export interface Props {
   canonical?: string;
   robots?: string;
   jsonLd?: string;
+  breadcrumbJsonLd?: string;
+  faqJsonLd?: string;
+  productJsonLd?: string;
 }
 
-const { title, description, keywords, ogTitle, ogDescription, ogImage, canonical, robots, jsonLd } = Astro.props;
+const { title, description, keywords, ogTitle, ogDescription, ogImage, canonical, robots, jsonLd, breadcrumbJsonLd, faqJsonLd, productJsonLd } = Astro.props;
+const combinedJsonLd = [jsonLd, breadcrumbJsonLd, faqJsonLd, productJsonLd].filter(Boolean).join('\n');
 ---
 
 <!DOCTYPE html>
@@ -40,11 +45,33 @@ const { title, description, keywords, ogTitle, ogDescription, ogImage, canonical
   />
 
   <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <script type="application/ld+json" set:html={jsonLd || ''}></script>
+  <script type="application/ld+json" set:html={combinedJsonLd}></script>
+
+  {
+    site.services.googleTagManager && (
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${site.services.googleTagManager}`}></script>
+    )
+  }
+  {
+    site.services.googleAnalytics && (
+      <script set:html={`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${site.services.googleAnalytics}');`}></script>
+    )
+  }
+  {
+    site.services.googleAds && (
+      <script set:html={`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${site.services.googleAds}');`}></script>
+    )
+  }
+  {
+    site.services.facebookPixel && (
+      <script set:html={`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '${site.services.facebookPixel}'); fbq('track', 'PageView');`}></script>
+    )
+  }
 
   <script type="application/ld+json">
   {

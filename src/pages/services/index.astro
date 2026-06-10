@@ -9,12 +9,58 @@ import { site } from '../../data/site';
 ---
 
 <AppLayout
-  title="Reinsurance Broking Services & Solutions"
-  description="Classic Reinsurance Brokers offers professional reinsurance broking services across 9 core products and 9 specialty risk classes, connecting insurance companies with leading global and regional reinsurance markets."
-  keywords="reinsurance broker Zimbabwe, reinsurance broking services, treaty reinsurance, facultative reinsurance, specialty risk insurance, reinsurance broker Africa, insurance company reinsurance"
-  ogTitle="Reinsurance Broking Services | Classic Reinsurance Brokers"
-  ogDescription="Explore our professional reinsurance broking services — connecting insurance companies with leading global and regional reinsurance markets for treaty, facultative, and specialty risk solutions."
+  title="Reinsurance Broking Services & Solutions — Zimbabwe"
+  description="Classic Reinsurance Brokers offers professional reinsurance broking services across 9 core products and 9 specialty risk classes, connecting insurance companies in Zimbabwe with leading global and regional reinsurance markets. Based in Harare, serving insurers nationwide."
+  keywords="reinsurance broker Zimbabwe, reinsurance broking services, treaty reinsurance Zimbabwe, facultative reinsurance Zimbabwe, specialty risk insurance, reinsurance broker Africa, insurance company reinsurance, reinsurance companies Zimbabwe, broking companies Zimbabwe, insurance brokers Zimbabwe, reinsurance services Harare, reinsurance products Zimbabwe"
+  ogTitle="Reinsurance Broking Services | Classic Reinsurance Brokers — Zimbabwe"
+  ogDescription="Explore our professional reinsurance broking services — connecting insurance companies with leading global and regional reinsurance markets for treaty, facultative, and specialty risk solutions across Zimbabwe and Africa."
   canonical="https://www.classicre.co.zw/services"
+  faqJsonLd={`{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What reinsurance broking services does Classic Reinsurance Brokers offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer professional reinsurance broking services including treaty reinsurance placements, facultative reinsurance solutions, portfolio optimisation, market intelligence, regulatory and capital advisory, and strategic consulting for insurance companies across Zimbabwe and Africa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What core reinsurance products do you provide in Zimbabwe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide reinsurance intermediary services across 9 core product classes: Motor Insurance, Household, Engineering, Assets All Risks, Liability Insurance, Group Personal Accidents, Travel Insurance, Goods In Transit, and Agriculture Insurance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What specialty risk classes do you cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We cover 9 specialty risk classes: Aviation, Bankers' Blanket, Construction Projects, Cyber, Kidnap and Ransom, Marine Hull, Power Projects, Political Risks, and Political Violence and Terrorism."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does a reinsurance broker help insurance companies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A reinsurance broker connects insurance companies with global and regional reinsurance markets, providing access to risk transfer capacity, specialised expertise, and competitive terms. Classic Reinsurance Brokers facilitates treaty and facultative placements that help insurers grow their portfolios and protect their balance sheets."
+        }
+      }
+    ]
+  }`}
+  breadcrumbJsonLd={`{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.classicre.co.zw" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.classicre.co.zw/services" }
+    ]
+  }`}
 >
   <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Services' }]} />
 

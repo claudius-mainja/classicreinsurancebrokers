@@ -7,11 +7,19 @@ import { site } from '../data/site';
 
 <AppLayout
   title="Contact Us"
-  description="Get in touch with Classic Reinsurance Brokers — Zimbabwe's premier reinsurance broker. Call +263 242 773192 or email info@classicre.co.zw. 11th Floor Fidelity Life Tower, Harare."
-  keywords="contact Classic Reinsurance Brokers, reinsurance broker Harare contact, reinsurance broker Zimbabwe phone, email, address"
-  ogTitle="Contact Classic Reinsurance Brokers"
-  ogDescription="Contact Zimbabwe's premier reinsurance broker. Call +263 242 773192, email info@classicre.co.zw, or visit our Harare office."
+  description="Get in touch with Classic Reinsurance Brokers — Zimbabwe's premier reinsurance broker. Call +263 242 773192 or email info@classicre.co.zw. 11th Floor Fidelity Life Tower, 5 Raleigh Street, Harare. Serving insurance companies across Zimbabwe."
+  keywords="contact Classic Reinsurance Brokers, reinsurance broker Harare contact, reinsurance broker Zimbabwe phone, email, address, reinsurance companies Zimbabwe, broking companies Zimbabwe, insurance broker Harare, reinsurance broker Bulawayo, insurance companies Zimbabwe contact"
+  ogTitle="Contact Classic Reinsurance Brokers — Zimbabwe's Reinsurance Broker"
+  ogDescription="Contact Zimbabwe's premier reinsurance broker. Call +263 242 773192, email info@classicre.co.zw, or visit our Harare office at 11th Floor Fidelity Life Tower."
   canonical="https://www.classicre.co.zw/contact"
+  breadcrumbJsonLd={`{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.classicre.co.zw" },
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.classicre.co.zw/contact" }
+    ]
+  }`}
 >
   <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
 

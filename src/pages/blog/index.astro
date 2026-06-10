@@ -9,12 +9,20 @@ const sorted = posts.sort((a, b) => new Date(b.data.publishedAt).getTime() - new
 ---
 
 <AppLayout
-  title="Reinsurance Insights"
-  description="Expert insights, analysis, and thought leadership on reinsurance, risk management, and the Zimbabwean insurance market from Classic Reinsurance Brokers."
-  keywords="reinsurance insights, reinsurance blog Zimbabwe, risk management insights, insurance market analysis, Classic Reinsurance Brokers blog"
+  title="Reinsurance Insights & Blog"
+  description="Expert insights, analysis, and thought leadership on reinsurance, risk management, and the Zimbabwean insurance market from Classic Reinsurance Brokers — Zimbabwe's premier reinsurance broker."
+  keywords="reinsurance insights, reinsurance blog Zimbabwe, risk management insights, insurance market analysis, Classic Reinsurance Brokers blog, reinsurance companies Zimbabwe, broking companies Zimbabwe insights"
   ogTitle="Reinsurance Insights | Classic Reinsurance Brokers Blog"
   ogDescription="Expert reinsurance insights, market analysis, and thought leadership from Zimbabwe's premier reinsurance broker."
   canonical="https://www.classicre.co.zw/blog"
+  breadcrumbJsonLd={`{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.classicre.co.zw" },
+      { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.classicre.co.zw/blog" }
+    ]
+  }`}
 >
   <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Insights' }]} />
 

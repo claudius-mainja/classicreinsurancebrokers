@@ -9,11 +9,19 @@ import { site } from '../data/site';
 
 <AppLayout
   title="About Us"
-  description="Classic Reinsurance Brokers — Zimbabwe's premier reinsurance broker. Learn about our mission, values, team, and track record in reinsurance broking across Africa."
-  keywords="about Classic Reinsurance Brokers, reinsurance broker team Harare, reinsurance broker Zimbabwe history, Kingstone Mhinda, reinsurance advisory Zimbabwe"
-  ogTitle="About Classic Reinsurance Brokers"
-  ogDescription="Zimbabwe's premier reinsurance broker connecting insurance companies with leading global and regional reinsurance markets since 2015."
+  description="Classic Reinsurance Brokers — Zimbabwe's premier reinsurance broker. Learn about our mission, values, team, and track record in reinsurance broking across Africa. Licensed by IPEC, serving insurance companies in Harare, Bulawayo, and across Zimbabwe."
+  keywords="about Classic Reinsurance Brokers, reinsurance broker team Harare, reinsurance broker Zimbabwe history, Kingstone Mhinda, reinsurance advisory Zimbabwe, reinsurance companies Zimbabwe, broking companies Zimbabwe, reinsurance broker Zimbabwe, insurance broker Zimbabwe, Technical Director Kingstone Mhinda"
+  ogTitle="About Classic Reinsurance Brokers — Zimbabwe's Leading Reinsurance Broker"
+  ogDescription="Zimbabwe's premier reinsurance broker connecting insurance companies with leading global and regional reinsurance markets since 2015. Learn about our team, mission, and values."
   canonical="https://www.classicre.co.zw/about"
+  breadcrumbJsonLd={`{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.classicre.co.zw" },
+      { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.classicre.co.zw/about" }
+    ]
+  }`}
 >
   <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
 

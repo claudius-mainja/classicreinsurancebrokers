@@ -7,10 +7,20 @@ import { site } from '../data/site';
 
 <AppLayout
   title="Terms & Conditions"
-  description="Classic Reinsurance Brokers Terms and Conditions — the terms governing the use of our website and reinsurance broking services."
-  keywords="terms and conditions, Classic Reinsurance Brokers terms, reinsurance broker Zimbabwe terms, website terms of use"
+  description="Classic Reinsurance Brokers Terms and Conditions — the terms governing the use of our website and reinsurance broking services. Classic Reinsurance Brokers is an IPEC-licensed reinsurance broker in Zimbabwe."
+  keywords="terms and conditions, Classic Reinsurance Brokers terms, reinsurance broker Zimbabwe terms, website terms of use, reinsurance companies Zimbabwe legal"
+  ogTitle="Terms & Conditions | Classic Reinsurance Brokers"
+  ogDescription="Terms and conditions governing the use of the Classic Reinsurance Brokers website and reinsurance broking services."
   robots="index, follow"
   canonical="https://www.classicre.co.zw/terms-conditions"
+  breadcrumbJsonLd={`{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.classicre.co.zw" },
+      { "@type": "ListItem", "position": 2, "name": "Terms & Conditions", "item": "https://www.classicre.co.zw/terms-conditions" }
+    ]
+  }`}
 >
   <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Terms & Conditions' }]} />
 
